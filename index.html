@@ -1,19 +1,368 @@
 <!DOCTYPE html>
-<html lang ="en">
-    <head>
-        <meta charset= "UTF-8">
-        <meta name="viewport" content = "width=device-width, initial-scale=1.0">
-        <title>NIFES Gidan Kwano</title>
-        <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
-        <link rel = stylesheet" href ="css/style.css">
-    </head>
+<html lang="en">
+ 
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NIFES Gidan Kwano</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="Style.css">
+</head>
 
-    <body>
+<!-- ═══════════════════════════════════════════════════════════════════════════════
+     NIFES WEBSITE - COLOR & BRAND GUIDELINES
+     ═══════════════════════════════════════════════════════════════════════════════
+     
+     PRIMARY BRAND COLOR: #EA3A60 (NIFES Pink)
+     RGB: (234, 58, 96)
+     CSS Variable: var(--nifes-pink)
+     
+     All text colors, buttons, accents, and borders use this brand color automatically.
+     No need to manually change colors - they're centralized in CSS variables.
+     
+     HOW TO EDIT TESTIMONIALS (Community Impact Section):
+     1. Find the "Community Impact" section (around line 237)
+     2. To add a new testimonial: Copy a <div class="testimonial-card">...</div> block
+     3. Update these fields:
+        • testimonial-avatar: Use emoji (👨‍🎓, 👩‍🎓, etc.)
+        • testimonial-name: Person's full name
+        • testimonial-role: Level + Department (e.g., "200 Level, Engineering")
+        • testimonial-text: Their story/quote (no quotation marks)
+        • testimonial-stars: Use ⭐⭐⭐⭐⭐ or adjust quantity
+     4. All styling automatically uses NIFES brand color - no CSS changes needed!
+     
+     BRAND COLOR USAGE THROUGHOUT:
+     ✓ Navigation buttons & hover effects
+     ✓ Primary call-to-action buttons
+     ✓ All accent bars and borders
+     ✓ Testimonial cards and avatars
+     ✓ Section tags and links
+     ✓ Hover effects and animations
+     
+     ═══════════════════════════════════════════════════════════════════════════════
+-->
+ 
+<body>
+ 
+  <!-- NAV -->
+  <nav>
+    <div class="logo">
+      <img src="nifes-logo.png" alt="NIFES Logo" class="logo-img">
+      <div>
+        <div class="logo-text">NIFES Gidan Kwano</div>
+        <div class="logo-sub">FUT Minna Fellowship</div>
+      </div>
+    </div>
+    <ul class="nav-links">
+      <li><a href="about.html" target="_blank" rel="noopener noreferrer">About</a></li>
+      <li><a href="events.html" target="_blank" rel="noopener noreferrer">Events</a></li>
+      <li><a href="devotionals.html" target="_blank" rel="noopener noreferrer">Devotionals</a></li>
+      <li><a href="gallery.html" target="_blank" rel="noopener noreferrer">Gallery</a></li>
+      <li><a href="join.html" target="_blank" rel="noopener noreferrer" class="nav-cta">Join Us</a></li>
+    </ul>
+  </nav>
+ 
+  <!-- HERO -->
+  <div class="hero">
+    <div>
+      <div class="hero-label">☩ Nigerian Fellowship of Evangelical Students</div>
+      <h1>Faith. <span>Fellowship.</span> Future.</h1>
+      <p class="hero-desc">Raising disciples who impact the campus and the nation — rooted in the Word, built in community, sent into the world.</p>
+      <div class="hero-btns">
+        <a href="join.html" target="_blank" rel="noopener noreferrer" class="btn-primary">Join the Fellowship</a>
+        <a href="about.html" target="_blank" rel="noopener noreferrer" class="btn-outline">Our Story</a>
+      </div>
+    </div>
+    <div class="hero-image-carousel">
+      <img src="placeholder-hero-1.jpg" alt="NIFES Fellowship" class="carousel-image">
+    </div>
+  </div>
+ 
+  <!-- STATS -->
+  <div class="stats-bar">
+    <div class="stat-item">
+      <div class="stat-num">200<span>+</span></div>
+      <div class="stat-label">Active Members</div>
+    </div>
+    <div class="stat-item">
+      <div class="stat-num">12<span>+</span></div>
+      <div class="stat-label">Years on Campus</div>
+    </div>
+    <div class="stat-item">
+      <div class="stat-num">4</div>
+      <div class="stat-label">Weekly Programmes</div>
+    </div>
+    <div class="stat-item">
+      <div class="stat-num">1<span>♱</span></div>
+      <div class="stat-label">Lord &amp; Saviour</div>
+    </div>
+  </div>
+ 
+  <!-- ABOUT -->
+  <section class="about">
+    <div class="about-grid">
+ 
+      <div class="about-visual">
+        <div class="about-badge">✦ Why NIFES Gidan Kwano</div>
+        <h3>Raised to know Christ and make Him known</h3>
+        <p>NIFES Gidan Kwano exists to help students at FUT Minna grow in Christ, stand for truth, and carry the gospel into the campus and beyond. We are a fellowship built for discipleship, service, and mission.</p>
+        <div class="pillars">
+          <div class="pillar">
+            <div class="pillar-icon">📖</div>
+            <div class="pillar-name">Word</div>
+            <div class="pillar-desc">Scripture shapes everything</div>
+          </div>
+          <div class="pillar">
+            <div class="pillar-icon">🙏</div>
+            <div class="pillar-name">Prayer</div>
+            <div class="pillar-desc">We depend on God together</div>
+          </div>
+          <div class="pillar">
+            <div class="pillar-icon">🤝</div>
+            <div class="pillar-name">Fellowship</div>
+            <div class="pillar-desc">Life together on campus</div>
+          </div>
+          <div class="pillar">
+            <div class="pillar-icon">🌍</div>
+            <div class="pillar-name">Mission</div>
+            <div class="pillar-desc">Salt and light on campus</div>
+          </div>
+        </div>
+      </div>
+ 
+      <div>
+        <div class="section-tag">About NIFES Gidan Kwano</div>
+        <div class="section-title">A campus fellowship with a clear mission</div>
+        <p class="section-sub">NIFES Gidan Kwano is the FUT Minna expression of the Nigerian Fellowship of Evangelical Students. We are a Christ-centered student movement formed to nurture faith, build godly character, and raise leaders who serve God with purpose.</p>
+        <div class="about-media-grid">
+          <div class="about-media about-media-wide">
+            <img src="prayer_meeting_session.jpg" alt="NIFES Prayer Meeting">
+          </div>
+          <div class="about-media">
+            <img src="bible_study_session.jpg" alt="NIFES Bible study session">
+          </div>
+          <div class="about-media">
+            <img src="praise_session.jpg" alt="NIFES Praise and Worship session">
+          </div>
+        </div>
+        <div class="value-points">
+          <div class="value-point">
+            <div class="value-dot">1</div>
+            <div>
+              <div class="value-title">Our core values</div>
+              <div class="value-text">We value Scripture, prayer, fellowship, holiness, service, and leadership shaped by Christ.</div>
+            </div>
+          </div>
+          <div class="value-point">
+            <div class="value-dot">2</div>
+            <div>
+              <div class="value-title">Our mission</div>
+              <div class="value-text">To disciple students in the Word of God, strengthen Christian community, and equip believers for faithful witness on campus and in society.</div>
+            </div>
+          </div>
+          <div class="value-point">
+            <div class="value-dot">3</div>
+            <div>
+              <div class="value-title">Service rhythm</div>
+              <div class="value-text">Sunday Service, Tuesday Prayer Meeting, and Thursday Bible Study remain the heart of our weekly fellowship. Times can be updated later.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+ 
+    </div>
+  </section>
 
-        <!-- NAV -->
-         <nav></nav>
-    </body>
+  <!-- VISION & MISSION -->
+  <section class="vision-mission">
+    <div class="vm-container">
+      <div class="vm-card">
+        <div class="vm-icon">🎯</div>
+        <div class="vm-header">Our Vision</div>
+        <div class="vm-text">To raise a generation of Christ-centered leaders who will impact every sphere of Nigerian society with kingdom values, transforming campuses, communities, and the nation through faith, integrity, and servant leadership.</div>
+      </div>
+      <div class="vm-card">
+        <div class="vm-icon">💡</div>
+        <div class="vm-header">Our Mission</div>
+        <div class="vm-text">To disciple students in the Word of God, foster authentic Christian community on campus, and equip them to be salt and light in their spheres of influence through spiritual formation and missional engagement.</div>
+      </div>
+    </div>
+  </section>
 
+  <!-- NIFES AT A GLANCE -->
+  <section class="glance">
+    <div class="glance-grid">
+      <div class="glance-image">
+        <img src="placeholder-glance.jpg" alt="NIFES Community in action">
+      </div>
+      <div class="glance-content">
+        <div class="section-tag">Who We Are</div>
+        <h3>NIFES at a Glance</h3>
+        <p>The Nigerian Fellowship of Evangelical Students (NIFES) is an indigenous student-centered and Christ-centered movement committed to raising godly leaders in higher institutions.</p>
+        <p>At FUT Minna, NIFES Gidan Kwano serves as a home for students who want to grow spiritually, belong deeply, and live missionally. Our gatherings are built to help members know God, serve one another, and reach the campus with the gospel.</p>
+        <p>We believe that a student's years on campus are pivotal. It's during these formative years that faith is solidified, leadership skills are honed, and kingdom priorities are established. Every programme, every Bible study, every outreach is designed with this vision in mind.</p>
+        <p>Whether you're seeking deeper spirituality, authentic community, or a platform to make a difference on campus, NIFES is the place for you.</p>
+        <a href="about.html" target="_blank" rel="noopener noreferrer" class="glance-cta">Read Our Story →</a>
+      </div>
+    </div>
+  </section>
 
+  <!-- CARDINAL STRATEGIES -->
+  <section class="strategies">
+    <div class="strategies-title">Our Cardinal Strategies</div>
+    <div class="strategies-grid">
+      <div class="strategy-card">
+        <div class="strategy-number">01</div>
+        <div class="strategy-title">Word-Centered Teaching</div>
+        <div class="strategy-text">We equip students to encounter Jesus through Scripture. Our Bible studies, devotionals, and teaching emphasize the centrality of God's Word in every aspect of student life and decision-making.</div>
+      </div>
+      <div class="strategy-card">
+        <div class="strategy-number">02</div>
+        <div class="strategy-title">Intentional Discipleship</div>
+        <div class="strategy-text">Growth happens in relationships. We foster one-on-one mentoring, small group discussions, and accountability partnerships that help members grow deeper in faith and character.</div>
+      </div>
+      <div class="strategy-card">
+        <div class="strategy-number">03</div>
+        <div class="strategy-title">Campus & Community Engagement</div>
+        <div class="strategy-text">We're committed to being a redemptive presence on campus and in surrounding communities. Through outreach, service, and proclamation, we demonstrate Christ's love in word and deed.</div>
+      </div>
+      <div class="strategy-card">
+        <div class="strategy-number">04</div>
+        <div class="strategy-title">Leadership Formation</div>
+        <div class="strategy-text">We identify, nurture, and develop student leaders who will shape the future of Nigeria. Leadership training, spiritual mentoring, and strategic involvement prepare them for kingdom influence.</div>
+      </div>
+    </div>
+  </section>  
+   <section class="events">
+    <div class="section-tag">Fellowship Life</div>
+    <div class="section-title">Our Programmes</div>
+    <p class="section-sub">Every week is an opportunity to gather, grow, and go. Come and experience life in community.</p>
+    <div class="events-grid">
+      <div class="event-card">
+        <div class="event-header weekly">
+          <div class="event-type">Weekly . Sunday</div>
+          <div class="event-name">Sunday Service</div>
+          <div class="event-time">⏰ Time to be confirmed · Main Fellowship Venue</div>
+        </div>
+        <div class="event-body">
+          <p>Our weekly worship service where we gather for praise, preaching, prayer, and fellowship as one body in Christ.</p>
+          <a href="events.html" target="_blank" rel="noopener noreferrer" class="event-link">View details → </a>
+        </div>
+      </div>
 
-</html>
+      <div class="event-card">
+        <div class="event-header prayer">
+          <div class="event-type">Weekly . Tuesday</div>
+          <div class="event-name">Prayer Meeting</div>
+          <div class="event-time">⏰ Time to be confirmed · Fellowship Venue</div>
+        </div>
+        <div class="event-body">
+          <p>A time to seek God together, intercede for the campus, and strengthen our spiritual lives through prayer.</p>
+          <a href="events.html" target="_blank" rel="noopener noreferrer" class="event-link">View details → </a>
+        </div>
+      </div>
+
+      <div class="event-card">
+        <div class="event-header outreach">
+          <div class="event-type">Weekly . Thursday</div>
+          <div class="event-name">Bible Study</div>
+          <div class="event-time">⏰ Time to be confirmed · Fellowship Venue</div>
+        </div>
+        <div class="event-body">
+          <p>We open Scripture together, ask honest questions, and grow in truth, maturity, and practical Christian living.</p>
+          <a href="events.html" target="_blank" rel="noopener noreferrer" class="event-link">View details → </a>
+        </div>
+      </div>
+    </div>
+              </section>
+
+              <!-- IMPACT & TESTIMONIALS -->
+              <section class="impact">
+                <div class="section-tag">Community Impact</div>
+                <div class="section-title">Stories of Transformation</div>
+                <p class="section-sub">See how NIFES Gidan Kwano is shaping lives and impacting the FUT Minna community.</p>
+                <div class="testimonials-grid">
+                  <div class="testimonial-card">
+                    <div class="testimonial-header">
+                      <div class="testimonial-avatar">👨‍🎓</div>
+                      <div>
+                        <div class="testimonial-name">Chisom Emmanuel</div>
+                        <div class="testimonial-role">200 Level, Engineering</div>
+                      </div>
+                    </div>
+                    <div class="testimonial-text">Joining NIFES transformed my college experience. I found not just a fellowship, but a family that challenged me to grow deeper in my faith and become intentional about my influence on campus.</div>
+                    <div class="testimonial-stars">⭐⭐⭐⭐⭐</div>
+                  </div>
+
+                  <div class="testimonial-card">
+                    <div class="testimonial-header">
+                      <div class="testimonial-avatar">👩‍🎓</div>
+                      <div>
+                        <div class="testimonial-name">Amara Okafor</div>
+                        <div class="testimonial-role">300 Level, Medicine</div>
+                      </div>
+                    </div>
+                    <div class="testimonial-text">The discipleship I received through NIFES has shaped who I am today. I've learned to balance academics, faith, and service. This is where my spiritual journey truly deepened.</div>
+                    <div class="testimonial-stars">⭐⭐⭐⭐⭐</div>
+                  </div>
+
+                  <div class="testimonial-card">
+                    <div class="testimonial-header">
+                      <div class="testimonial-avatar">👨‍🎓</div>
+                      <div>
+                        <div class="testimonial-name">David Adeyemi</div>
+                        <div class="testimonial-role">Final Year, Law</div>
+                      </div>
+                    </div>
+                    <div class="testimonial-text">NIFES equipped me with leadership skills and biblical perspective that I'll carry beyond campus. The community here is genuine, the teaching is sound, and the mission is clear.</div>
+                    <div class="testimonial-stars">⭐⭐⭐⭐⭐</div>
+                  </div>
+                </div>
+              </section>
+
+              <!-- JOIN -->
+              <section class="join">
+                <div class="section-tag">Join the Family</div>
+                <div class="section-title">Take your next step with NIFES</div>
+                <p class="section-sub">Whether you are new on campus or already rooted here, there is a place for you to grow, serve, and belong. Service times can be edited later once you confirm them.</p>
+                <div class="join-cards">
+                  <div class="join-card">
+                    <div class="join-icon">📍</div>
+                    <h4>Sunday Service</h4>
+                    <p>Worship with us every Sunday. Time and venue can be updated later once you confirm the schedule.</p>
+                  </div>
+                  <div class="join-card">
+                    <div class="join-icon">🙏</div>
+                    <h4>Tuesday Prayer Meeting</h4>
+                    <p>Join us midweek for intercession, worship, and spiritual refreshment. You can edit the exact time later.</p>
+                  </div>
+                  <div class="join-card">
+                    <div class="join-icon">📖</div>
+                    <h4>Thursday Bible Study</h4>
+                    <p>Come for the Word, discussion, and discipleship. This card can be updated later with the exact time.</p>
+                  </div>
+                </div>
+                <a href="https://chat.whatsapp.com/REPLACE-WITH-YOUR-INVITE-LINK" target="_blank" rel="noopener noreferrer" class="btn-outline join-whatsapp-btn">Join the WhatsApp Group</a>
+                <a href="join.html" target="_blank" rel="noopener noreferrer" class="btn-primary btn-inline">Connect with Us Today</a>
+              </section>
+
+               <!-- FOOTER-->
+                <footer>
+                  <div>
+                    <p class="footer-brand">NIFES Gidan Kwano</p>
+                    <p>Federal University of Technology Minna . Niger State, Nigeria</p>
+                    
+                  </div>
+                  <div class="footer-links">
+                    <a href="about.html" target="_blank" rel="noopener noreferrer">About</a>
+                    <a href="events.html" target="_blank" rel="noopener noreferrer">Events</a>
+                    <a href="devotionals.html" target="_blank" rel="noopener noreferrer">Devotionals</a>
+                    <a href="gallery.html" target="_blank" rel="noopener noreferrer">Gallery</a>
+                    <a href="join.html" target="_blank" rel="noopener noreferrer">Contact</a>
+                  </div>
+                  <p>&copy; 2026 NIFES Gidan Kwano. All rights reserved.</p>
+                </footer>
+              </body>
+              </html>
+
+          
