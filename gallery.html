@@ -4,115 +4,95 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Gallery - NIFES Gidan Kwano</title>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="Style.css">
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 </head>
 <body>
-  <!-- GALLERY EDIT NOTES:
-       - Replace each img src with your own photo file when you upload images.
-       - Change only the figcaption text if you want a new caption.
-       - The overlay labels are optional and can be edited or removed later.
-  -->
-  <nav>
-    <div class="logo">
-      <img src="nifes-logo.png" alt="NIFES Logo" class="logo-img">
-      <div>
-        <div class="logo-text">NIFES Gidan Kwano</div>
-        <div class="logo-sub">FUT Minna Fellowship</div>
-      </div>
-    </div>
+
+  <nav class="main-nav">
+    <a href="index.html" class="logo">
+        <img src="nifes-logo.png" alt="NIFES Logo">
+        NIFES Gidan Kwano
+    </a>
     <ul class="nav-links">
       <li><a href="index.html">Home</a></li>
-      <li><a href="about.html" target="_blank" rel="noopener noreferrer">About</a></li>
-      <li><a href="events.html" target="_blank" rel="noopener noreferrer">Events</a></li>
-      <li><a href="devotionals.html" target="_blank" rel="noopener noreferrer">Devotionals</a></li>
-      <li><a href="join.html" target="_blank" rel="noopener noreferrer" class="nav-cta">Join Us</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="executives.html">Executives</a></li>
+      <li><a href="events.html">Events</a></li>
+      <li><a href="devotionals.html">Devotionals</a></li>
+      <li><a href="gallery.html" class="active">Gallery</a></li>
+      <li><a href="join.html" class="btn btn-secondary">Join Us</a></li>
     </ul>
   </nav>
 
-  <section class="page-hero">
+  <header class="page-hero">
     <div class="page-hero-inner">
-      <div class="section-tag">Gallery</div>
-      <h1>A clean gallery grid ready for your photos</h1>
-      <p>When you upload your images, this page will become a full visual story of worship, fellowship, outreach, and campus life at NIFES Gidan Kwano.</p>
+      <div class="section-tag">Our Moments</div>
+      <h1>Fellowship in Pictures</h1>
+      <p class="section-sub">A visual story of worship, community, and mission at NIFES Gidan Kwano.</p>
     </div>
-  </section>
+  </header>
 
-  <section class="page-section about">
-    <div class="page-grid">
-      <div class="content-card">
-        <h3>How to use this gallery</h3>
-        <p>Replace each placeholder tile with a real image file path when you are ready. The layout already handles responsive scaling on desktop and phone.</p>
+  <main>
+    <section class="page-section" id="gallery-main">
+      <div class="container">
+        <div class="gallery-grid-new">
+          <div class="gallery-item">
+            <img src="https://images.unsplash.com/photo-1519709026365-7effad3a5596?q=80&w=2070&auto=format&fit=crop" alt="Worship Night">
+            <div class="gallery-caption">Worship Night</div>
+          </div>
+          <div class="gallery-item">
+            <img src="https://images.unsplash.com/photo-1524178232363-1fb2b075b655?q=80&w=2070&auto=format&fit=crop" alt="Bible Study Group">
+            <div class="gallery-caption">Bible Study Group</div>
+          </div>
+          <div class="gallery-item">
+            <img src="https://images.unsplash.com/photo-1583468982335-DD8183d12534?q=80&w=2070&auto=format&fit=crop" alt="Community Fellowship">
+            <div class="gallery-caption">Community Fellowship</div>
+          </div>
+          <div class="gallery-item">
+            <img src="https://images.unsplash.com/photo-1543978232-a2d444a48334?q=80&w=2074&auto=format&fit=crop" alt="Prayer Meeting">
+            <div class="gallery-caption">Prayer Meeting</div>
+          </div>
+          <div class="gallery-item">
+            <img src="https://images.unsplash.com/photo-1529156069898-fac51a63739d?q=80&w=2070&auto=format&fit=crop" alt="Leadership Retreat">
+            <div class="gallery-caption">Leadership Retreat</div>
+          </div>
+          <div class="gallery-item">
+            <img src="https://images.unsplash.com/photo-1523580494863-6f3031224c94?q=80&w=2070&auto=format&fit=crop" alt="Campus Outreach">
+            <div class="gallery-caption">Campus Outreach</div>
+          </div>
+           <div class="gallery-item">
+            <img src="https://images.unsplash.com/photo-1505664114579-6415873c3a53?q=80&w=2070&auto=format&fit=crop" alt="Small Group Discussion">
+            <div class="gallery-caption">Small Group Discussion</div>
+          </div>
+           <div class="gallery-item">
+            <img src="https://images.unsplash.com/photo-1604881991720-f91add269612?q=80&w=2070&auto=format&fit=crop" alt="Fellowship Picnic">
+            <div class="gallery-caption">Fellowship Picnic</div>
+          </div>
+           <div class="gallery-item">
+            <img src="https://images.unsplash.com/photo-1556157382-97eda2d62296?q=80&w=2070&auto=format&fit=crop" alt="Serving the Community">
+            <div class="gallery-caption">Serving the Community</div>
+          </div>
+        </div>
       </div>
-      <div class="content-card">
-        <h3>Suggested categories</h3>
-        <p>You can group future uploads by worship, prayer meeting, Bible study, outreach, and special events without changing the grid structure.</p>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-content">
+        <a href="index.html" class="footer-logo">NIFES<span>.</span></a>
+        <p>Raising Christ-like students to transform the campus and society.</p>
+        <ul class="footer-socials">
+          <li><a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a></li>
+          <li><a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a></li>
+          <li><a href="#" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a></li>
+          <li><a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a></li>
+        </ul>
+        <p class="footer-copyright">&copy; 2026 NIFES Gidan Kwano. All Rights Reserved.</p>
       </div>
     </div>
-  </section>
-
-  <section class="page-section">
-    <div class="section-tag">Gallery Preview</div>
-    <div class="section-title">A flexible image grid for future uploads</div>
-    <p class="section-sub">The layout below is ready for worship photos, fellowship moments, outreach images, and special events.</p>
-    <div class="gallery-grid">
-      <figure class="gallery-tile gallery-tile-large">
-        <img src="placeholder-hero-1.jpg" alt="Worship and praise">
-        <div class="gallery-overlay">
-          <div class="gallery-kicker">Featured</div>
-          <figcaption>Worship and praise</figcaption>
-        </div>
-      </figure>
-      <figure class="gallery-tile gallery-tile-tall">
-        <img src="prayer_meeting_session.jpg" alt="Prayer meeting">
-        <div class="gallery-overlay">
-          <div class="gallery-kicker">Weekly</div>
-          <figcaption>Prayer meeting</figcaption>
-        </div>
-      </figure>
-      <figure class="gallery-tile">
-        <img src="bible_study_session.jpg" alt="Bible study">
-        <div class="gallery-overlay">
-          <div class="gallery-kicker">Weekly</div>
-          <figcaption>Bible study</figcaption>
-        </div>
-      </figure>
-      <figure class="gallery-tile gallery-tile-wide">
-        <img src="praise_session.jpg" alt="Fellowship moments">
-        <div class="gallery-overlay">
-          <div class="gallery-kicker">Community</div>
-          <figcaption>Fellowship moments</figcaption>
-        </div>
-      </figure>
-      <figure class="gallery-tile">
-        <img src="placeholder-glance.jpg" alt="Campus outreach">
-        <div class="gallery-overlay">
-          <div class="gallery-kicker">Mission</div>
-          <figcaption>Campus outreach</figcaption>
-        </div>
-      </figure>
-      <figure class="gallery-tile">
-        <img src="placeholder-glance.jpg" alt="Special gatherings">
-        <div class="gallery-overlay">
-          <div class="gallery-kicker">Special</div>
-          <figcaption>Special gatherings</figcaption>
-        </div>
-      </figure>
-    </div>
-  </section>
-
-  <footer>
-    <div>
-      <p class="footer-brand">NIFES Gidan Kwano</p>
-      <p>Federal University of Technology Minna . Niger State, Nigeria</p>
-    </div>
-    <div class="footer-links">
-      <a href="index.html">Home</a>
-      <a href="about.html" target="_blank" rel="noopener noreferrer">About</a>
-      <a href="events.html" target="_blank" rel="noopener noreferrer">Events</a>
-      <a href="join.html" target="_blank" rel="noopener noreferrer">Join</a>
-    </div>
-    <p>&copy; 2026 NIFES Gidan Kwano. All rights reserved.</p>
   </footer>
+
 </body>
 </html>
