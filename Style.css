@@ -681,6 +681,70 @@ img {
   color: #ccffcc;
 }
 
+/* --- Devotional Sidebar Layout --- */
+.devotional-wrapper {
+  display: grid;
+  grid-template-columns: 1fr 320px;
+  gap: 2rem;
+  align-items: start;
+}
+
+.devotional-main-content {
+  flex: 1;
+}
+
+.devotional-sidebar {
+  position: sticky;
+  top: 100px;
+}
+
+.devotional-sidebar .newsletter-section {
+  background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
+  padding: 2rem;
+  border-radius: 12px;
+  color: var(--text-light);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+  animation: slideInRight 0.6s ease-out 0.3s both;
+}
+
+.devotional-sidebar .newsletter-content {
+  max-width: 100%;
+  text-align: center;
+}
+
+.devotional-sidebar .newsletter-content h2 {
+  font-size: 1.3rem;
+  color: var(--text-light);
+  margin-bottom: 0.75rem;
+}
+
+.devotional-sidebar .newsletter-content p {
+  font-size: 0.9rem;
+  margin-bottom: 0.75rem;
+}
+
+.devotional-sidebar .mc-embedded-subscribe-form {
+  flex-direction: column;
+}
+
+.devotional-sidebar .mc-field-group {
+  flex-direction: column;
+  max-width: 100%;
+}
+
+.devotional-sidebar .mc-field-group input {
+  width: 100%;
+  margin-bottom: 0.5rem;
+}
+
+.devotional-sidebar .newsletter-btn {
+  width: 100%;
+}
+
+.devotional-sidebar .newsletter-note {
+  font-size: 0.8rem;
+}
+
 /* --- Responsive --- */
 @media (max-width: 768px) {
   /* Typography */
@@ -879,6 +943,16 @@ img {
   .newsletter-btn {
     width: 100%;
   }
+
+  /* Devotional Sidebar */
+  .devotional-wrapper {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .devotional-sidebar {
+    position: static;
+  }
 }
 
 @media (max-width: 480px) {
@@ -969,6 +1043,22 @@ img {
   .section-title-container h2 {
     font-size: 1.2rem;
   }
+
+  /* Upcoming Events button and hidden state for LTC */
+  .upcoming-btn {
+    background: var(--accent-color);
+    color: #fff;
+    border: none;
+    padding: 0.4rem 0.75rem;
+    border-radius: 6px;
+    cursor: pointer;
+    margin-left: 1rem;
+    font-weight: 600;
+  }
+
+  .upcoming-btn:hover { opacity: 0.95; }
+
+  .hidden { display: none !important; }
 
   /* Grid */
   .page-grid {

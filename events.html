@@ -88,8 +88,9 @@
     <section class="page-section" id="upcoming-programs">
       <div class="container">
         <div class="section-title-container">
-          <h2>Upcoming Programs</h2>
+          <h2>OUR PROGRAMS - LIFE, Fellowship Retreat, LTC(Leadership Training Conference), EDC (Easter Discipleship Conference)</h2>
           <p class="section-sub">Mark your calendars for these significant events coming your way.</p>
+          <button id="upcoming-toggle" class="upcoming-btn" onclick="toggleLTC()">Show/Hide LTC</button>
         </div>
         <div class="page-grid">
           <div class="content-card">
@@ -99,13 +100,14 @@
             <p><strong>Status:</strong> Coming Soon</p>
           </div>
           <div class="content-card">
-            <h4>Leadership Training</h4>
-            <p>Intensive training programs designed to equip campus leaders with practical skills in discipleship, evangelism, and ministry management for effective campus witness.</p>
+            <img src="images/fellowship-retreat.jpg" alt="Fellowship Retreat">
+            <h4>Fellowship Retreat</h4>
+            <p>A time away for deeper fellowship, prayer, and spiritual renewal. Designed to help students step back from campus life and focus on God together.</p>
             <p><strong>Status:</strong> Coming Soon</p>
           </div>
-          <div class="content-card">
-            <h4>Mission & Outreach Week</h4>
-            <p>A dedicated week focused on community outreach, street evangelism, and practical ministry in the surrounding communities, putting faith into action.</p>
+          <div class="content-card hidden" id="ltc-card">
+            <h4>LTC (Leadership Training Conference)</h4>
+            <p>Intensive training conference to equip campus leaders in discipleship, evangelism, and ministry management for effective campus witness.</p>
             <p><strong>Status:</strong> Coming Soon</p>
           </div>
         </div>
@@ -134,6 +136,22 @@
       </div>
     </div>
   </footer>
+
+  <script>
+    function toggleLTC() {
+      const ltc = document.getElementById('ltc-card');
+      if (!ltc) return;
+      ltc.classList.toggle('hidden');
+      const btn = document.getElementById('upcoming-toggle');
+      if (btn) btn.textContent = ltc.classList.contains('hidden') ? 'Show LTC' : 'Hide LTC';
+    }
+    // Initialize button text
+    document.addEventListener('DOMContentLoaded', function() {
+      const ltc = document.getElementById('ltc-card');
+      const btn = document.getElementById('upcoming-toggle');
+      if (btn) btn.textContent = (ltc && ltc.classList.contains('hidden')) ? 'Show LTC' : 'Hide LTC';
+    });
+  </script>
 
 </body>
 </html>
