@@ -565,6 +565,15 @@ img {
   color: var(--accent-color);
 }
 
+.footer-locations {
+  margin: 1.5rem 0;
+  font-size: 0.95rem;
+}
+
+.footer-locations p {
+  margin: 0;
+}
+
 .footer-copyright {
   font-size: 0.9rem;
   color: var(--text-light);
