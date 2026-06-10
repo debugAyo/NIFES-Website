@@ -463,17 +463,59 @@ img {
 }
 
 /* --- Executives Page --- */
-.exec-card img {
-  width: 190px;
-  height: 190px;
-  border-radius: 50%;
-  object-fit: cover;
-  object-position: center 50%;
-  margin: 0 auto 1rem;
-  display: block;
- 
+.exec-card {
+  background: #ffffff;
+  border: 1px solid rgba(0, 51, 102, 0.05);
+  border-radius: 16px;
+  padding: 1.5rem 1.25rem;
+  text-align: center;
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.4s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.4s ease;
+  box-shadow: 0 4px 18px rgba(0, 51, 102, 0.03);
 }
 
+.exec-card:hover {
+  transform: translateY(-6px);
+  border-color: rgba(227, 27, 109, 0.2);
+  box-shadow: 0 16px 32px rgba(0, 51, 102, 0.08);
+}
+
+.exec-card img {
+  width: 140px; /* Reduced round circle size */
+  height: 140px;
+  border-radius: 50%; /* Back to round */
+  object-fit: cover;
+  object-position: center; /* Center-focused as user will crop manually */
+  margin: 0 auto 1.2rem;
+  display: block;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.exec-card:hover img {
+  transform: scale(1.05);
+  box-shadow: 0 8px 20px rgba(227, 27, 109, 0.2);
+}
+
+.exec-card h4 {
+  font-size: 1.15rem;
+  font-weight: 600;
+  color: var(--primary-color);
+  margin: 0.5rem 0 0.4rem;
+  letter-spacing: -0.01em;
+}
+
+.exec-card p {
+  display: inline-block;
+  font-size: 0.72rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--accent-color);
+  background-color: rgba(227, 27, 109, 0.06);
+  padding: 5px 12px;
+  border-radius: 100px;
+  margin: 0;
+}
 .exec-group {
   margin-bottom: 4rem;
 }
