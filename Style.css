@@ -464,11 +464,14 @@ img {
 
 /* --- Executives Page --- */
 .exec-card img {
-  width: 150px;
-  height: 150px;
+  width: 190px;
+  height: 190px;
   border-radius: 50%;
+  object-fit: cover;
+  object-position: center 50%;
   margin: 0 auto 1rem;
-  border: 3px solid var(--accent-color);
+  display: block;
+ 
 }
 
 .exec-group {
