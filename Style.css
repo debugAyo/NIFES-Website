@@ -1321,3 +1321,87 @@ img {
   font-weight: 600;
   color: var(--primary-color);
 }
+
+/* ==========================================================================
+   NIFES FUTMinna Premium Animation System (Apple & Google Style)
+   ========================================================================== */
+
+:root {
+  --transition-apple: cubic-bezier(0.16, 1, 0.3, 1);
+  --transition-duration: 0.9s;
+}
+
+/* 1. Remove conflict-causing static load animations */
+.page-section, .page-grid, .page-grid-text, .page-grid-text div, .content-card {
+  animation: none !important;
+}
+
+/* 2. Glassmorphic Sticky Navbar Transition */
+.main-nav {
+  transition: padding 0.5s var(--transition-apple), 
+              background-color 0.5s var(--transition-apple), 
+              box-shadow 0.5s var(--transition-apple), 
+              backdrop-filter 0.5s var(--transition-apple), 
+              border-bottom 0.5s var(--transition-apple);
+}
+
+.main-nav.nav-scrolled {
+  padding: 0.85rem 2rem;
+  background-color: rgba(0, 51, 102, 0.92);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+  backdrop-filter: blur(16px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+/* 3. Hero Sequential Entrance keyframe & class */
+.hero-anim-item {
+  opacity: 0;
+  transform: translateY(28px);
+  animation: heroSequentialFadeIn 1.2s var(--transition-apple) forwards;
+  will-change: transform, opacity;
+}
+
+@keyframes heroSequentialFadeIn {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* 4. Single-element Scroll Reveal */
+.reveal {
+  opacity: 0;
+  transform: translateY(35px) scale(0.99);
+  transition: opacity var(--transition-duration) var(--transition-apple), 
+              transform var(--transition-duration) var(--transition-apple);
+  will-change: transform, opacity;
+}
+
+.reveal.revealed {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+}
+
+/* 5. Grid Staggered Reveal */
+.reveal-grid > * {
+  opacity: 0;
+  transform: translateY(40px) scale(0.97);
+  transition: opacity var(--transition-duration) var(--transition-apple), 
+              transform var(--transition-duration) var(--transition-apple),
+              border-radius 0.4s var(--transition-apple),
+              box-shadow 0.4s var(--transition-apple);
+  will-change: transform, opacity;
+}
+
+.reveal-grid.revealed > * {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+}
+
+/* 6. Active Nav Link Bubble Highlight effect (Micro-interaction) */
+.nav-links a::after {
+  height: 3px;
+  border-radius: 2px;
+  background-color: var(--accent-color);
+  transition: width 0.4s var(--transition-apple);
+}

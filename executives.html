@@ -42,10 +42,10 @@
     <div id="gidan-kwano" class="tab-content active">
       <section class="page-section" id="gk-execs">
         <div class="container">
-          <div class="section-title-container">
+          <div class="section-title-container reveal">
             <h2>FUTMinna Executives</h2>
           </div>
-          <div class="page-grid">
+          <div class="page-grid reveal-grid">
             <!-- Placeholder Cards -->
             <div class="content-card exec-card">
               <img src="images/executives/sir_peter_gk_president1.jpg" alt="Samuel Peter, President">
@@ -141,10 +141,10 @@
     <div id="bosso" class="tab-content">
       <section class="page-section" id="bosso-execs">
         <div class="container">
-          <div class="section-title-container">
+          <div class="section-title-container reveal">
             <h2>Bosso Executives</h2>
           </div>
-          <div class="page-grid">
+          <div class="page-grid reveal-grid">
             <!-- Placeholder Cards -->
             <div class="content-card exec-card">
               <img src="https://via.placeholder.com/300x300.png?text=Photo" alt="Executive Photo">
@@ -158,27 +158,27 @@
             </div>
             <div class="content-card exec-card">
               <img src="https://via.placeholder.com/300x300.png?text=Photo" alt="Executive Photo">
-              <h4>Onyedim Gift</h4>
+              <h4>Executive Name</h4>
               <p>General Secretary</p>
             </div>
             <div class="content-card exec-card">
-              <img src="https://via.placeholder.com/300x300.png?text=Photo" alt="Tresurer">
-              <h4>Ibrahim Abigail</h4>
-              <p>Tresurer</p>
+              <img src="https://via.placeholder.com/300x300.png?text=Photo" alt="Executive Photo">
+              <h4>Executive Name</h4>
+              <p>Treasurer</p>
             </div>
             <div class="content-card exec-card">
-              <img src="" alt="Sisters Coordinator">
-              <h4>Enyojo Abigail</h4>
+              <img src="https://via.placeholder.com/300x300.png?text=Photo" alt="Executive Photo">
+              <h4>Executive Name</h4>
               <p>Sisters Coordinator</p>
             </div>
             <div class="content-card exec-card">
-              <img src="" alt="Brothers Coordinators">
-              <h4>Boniface Chisom</h4>
+              <img src="https://via.placeholder.com/300x300.png?text=Photo" alt="Executive Photo">
+              <h4>Executive Name</h4>
               <p>Brothers Coordinator</p>
             </div>
             <div class="content-card exec-card">
-              <img src="" alt="Financial Secretary">
-              <h4>Onoja Fidelia</h4>
+              <img src="https://via.placeholder.com/300x300.png?text=Photo" alt="Executive Photo">
+              <h4>Executive Name</h4>
               <p>Financial Secretary</p>
             </div>
 
@@ -212,23 +212,7 @@
     </div>
   </footer>
 
-  <script>
-    function openTab(evt, tabName) {
-      var i, tabcontent, tablinks;
-      tabcontent = document.getElementsByClassName("tab-content");
-      for (i = 0; i < tabcontent.length; i++) {
-        tabcontent[i].style.display = "none";
-      }
-      tablinks = document.getElementsByClassName("tab-link");
-      for (i = 0; i < tablinks.length; i++) {
-        tablinks[i].className = tablinks[i].className.replace(" active", "");
-      }
-      document.getElementById(tabName).style.display = "block";
-      evt.currentTarget.className += " active";
-    }
-    // Get the element with id="defaultOpen" and click on it
-    document.querySelector(".tab-link.active").click();
-  </script>
+  <script src="animations.js"></script>
 
 </body>
 </html>
