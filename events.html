@@ -135,7 +135,65 @@
     </div>
   </footer>
 
+  <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-database-compat.js"></script>
+  <script src="config.js"></script>
   <script src="animations.js"></script>
+
+  <script>
+    // Realtime Syncing from Firebase Database if configured
+    if (typeof db !== "undefined" && db) {
+      db.ref("nifes_data/weekly").on("value", snapshot => {
+        const weekly = snapshot.val();
+        if (weekly) {
+          renderWeeklyList(weekly);
+        }
+      });
+      db.ref("nifes_data/programs").on("value", snapshot => {
+        const programs = snapshot.val();
+        if (programs) {
+          renderProgramsList(programs);
+        }
+      });
+    }
+
+    function renderWeeklyList(list) {
+      const grid = document.querySelector("#weekly-rhythm .page-grid");
+      if (!grid) return;
+      grid.innerHTML = "";
+      list.forEach(event => {
+        const card = document.createElement("div");
+        card.className = "content-card";
+        card.innerHTML = `
+          <img src="${event.image || 'images/placeholder-glance.jpg'}" alt="${event.title}">
+          <h4>${event.title}</h4>
+          <p>${event.desc}</p>
+          <p><strong>Time:</strong> ${event.time}</p>
+        `;
+        grid.appendChild(card);
+      });
+      if (window.initScrollReveal) window.initScrollReveal();
+    }
+
+    function renderProgramsList(list) {
+      const grid = document.querySelector("#upcoming-programs .page-grid");
+      if (!grid) return;
+      grid.innerHTML = "";
+      list.forEach(prog => {
+        const card = document.createElement("div");
+        card.className = "content-card";
+        const imgTag = prog.image ? `<img src="${prog.image}" alt="${prog.title}">` : '';
+        card.innerHTML = `
+          ${imgTag}
+          <h4>${prog.title}</h4>
+          <p>${prog.desc}</p>
+          <p><strong>Status:</strong> ${prog.status}</p>
+        `;
+        grid.appendChild(card);
+      });
+      if (window.initScrollReveal) window.initScrollReveal();
+    }
+  </script>
 
 </body>
 </html>

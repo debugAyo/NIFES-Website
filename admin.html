@@ -1,0 +1,653 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin Dashboard - NIFES FUTMinna</title>
+  <link rel="stylesheet" href="Style.css">
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+  
+  <!-- Firebase Compat CDN Libraries -->
+  <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-auth-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-database-compat.js"></script>
+  <script src="config.js"></script>
+
+  <style>
+    :root {
+      --admin-border: rgba(0, 51, 102, 0.08);
+    }
+    
+    .admin-container {
+      max-width: 1000px;
+      margin: 8rem auto 4rem;
+      padding: 0 2rem;
+    }
+    
+    /* Login Box */
+    .login-box {
+      max-width: 420px;
+      margin: 10rem auto 4rem;
+      background: white;
+      padding: 3rem 2.5rem;
+      border-radius: 20px;
+      box-shadow: 0 10px 40px rgba(0, 51, 102, 0.08);
+      border: 1px solid var(--admin-border);
+      text-align: center;
+    }
+    
+    .login-box h2 {
+      color: var(--primary-color);
+      margin-bottom: 1rem;
+      font-size: 1.8rem;
+    }
+    
+    .login-box p {
+      color: var(--text-dark);
+      font-size: 0.95rem;
+      margin-bottom: 2rem;
+      opacity: 0.8;
+    }
+    
+    .form-group {
+      margin-bottom: 1.5rem;
+      text-align: left;
+    }
+    
+    .form-group label {
+      display: block;
+      font-size: 0.85rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: var(--primary-color);
+      margin-bottom: 0.5rem;
+    }
+    
+    .form-input {
+      width: 100%;
+      padding: 0.85rem 1.25rem;
+      border: 1px solid var(--admin-border);
+      border-radius: 10px;
+      font-family: var(--font-main);
+      font-size: 0.95rem;
+      outline: none;
+      transition: all 0.3s var(--transition-apple);
+      background-color: var(--bg-dark);
+    }
+    
+    .form-input:focus {
+      border-color: var(--accent-color);
+      background-color: white;
+      box-shadow: 0 0 0 3px rgba(227, 27, 109, 0.15);
+    }
+    
+    .admin-btn {
+      width: 100%;
+      padding: 0.85rem;
+      border: none;
+      border-radius: 10px;
+      font-family: var(--font-main);
+      font-size: 0.95rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.3s var(--transition-apple);
+      text-align: center;
+    }
+    
+    .btn-save {
+      background-color: var(--accent-color);
+      color: white;
+    }
+    
+    .btn-save:hover {
+      background-color: #c21257;
+      transform: translateY(-2px);
+      box-shadow: 0 4px 15px rgba(227, 27, 109, 0.25);
+    }
+    
+    /* Dashboard Panel */
+    .dashboard-panel {
+      display: none;
+      background: white;
+      border-radius: 20px;
+      padding: 2.5rem;
+      box-shadow: 0 10px 40px rgba(0, 51, 102, 0.05);
+      border: 1px solid var(--admin-border);
+    }
+    
+    .dashboard-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 2rem;
+      border-bottom: 2px solid var(--bg-dark);
+      padding-bottom: 1.5rem;
+    }
+    
+    .dashboard-header h2 {
+      color: var(--primary-color);
+      font-size: 2rem;
+      margin: 0;
+    }
+    
+    .btn-logout {
+      width: auto;
+      background-color: var(--bg-light);
+      color: var(--text-dark);
+      padding: 0.5rem 1.25rem;
+      border-radius: 8px;
+    }
+    
+    .btn-logout:hover {
+      background-color: #e2e6ea;
+    }
+    
+    .editor-section {
+      margin-top: 2rem;
+    }
+    
+    .row-item {
+      display: grid;
+      grid-template-columns: 1.5fr 1.5fr 2fr 120px;
+      gap: 1rem;
+      align-items: center;
+      background: var(--bg-dark);
+      padding: 1.25rem;
+      border-radius: 12px;
+      margin-bottom: 1rem;
+      border: 1px solid transparent;
+      transition: all 0.3s ease;
+    }
+    
+    .row-item:hover {
+      border-color: rgba(0, 51, 102, 0.1);
+      box-shadow: 0 4px 12px rgba(0,0,0,0.02);
+    }
+    
+    .row-actions {
+      display: flex;
+      gap: 0.5rem;
+    }
+    
+    .action-btn {
+      background: white;
+      border: 1px solid var(--admin-border);
+      padding: 0.5rem;
+      border-radius: 8px;
+      cursor: pointer;
+      color: var(--text-dark);
+      transition: all 0.2s ease;
+    }
+    
+    .action-btn:hover {
+      background: var(--bg-light);
+    }
+    
+    .action-btn.delete:hover {
+      color: red;
+      border-color: rgba(255, 0, 0, 0.2);
+      background-color: rgba(255, 0, 0, 0.05);
+    }
+    
+    .btn-add {
+      background-color: var(--primary-color);
+      color: white;
+      max-width: 200px;
+      margin-top: 1rem;
+    }
+    
+    .btn-add:hover {
+      background-color: #002244;
+    }
+    
+    .toast {
+      position: fixed;
+      bottom: 2rem;
+      right: 2rem;
+      background-color: #333;
+      color: white;
+      padding: 1rem 2rem;
+      border-radius: 10px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+      display: none;
+      z-index: 2000;
+      font-weight: 500;
+      animation: fadeInUp 0.4s var(--transition-apple);
+    }
+    
+    /* Config warning */
+    .config-warning {
+      background-color: #fff3cd;
+      border: 1px solid #ffeeba;
+      color: #856404;
+      padding: 1.5rem;
+      border-radius: 12px;
+      margin-bottom: 2rem;
+      text-align: left;
+    }
+    
+    .config-warning code {
+      background: rgba(0,0,0,0.05);
+      padding: 2px 6px;
+      border-radius: 4px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav class="main-nav">
+    <a href="index.html" class="logo">
+      <img src="nifes-logo.png" alt="NIFES Logo">
+      NIFES FUTMinna
+    </a>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="executives.html">Executives</a></li>
+      <li><a href="events.html">Events</a></li>
+      <li><a href="devotionals.html">Devotionals</a></li>
+      <li><a href="gallery.html">Gallery</a></li>
+      <li><a href="join.html" class="btn btn-secondary">Join Us</a></li>
+    </ul>
+  </nav>
+
+  <div class="admin-container">
+    
+    <!-- Config Check Warning -->
+    <div id="config-check-box" class="config-warning" style="display: none;">
+      <h4>⚠️ Firebase Configuration Required</h4>
+      <p>Please configure your Firebase credentials in <a href="file:///c:/Users/HP/Desktop/Scripts/Nifes_Web_Dev/config.js">config.js</a> to enable the online dashboard features.</p>
+    </div>
+
+    <!-- Login Form -->
+    <div id="login-form-box" class="login-box">
+      <h2>Admin Access</h2>
+      <p>Log in to update executives, events, and programs online.</p>
+      
+      <form id="login-form" onsubmit="handleLogin(event)">
+        <div class="form-group">
+          <label>Email Address</label>
+          <input type="email" id="login-email" class="form-input" required placeholder="admin@nifesfutminna.org">
+        </div>
+        <div class="form-group">
+          <label>Password</label>
+          <input type="password" id="login-password" class="form-input" required placeholder="••••••••">
+        </div>
+        <button type="submit" class="admin-btn btn-save">Log In</button>
+      </form>
+    </div>
+
+    <!-- Main Dashboard Panel -->
+    <div id="dashboard-box" class="dashboard-panel">
+      <div class="dashboard-header">
+        <div>
+          <h2>NIFES Admin Control</h2>
+          <span style="font-size: 0.9rem; color: var(--text-dark); opacity: 0.7;">Connected to Online Database</span>
+        </div>
+        <button onclick="handleLogout()" class="admin-btn btn-logout">Log Out</button>
+      </div>
+
+      <!-- Navigation Tabs inside Admin -->
+      <div class="exec-tabs" style="margin-bottom: 2rem;">
+        <button class="tab-link active" onclick="openAdminTab(event, 'tab-gk')">GK Execs</button>
+        <button class="tab-link" onclick="openAdminTab(event, 'tab-bosso')">Bosso Execs</button>
+        <button class="tab-link" onclick="openAdminTab(event, 'tab-events')">Weekly Rhythm</button>
+        <button class="tab-link" onclick="openAdminTab(event, 'tab-programs')">Programs</button>
+      </div>
+
+      <!-- TAB: Gidan Kwano Executives -->
+      <div id="tab-gk" class="tab-content active">
+        <h3>Manage Gidan Kwano Executives</h3>
+        <p style="margin-bottom: 1.5rem; font-size: 0.9rem; color: var(--text-dark); opacity: 0.7;">Add, remove, or edit GK executive names, titles, and pictures.</p>
+        <div id="gk-list-container" class="editor-section">
+          <!-- Dynamically populated rows -->
+        </div>
+        <button onclick="addNewExecutive('gk')" class="admin-btn btn-add"><i class="fas fa-plus"></i> Add GK Exec</button>
+      </div>
+
+      <!-- TAB: Bosso Executives -->
+      <div id="tab-bosso" class="tab-content">
+        <h3>Manage Bosso Executives</h3>
+        <p style="margin-bottom: 1.5rem; font-size: 0.9rem; color: var(--text-dark); opacity: 0.7;">Add, remove, or edit Bosso executive names, titles, and pictures.</p>
+        <div id="bosso-list-container" class="editor-section">
+          <!-- Dynamically populated rows -->
+        </div>
+        <button onclick="addNewExecutive('bosso')" class="admin-btn btn-add"><i class="fas fa-plus"></i> Add Bosso Exec</button>
+      </div>
+
+      <!-- TAB: Weekly Rhythm -->
+      <div id="tab-events" class="tab-content">
+        <h3>Manage Weekly Rhythm</h3>
+        <p style="margin-bottom: 1.5rem; font-size: 0.9rem; color: var(--text-dark); opacity: 0.7;">Modify details and times for the weekly fellowship rhythm.</p>
+        <div id="weekly-list-container" class="editor-section">
+          <!-- Dynamically populated rows -->
+        </div>
+      </div>
+
+      <!-- TAB: Programs -->
+      <div id="tab-programs" class="tab-content">
+        <h3>Manage Programs</h3>
+        <p style="margin-bottom: 1.5rem; font-size: 0.9rem; color: var(--text-dark); opacity: 0.7;">Update names, details, and active status for annual events.</p>
+        <div id="programs-list-container" class="editor-section">
+          <!-- Dynamically populated rows -->
+        </div>
+        <button onclick="addNewProgram()" class="admin-btn btn-add"><i class="fas fa-plus"></i> Add Program</button>
+      </div>
+
+      <!-- Save Panel -->
+      <div style="margin-top: 3rem; border-top: 2px solid var(--bg-dark); padding-top: 2rem; display: flex; gap: 1rem;">
+        <button onclick="saveAllToDatabase()" class="admin-btn btn-save" style="max-width: 250px;">Save All Changes</button>
+        <button onclick="initializeDatabaseDefaults()" class="admin-btn btn-logout" style="width: auto;">Reset to Defaults</button>
+      </div>
+    </div>
+
+  </div>
+
+  <div id="toast-message" class="toast">Changes Saved Successfully!</div>
+
+  <script>
+    // State variables
+    let siteData = {
+      executives: { gk: [], bosso: [] },
+      weekly: [],
+      programs: []
+    };
+
+    // Check Firebase configuration
+    if (firebaseConfig.apiKey === "YOUR_API_KEY") {
+      document.getElementById("config-check-box").style.display = "block";
+      document.getElementById("login-form-box").style.opacity = "0.5";
+      document.getElementById("login-email").disabled = true;
+      document.getElementById("login-password").disabled = true;
+    }
+
+    // Monitor Firebase Auth status
+    if (auth) {
+      auth.onAuthStateChanged(user => {
+        if (user) {
+          document.getElementById("login-form-box").style.display = "none";
+          document.getElementById("dashboard-box").style.display = "block";
+          loadDatabaseContent();
+        } else {
+          document.getElementById("login-form-box").style.display = "block";
+          document.getElementById("dashboard-box").style.display = "none";
+        }
+      });
+    }
+
+    // Handle Login
+    function handleLogin(e) {
+      e.preventDefault();
+      const email = document.getElementById("login-email").value;
+      const pass = document.getElementById("login-password").value;
+      
+      if (!auth) {
+        showToast("Firebase Config is missing!");
+        return;
+      }
+
+      auth.signInWithEmailAndPassword(email, pass)
+        .then(() => {
+          showToast("Welcome! Logged In.");
+        })
+        .catch(err => {
+          showToast("Error: " + err.message);
+        });
+    }
+
+    // Handle Logout
+    function handleLogout() {
+      auth.signOut().then(() => {
+        showToast("Logged Out Successfully.");
+      });
+    }
+
+    // Tab switcher inside admin panel
+    function openAdminTab(evt, tabId) {
+      const tabcontent = document.querySelectorAll(".dashboard-panel .tab-content");
+      tabcontent.forEach(content => {
+        content.style.display = "none";
+        content.classList.remove("active");
+      });
+      
+      const tablinks = document.querySelectorAll(".dashboard-panel .tab-link");
+      tablinks.forEach(link => {
+        link.classList.remove("active");
+      });
+
+      const activeTab = document.getElementById(tabId);
+      activeTab.style.display = "block";
+      activeTab.offsetHeight;
+      activeTab.classList.add("active");
+      
+      evt.currentTarget.classList.add("active");
+    }
+
+    // Toast message trigger
+    function showToast(msg) {
+      const toast = document.getElementById("toast-message");
+      toast.innerText = msg;
+      toast.style.display = "block";
+      setTimeout(() => {
+        toast.style.display = "none";
+      }, 3000);
+    }
+
+    // Load dynamic content from database
+    function loadDatabaseContent() {
+      db.ref("nifes_data").once("value", snapshot => {
+        const data = snapshot.val();
+        if (data) {
+          siteData = data;
+          renderEditors();
+        } else {
+          showToast("Database is empty. Please click 'Reset to Defaults' to initialize.");
+        }
+      });
+    }
+
+    // Render all editor fields
+    function renderEditors() {
+      renderExecEditor("gk");
+      renderExecEditor("bosso");
+      renderWeeklyEditor();
+      renderProgramsEditor();
+    }
+
+    // Render Gidan Kwano or Bosso Editors
+    function renderExecEditor(branch) {
+      const container = document.getElementById(`${branch}-list-container`);
+      container.innerHTML = "";
+      
+      const list = siteData.executives[branch] || [];
+      list.forEach((exec, index) => {
+        const row = document.createElement("div");
+        row.className = "row-item";
+        row.innerHTML = `
+          <input type="text" class="form-input" value="${exec.name}" placeholder="Name" onchange="updateExecField('${branch}', ${index}, 'name', this.value)">
+          <input type="text" class="form-input" value="${exec.role}" placeholder="Role" onchange="updateExecField('${branch}', ${index}, 'role', this.value)">
+          <input type="text" class="form-input" value="${exec.image}" placeholder="Image Path" onchange="updateExecField('${branch}', ${index}, 'image', this.value)">
+          <div class="row-actions">
+            <button class="action-btn" onclick="moveExec('${branch}', ${index}, -1)" title="Move Up"><i class="fas fa-chevron-up"></i></button>
+            <button class="action-btn" onclick="moveExec('${branch}', ${index}, 1)" title="Move Down"><i class="fas fa-chevron-down"></i></button>
+            <button class="action-btn delete" onclick="deleteExec('${branch}', ${index})" title="Delete"><i class="fas fa-trash-alt"></i></button>
+          </div>
+        `;
+        container.appendChild(row);
+      });
+    }
+
+    function updateExecField(branch, index, field, val) {
+      siteData.executives[branch][index][field] = val;
+    }
+
+    function addNewExecutive(branch) {
+      if (!siteData.executives[branch]) siteData.executives[branch] = [];
+      siteData.executives[branch].push({
+        name: "New Executive",
+        role: "Officer",
+        image: "https://via.placeholder.com/300x300.png?text=Photo"
+      });
+      renderExecEditor(branch);
+    }
+
+    function deleteExec(branch, index) {
+      siteData.executives[branch].splice(index, 1);
+      renderExecEditor(branch);
+    }
+
+    function moveExec(branch, index, direction) {
+      const list = siteData.executives[branch];
+      const target = index + direction;
+      if (target < 0 || target >= list.length) return;
+      // Swap items
+      const temp = list[index];
+      list[index] = list[target];
+      list[target] = temp;
+      renderExecEditor(branch);
+    }
+
+    // Render Weekly Rhythm Editors
+    function renderWeeklyEditor() {
+      const container = document.getElementById("weekly-list-container");
+      container.innerHTML = "";
+      
+      const list = siteData.weekly || [];
+      list.forEach((event, index) => {
+        const row = document.createElement("div");
+        row.className = "row-item";
+        row.style.gridTemplateColumns = "1.5fr 1fr 3fr 80px";
+        row.innerHTML = `
+          <input type="text" class="form-input" value="${event.title}" placeholder="Event Title" onchange="updateWeeklyField(${index}, 'title', this.value)">
+          <input type="text" class="form-input" value="${event.time}" placeholder="Time" onchange="updateWeeklyField(${index}, 'time', this.value)">
+          <input type="text" class="form-input" value="${event.desc}" placeholder="Description" onchange="updateWeeklyField(${index}, 'desc', this.value)">
+          <div class="row-actions">
+            <button class="action-btn delete" onclick="deleteWeekly(${index})" title="Delete"><i class="fas fa-trash-alt"></i></button>
+          </div>
+        `;
+        container.appendChild(row);
+      });
+    }
+
+    function updateWeeklyField(index, field, val) {
+      siteData.weekly[index][field] = val;
+    }
+
+    function deleteWeekly(index) {
+      siteData.weekly.splice(index, 1);
+      renderWeeklyEditor();
+    }
+
+    // Render Programs Editors
+    function renderProgramsEditor() {
+      const container = document.getElementById("programs-list-container");
+      container.innerHTML = "";
+      
+      const list = siteData.programs || [];
+      list.forEach((prog, index) => {
+        const row = document.createElement("div");
+        row.className = "row-item";
+        row.style.gridTemplateColumns = "1.5fr 1fr 3fr 80px";
+        row.innerHTML = `
+          <input type="text" class="form-input" value="${prog.title}" placeholder="Program Title" onchange="updateProgramField(${index}, 'title', this.value)">
+          <input type="text" class="form-input" value="${prog.status}" placeholder="Status (e.g. Coming Soon)" onchange="updateProgramField(${index}, 'status', this.value)">
+          <input type="text" class="form-input" value="${prog.desc}" placeholder="Description" onchange="updateProgramField(${index}, 'desc', this.value)">
+          <div class="row-actions">
+            <button class="action-btn delete" onclick="deleteProgram(${index})" title="Delete"><i class="fas fa-trash-alt"></i></button>
+          </div>
+        `;
+        container.appendChild(row);
+      });
+    }
+
+    function updateProgramField(index, field, val) {
+      siteData.programs[index][field] = val;
+    }
+
+    function addNewProgram() {
+      if (!siteData.programs) siteData.programs = [];
+      siteData.programs.push({
+        title: "New Program",
+        status: "Coming Soon",
+        desc: "Insert program description here."
+      });
+      renderProgramsEditor();
+    }
+
+    function deleteProgram(index) {
+      siteData.programs.splice(index, 1);
+      renderProgramsEditor();
+    }
+
+    // Save All Data Back to Firebase
+    function saveAllToDatabase() {
+      db.ref("nifes_data").set(siteData)
+        .then(() => {
+          showToast("All changes saved to Database successfully!");
+        })
+        .catch(err => {
+          showToast("Error saving changes: " + err.message);
+        });
+    }
+
+    // Write defaults to database to initialize
+    function initializeDatabaseDefaults() {
+      const defaults = {
+        executives: {
+          gk: [
+            { name: "Samuel Peter", role: "President", image: "images/executives/sir_peter_gk_president1.jpg" },
+            { name: "Okpanachi Daniel", role: "Vice President", image: "images/executives/sir_daniel_gk_vp.jpg" },
+            { name: "Onyedim Gift", role: "General Secretary", image: "https://via.placeholder.com/300x300.png?text=Photo" },
+            { name: "Ibrahim Abigail", role: "Treasurer", image: "images/executives/treasurer_cord.jpg" },
+            { name: "Enyojo Abigail", role: "Sisters Coordinator/Welfare Secretary", image: "images/executives/sister_cord.jpg" },
+            { name: "Boniface Chisom", role: "Brothers Coordinator", image: "https://via.placeholder.com/300x300.png?text=Photo" },
+            { name: "Onoja Fidelia", role: "Financial Secretary", image: "https://via.placeholder.com/300x300.png?text=Photo" },
+            { name: "Na'allah Beauty", role: "Ushering Unit Secretary", image: "images/executives/ushering_cord.jpg" },
+            { name: "Zimuzor Wisdom", role: "Evangelism Unit Secretary", image: "images/executives/evangelism_cord.jpg" },
+            { name: "Emejor Kingsley", role: "Follow Up Secretary", image: "images/executives/followup_cord.jpg" },
+            { name: "Williams Tabitha", role: "Prayer Unit Secretary", image: "https://via.placeholder.com/300x300.png?text=Photo" },
+            { name: "Jordan Anibe", role: "Press Unit Secretary", image: "https://via.placeholder.com/300x300.png?text=Photo" },
+            { name: "Isah Joshua", role: "Bible Study Unit Secretary", image: "images/executives/biblestudy_cord.jpg" },
+            { name: "Achimugu Caleb", role: "Drama Unit Secretary", image: "https://via.placeholder.com/300x300.png?text=Photo" },
+            { name: "Oyewale Lifted", role: "Technical Unit Secretary", image: "images/executives/technical_cord.jpg" },
+            { name: "Oma-benedi Sophia", role: "Assistant General Secretary", image: "https://via.placeholder.com/300x300.png?text=Photo" },
+            { name: "Innocent Healer", role: "Music Director", image: "images/executives/music_cord.jpg" }
+          ],
+          bosso: [
+            { name: "Executive Name", role: "President", image: "https://via.placeholder.com/300x300.png?text=Photo" },
+            { name: "Executive Name", role: "Vice President", image: "https://via.placeholder.com/300x300.png?text=Photo" },
+            { name: "Executive Name", role: "General Secretary", image: "https://via.placeholder.com/300x300.png?text=Photo" },
+            { name: "Executive Name", role: "Treasurer", image: "https://via.placeholder.com/300x300.png?text=Photo" },
+            { name: "Executive Name", role: "Sisters Coordinator", image: "https://via.placeholder.com/300x300.png?text=Photo" },
+            { name: "Executive Name", role: "Brothers Coordinator", image: "https://via.placeholder.com/300x300.png?text=Photo" },
+            { name: "Executive Name", role: "Financial Secretary", image: "https://via.placeholder.com/300x300.png?text=Photo" }
+          ]
+        },
+        weekly: [
+          { title: "Sunday Service", time: "4:00 PM", desc: "The cornerstone of our week. A time of corporate worship, powerful preaching from the Word, and fellowship as one body in Christ. The perfect way to re-center your heart for the week ahead.", image: "images/nifes-worship.jpg" },
+          { title: "Tuesday Prayer Meeting", time: "7:00 PM", desc: "Join us as we seek God's face together. A dedicated time to intercede for our campus, our nation, and one another, strengthening our dependence on God.", image: "images/nifes-prayer.jpg" },
+          { title: "Thursday Bible Study", time: "7:00 PM", desc: "Dive deeper into God's Word in a more interactive, small group setting. It's a safe place to ask questions, share insights, and grow in your understanding of Scripture.", image: "images/nifes-gathering.jpg" }
+        ],
+        programs: [
+          { title: "LIFE 2026", status: "Coming Soon", desc: "Our flagship annual conference bringing together students from across the nation for spiritual growth, powerful teaching, worship, and fellowship. Experience transformative messages, workshops, and an opportunity to connect with the wider NIFES movement.", image: "images/life-2026.jpg" },
+          { title: "Leadership Training (LTC)", status: "Coming Soon", desc: "Intensive training programs designed to equip campus leaders with practical skills in discipleship, evangelism, and ministry management for effective campus witness." },
+          { title: "Easter Discipleship Conference (EDC)", status: "Coming Soon", desc: "A dedicated week focused on community outreach, street evangelism, and practical ministry in the surrounding communities, putting faith into action." }
+        ]
+      };
+
+      if (confirm("Are you sure you want to reset the online database to default site values? This will overwrite existing edits.")) {
+        db.ref("nifes_data").set(defaults)
+          .then(() => {
+            showToast("Database initialized with static defaults.");
+            loadDatabaseContent();
+          })
+          .catch(err => {
+            showToast("Error initializing database: " + err.message);
+          });
+      }
+    }
+  </script>
+</body>
+</html>

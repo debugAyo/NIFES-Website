@@ -110,7 +110,39 @@
     </div>
   </footer>
 
+  <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-database-compat.js"></script>
+  <script src="config.js"></script>
   <script src="animations.js"></script>
+
+  <script>
+    // Realtime Syncing from Firebase Database if configured
+    if (typeof db !== "undefined" && db) {
+      db.ref("nifes_data/weekly").on("value", snapshot => {
+        const weekly = snapshot.val();
+        if (weekly) {
+          renderWeeklyList(weekly);
+        }
+      });
+    }
+
+    function renderWeeklyList(list) {
+      const grid = document.querySelector("#events .page-grid");
+      if (!grid) return;
+      grid.innerHTML = "";
+      list.forEach(event => {
+        const card = document.createElement("div");
+        card.className = "content-card";
+        card.innerHTML = `
+          <h4>${event.title}</h4>
+          <p>${event.desc}</p>
+          <p><strong>Time:</strong> ${event.time}</p>
+        `;
+        grid.appendChild(card);
+      });
+      if (window.initScrollReveal) window.initScrollReveal();
+    }
+  </script>
 
 </body>
 </html>

@@ -152,3 +152,7 @@ function initTabTransitions() {
     activeTab.click();
   }
 }
+
+// Expose functions globally for dynamic data loading script overrides
+window.initScrollReveal = initScrollReveal;
+window.initHeroAnimations = initHeroAnimations;

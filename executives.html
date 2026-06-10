@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,12 +8,13 @@
   <link rel="stylesheet" href="Style.css">
   <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 </head>
+
 <body>
 
   <nav class="main-nav">
     <a href="index.html" class="logo">
-        <img src="nifes-logo.png" alt="NIFES Logo">
-        NIFES FUTMinna
+      <img src="nifes-logo.png" alt="NIFES Logo">
+      NIFES FUTMinna
     </a>
     <ul class="nav-links">
       <li><a href="index.html">Home</a></li>
@@ -78,7 +80,7 @@
               <p>Brothers Coordinator</p>
             </div>
             <div class="content-card exec-card">
-              <img src="https://via.placeholder.com/300x300.png?text=Photo" alt="Onoja Fidelia, Financial Secretary">
+              <img src="images/executives/financialsec_cord.jpg" alt="Onoja Fidelia, Financial Secretary">
               <h4>Onoja Fidelia</h4>
               <p>Financial Secretary</p>
             </div>
@@ -98,12 +100,13 @@
               <p>Follow Up Secretary</p>
             </div>
             <div class="content-card exec-card">
-              <img src="https://via.placeholder.com/300x300.png?text=Photo" alt="Williams Tabitha, Prayer Unit Secretary">
+              <img src="https://via.placeholder.com/300x300.png?text=Photo"
+                alt="Williams Tabitha, Prayer Unit Secretary">
               <h4>Williams Tabitha</h4>
               <p>Prayer Unit Secretary</p>
             </div>
             <div class="content-card exec-card">
-              <img src="https://via.placeholder.com/300x300.png?text=Photo" alt="Jordan Anibe, Press Unit Secretary">
+              <img src="images/executives/press_cord.jpg" alt="Jordan Anibe, Press Unit Secretary">
               <h4>Jordan Anibe</h4>
               <p>Press Unit Secretary</p>
             </div>
@@ -123,7 +126,8 @@
               <p>Technical Unit Secretary</p>
             </div>
             <div class="content-card exec-card">
-              <img src="https://via.placeholder.com/300x300.png?text=Photo" alt="Oma-benedi Sophia, Assistant General Secretary">
+              <img src="https://via.placeholder.com/300x300.png?text=Photo"
+                alt="Oma-benedi Sophia, Assistant General Secretary">
               <h4>Oma-benedi Sophia</h4>
               <p>Assistant General Secretary</p>
             </div>
@@ -182,7 +186,7 @@
               <p>Financial Secretary</p>
             </div>
 
-          
+
             <!-- Add more as needed -->
           </div>
         </div>
@@ -196,12 +200,18 @@
         <a href="index.html" class="footer-logo">NIFES<span>.</span></a>
         <p>Raising Christ-like students to transform the campus and society.</p>
         <ul class="footer-socials">
-          <li><a href="https://www.facebook.com/nifesfutminnaofficial" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a></li>
-          <li><a href="https://www.instagram.com/nifesfutminna?igsh=MXMzZDZzZnR2ZWFsaQ==" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="fab fa-instagram"></i></a></li>
-          <li><a href="https://www.tiktok.com/@nifesfutmx?_r=1&_t=ZS-94X9qqK7wH6" target="_blank" rel="noopener noreferrer" aria-label="TikTok"><i class="fab fa-tiktok"></i></a></li>
-          <li><a href="#" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a></li>
-          <li><a href="#" target="_blank" rel="noopener noreferrer" aria-label="Twitter"><i class="fab fa-twitter"></i></a></li>
-          <li><a href="https://www.youtube.com/@nifesfutmx?si=S88---Y41wuoewbN" target="_blank" rel="noopener noreferrer" aria-label="YouTube"><i class="fab fa-youtube"></i></a></li>
+          <li><a href="https://www.facebook.com/nifesfutminnaofficial" target="_blank" rel="noopener noreferrer"
+              aria-label="Facebook"><i class="fab fa-facebook-f"></i></a></li>
+          <li><a href="https://www.instagram.com/nifesfutminna?igsh=MXMzZDZzZnR2ZWFsaQ==" target="_blank"
+              rel="noopener noreferrer" aria-label="Instagram"><i class="fab fa-instagram"></i></a></li>
+          <li><a href="https://www.tiktok.com/@nifesfutmx?_r=1&_t=ZS-94X9qqK7wH6" target="_blank"
+              rel="noopener noreferrer" aria-label="TikTok"><i class="fab fa-tiktok"></i></a></li>
+          <li><a href="#" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp"><i
+                class="fab fa-whatsapp"></i></a></li>
+          <li><a href="#" target="_blank" rel="noopener noreferrer" aria-label="Twitter"><i
+                class="fab fa-twitter"></i></a></li>
+          <li><a href="https://www.youtube.com/@nifesfutmx?si=S88---Y41wuoewbN" target="_blank"
+              rel="noopener noreferrer" aria-label="YouTube"><i class="fab fa-youtube"></i></a></li>
         </ul>
         <div class="footer-locations">
           <p><strong>Locations:</strong> Chapel of Grace, Gidan Kwano | Chapel of Grace, Bosso</p>
@@ -212,7 +222,48 @@
     </div>
   </footer>
 
+  <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-database-compat.js"></script>
+  <script src="config.js"></script>
   <script src="animations.js"></script>
 
+  <script>
+    // Realtime Syncing from Firebase Database if configured
+    if (typeof db !== "undefined" && db) {
+      db.ref("nifes_data/executives").on("value", snapshot => {
+        const execs = snapshot.val();
+        if (execs) {
+          if (execs.gk) renderExecList("gidan-kwano", execs.gk);
+          if (execs.bosso) renderExecList("bosso", execs.bosso);
+        }
+      });
+    }
+
+    function renderExecList(tabId, list) {
+      const tab = document.getElementById(tabId);
+      if (!tab) return;
+      const grid = tab.querySelector(".page-grid");
+      if (!grid) return;
+
+      grid.innerHTML = "";
+      list.forEach(exec => {
+        const card = document.createElement("div");
+        card.className = "content-card exec-card";
+        card.innerHTML = `
+          <img src="${exec.image || 'https://via.placeholder.com/300x300.png?text=Photo'}" alt="${exec.name}, ${exec.role}">
+          <h4>${exec.name}</h4>
+          <p>${exec.role}</p>
+        `;
+        grid.appendChild(card);
+      });
+
+      // Re-trigger reveal grid observers on dynamic content
+      if (window.initScrollReveal) {
+        window.initScrollReveal();
+      }
+    }
+  </script>
+
 </body>
+
 </html>
