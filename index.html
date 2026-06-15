@@ -166,6 +166,12 @@
   <script>
     // Realtime Syncing from Firebase Database if configured
     if (typeof db !== "undefined" && db) {
+      // Show skeleton loaders before data arrives
+      const grid = document.querySelector("#events .page-grid");
+      if (window.showSkeletonLoaders) {
+        window.showSkeletonLoaders(grid, "content", 3);
+      }
+
       db.ref("nifes_data/weekly").on("value", snapshot => {
         const weekly = snapshot.val();
         if (weekly) {

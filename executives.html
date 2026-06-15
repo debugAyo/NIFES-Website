@@ -284,6 +284,14 @@
 
     // Realtime Syncing from Firebase Database if configured
     if (typeof db !== "undefined" && db) {
+      // Show skeleton loaders before data arrives
+      const gkGrid = document.querySelector("#gidan-kwano .page-grid");
+      const bossoGrid = document.querySelector("#bosso .page-grid");
+      if (window.showSkeletonLoaders) {
+        window.showSkeletonLoaders(gkGrid, "executive", 6);
+        window.showSkeletonLoaders(bossoGrid, "executive", 4);
+      }
+
       db.ref("nifes_data/executives").on("value", snapshot => {
         const execs = snapshot.val();
         if (execs) {

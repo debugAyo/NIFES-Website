@@ -156,3 +156,67 @@ function initTabTransitions() {
 // Expose functions globally for dynamic data loading script overrides
 window.initScrollReveal = initScrollReveal;
 window.initHeroAnimations = initHeroAnimations;
+
+/**
+ * 5. Floating Back-to-Top Button
+ */
+function initBackToTop() {
+  const btn = document.createElement('button');
+  btn.id = 'back-to-top';
+  btn.className = 'back-to-top';
+  btn.setAttribute('aria-label', 'Back to top');
+  btn.innerHTML = '<i class="fas fa-chevron-up"></i>';
+  document.body.appendChild(btn);
+
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > 400) {
+      btn.classList.add('visible');
+    } else {
+      btn.classList.remove('visible');
+    }
+  });
+
+  btn.style.transition = 'transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.4s cubic-bezier(0.16, 1, 0.3, 1), background-color 0.3s ease, box-shadow 0.3s ease';
+
+  btn.addEventListener('click', () => {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    });
+  });
+}
+
+// Start back to top on initialization
+document.addEventListener("DOMContentLoaded", () => {
+  initBackToTop();
+});
+
+/**
+ * 6. Dynamic Skeleton Screen Generator Helper
+ */
+window.showSkeletonLoaders = function(container, type, count = 3) {
+  if (!container) return;
+  container.innerHTML = "";
+  
+  for (let i = 0; i < count; i++) {
+    const card = document.createElement("div");
+    
+    if (type === "executive") {
+      card.className = "content-card exec-card skeleton-card";
+      card.innerHTML = `
+        <div class="skeleton-avatar"></div>
+        <div class="skeleton-line skeleton-line-subtitle"></div>
+      `;
+    } else {
+      card.className = "content-card skeleton-card";
+      card.innerHTML = `
+        <div class="skeleton-image"></div>
+        <div class="skeleton-line skeleton-line-title"></div>
+        <div class="skeleton-line"></div>
+        <div class="skeleton-line" style="width: 85%;"></div>
+        <div class="skeleton-line" style="width: 60%; margin-top: 1rem;"></div>
+      `;
+    }
+    container.appendChild(card);
+  }
+};
