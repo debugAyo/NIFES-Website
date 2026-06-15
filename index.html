@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,12 +8,13 @@
   <link rel="stylesheet" href="Style.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
+
 <body>
 
   <nav class="main-nav">
     <a href="index.html" class="logo">
-        <img src="nifes-logo.png" alt="NIFES Logo">
-        NIFES Futminna
+      <img src="nifes-logo.png" alt="NIFES Logo">
+      NIFES Futminna
     </a>
     <ul class="nav-links">
       <li><a href="index.html" class="active">Home</a></li>
@@ -24,11 +26,12 @@
       <li><a href="join.html" class="btn btn-secondary">Join Us</a></li>
     </ul>
   </nav>
-<header class="page-hero">
+  <header class="page-hero">
     <div class="page-hero-inner">
       <div class="section-tag">Nigerian Fellowship of Evangelical Students</div>
       <h1>Faith, Fellowship, Future</h1>
-      <p class="section-sub">A Christ-centered movement raising disciples who impact the campus, church, and society for God's glory.</p>
+      <p class="section-sub">A Christ-centered movement raising disciples who impact the campus, church, and society for
+        God's glory.</p>
       <div class="hero-buttons">
         <a href="join.html" class="btn btn-primary">Become a Member</a>
         <a href="about.html" class="btn btn-secondary">Learn More</a>
@@ -43,20 +46,59 @@
           <h2>Welcome to NIFES FUTMinna</h2>
         </div>
         <div class="page-grid reveal-grid">
-          <div class="content-card">
-            <img src="images\1.jpg"auto=format&fit=crop alt="Bible Study">
-            <h4>Word-Centered</h4>
-            <p>We are rooted in the timeless truth of Scripture, equipping students to know God deeply through His Word.</p>
+          <!-- Card 1 -->
+          <div class="flip-card-container">
+            <div class="flip-card" onclick="this.classList.toggle('flipped')">
+              <div class="flip-card-inner">
+                <div class="flip-card-front">
+                  <img src="images\gallery\6.jpg" alt="Bible Study">
+                  <h4>Word-Centered</h4>
+                  <p>We are rooted in the timeless truth of Scripture, equipping students to know God deeply through His Word.</p>
+                  <span class="click-to-reveal"><i class="fas fa-redo"></i> Click to reveal</span>
+                </div>
+                <div class="flip-card-back">
+                  <h4>Our Foundation</h4>
+                  <p>At NIFES FUTMinna, our primary aim is to ground students in the uncompromised truth of God's Word. Through structured Bible studies, prayer meetings, and personal discipleship, we equip students to study, live out, and defend the Scriptures on campus.</p>
+                  <span class="click-to-reveal"><i class="fas fa-redo"></i> Click to return</span>
+                </div>
+              </div>
+            </div>
           </div>
-          <div class="content-card">
-            <img src="images\2.jpg"auto=format&fit=crop alt="Community">
-            <h4>Community-Focused</h4>
-            <p>We are a family away from home, fostering authentic relationships and spiritual growth in a supportive environment.</p>
+          <!-- Card 2 -->
+          <div class="flip-card-container">
+            <div class="flip-card" onclick="this.classList.toggle('flipped')">
+              <div class="flip-card-inner">
+                <div class="flip-card-front">
+                  <img src="images\2.jpg" alt="Community">
+                  <h4>Community-Focused</h4>
+                  <p>We are a family away from home, fostering authentic relationships and spiritual growth in a supportive environment.</p>
+                  <span class="click-to-reveal"><i class="fas fa-redo"></i> Click to reveal</span>
+                </div>
+                <div class="flip-card-back">
+                  <h4>Our Fellowship</h4>
+                  <p>We believe spiritual growth happens best in community. NIFES provides a welcoming family environment where students from diverse backgrounds form life-long friendships, share burdens, pray together, and support one another.</p>
+                  <span class="click-to-reveal"><i class="fas fa-redo"></i> Click to return</span>
+                </div>
+              </div>
+            </div>
           </div>
-          <div class="content-card">
-            <img src="images\3.jpg"auto=format&fit=crop alt="Mission">
-            <h4>Mission-Minded</h4>
-            <p>We are passionate about sharing the love of Christ on campus and beyond, raising leaders to serve society.</p>
+          <!-- Card 3 -->
+          <div class="flip-card-container">
+            <div class="flip-card" onclick="this.classList.toggle('flipped')">
+              <div class="flip-card-inner">
+                <div class="flip-card-front">
+                  <img src="images/gallery/5.jpg" alt="Mission">
+                  <h4>Mission-Minded</h4>
+                  <p>We are passionate about sharing the love of Christ on campus and beyond, raising leaders to serve society.</p>
+                  <span class="click-to-reveal"><i class="fas fa-redo"></i> Click to reveal</span>
+                </div>
+                <div class="flip-card-back">
+                  <h4>Our Mission</h4>
+                  <p>We are called to impact the world. We actively mobilize students for local campus evangelism, rural missions, and social impact projects, raising godly, ethical leaders who will transform society upon graduation.</p>
+                  <span class="click-to-reveal"><i class="fas fa-redo"></i> Click to return</span>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -151,6 +193,5 @@
   </script>
 
 </body>
+
 </html>
-
-
