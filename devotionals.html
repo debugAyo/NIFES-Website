@@ -4,16 +4,28 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Devotionals - NIFES FUTMinna</title>
+  <meta name="description" content="Daily scripture-based devotionals and Bible study sessions from NIFES FUTMinna to strengthen your faith.">
+  <meta property="og:title" content="Devotionals - NIFES FUTMinna">
+  <meta property="og:description" content="Short, scripture-based reflections to encourage and strengthen your faith.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <link rel="stylesheet" href="Style.css">
-  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 </head>
 <body>
+  <a href="#main-content" class="skip-link">Skip to main content</a>
 
-  <nav class="main-nav">
+  <nav class="main-nav" aria-label="Main navigation">
     <a href="index.html" class="logo">
-        <img src="nifes-logo.png" alt="NIFES Logo">
-        NIFES FUTMinna
+      <img src="nifes-logo.png" alt="NIFES Logo">
+      NIFES FUTMinna
     </a>
+    <button class="hamburger" aria-label="Toggle navigation menu" aria-expanded="false">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+    <div class="nav-overlay"></div>
     <ul class="nav-links">
       <li><a href="index.html">Home</a></li>
       <li><a href="about.html">About</a></li>
@@ -33,94 +45,82 @@
     </div>
   </header>
 
-  <main>
+  <main id="main-content">
     <div class="devotional-wrapper">
       <div class="devotional-main-content">
         <section class="page-section" id="devotionals-list">
-      <div class="container">
-        <div class="section-title-container reveal">
-          <h2>Recent Devotionals</h2>
-        </div>
-        <div class="page-grid reveal-grid">
-          <!-- Devotional Card 1 -->
-          <div class="content-card" data-devotional="1">
-            <img src="https://images.unsplash.com/photo-1507842217343-583bb7270b66?q=80&w=2100&auto=format&fit=crop" alt="Bible">
-            <h4>Faith in Uncertainty</h4>
-            <p class="devotional-meta">May 28, 2026 | By John Doe</p>
-            <p>In times of doubt and uncertainty, our faith becomes our anchor. Learn how to trust in God's plan even when the path ahead seems unclear...</p>
-            <a href="#" class="read-more" onclick="openDevotional(1); return false;">Read More &rarr;</a>
+          <div class="container">
+            <div class="section-title-container reveal">
+              <h2>Recent Devotionals</h2>
+            </div>
+            <div class="page-grid reveal-grid">
+              <div class="content-card" data-devotional="1">
+                <img src="https://images.unsplash.com/photo-1507842217343-583bb7270b66?q=80&w=2100&auto=format&fit=crop" alt="Bible" loading="lazy">
+                <h4>Faith in Uncertainty</h4>
+                <p class="devotional-meta" style="color: var(--text-muted); font-size: var(--text-xs);">May 28, 2026 | By John Doe</p>
+                <p>In times of doubt and uncertainty, our faith becomes our anchor. Learn how to trust in God's plan even when the path ahead seems unclear...</p>
+                <a href="#" class="read-more" onclick="openDevotional(1); return false;">Read More &rarr;</a>
+              </div>
+              <div class="content-card" data-devotional="2">
+                <img src="https://images.unsplash.com/photo-1495446815901-a7297e633e8d?q=80&w=2070&auto=format&fit=crop" alt="Books" loading="lazy">
+                <h4>The Power of Prayer</h4>
+                <p class="devotional-meta" style="color: var(--text-muted); font-size: var(--text-xs);">May 27, 2026 | By Jane Smith</p>
+                <p>Prayer is more than just words — it's a conversation with the Almighty. Discover how consistent prayer can transform your daily life...</p>
+                <a href="#" class="read-more" onclick="openDevotional(2); return false;">Read More &rarr;</a>
+              </div>
+              <div class="content-card" data-devotional="3">
+                <img src="https://images.unsplash.com/photo-1516979187457-637abb4f9353?q=80&w=2070&auto=format&fit=crop" alt="Study" loading="lazy">
+                <h4>Walking in Love</h4>
+                <p class="devotional-meta" style="color: var(--text-muted); font-size: var(--text-xs);">May 26, 2026 | By David Adeyemi</p>
+                <p>Love is not just a feeling — it's an action. Explore how showing genuine love to those around us reflects God's love...</p>
+                <a href="#" class="read-more" onclick="openDevotional(3); return false;">Read More &rarr;</a>
+              </div>
+            </div>
           </div>
-          <!-- Devotional Card 2 -->
-          <div class="content-card" data-devotional="2">
-            <img src="https://images.unsplash.com/photo-1495446815901-a7297e633e8d?q=80&w=2070&auto=format&fit=crop" alt="Books">
-            <h4>The Power of Prayer</h4>
-            <p class="devotional-meta">May 27, 2026 | By Jane Smith</p>
-            <p>Prayer is more than just words—it's a conversation with the Almighty. Discover how consistent prayer can transform your daily life and strengthen your relationship with God...</p>
-            <a href="#" class="read-more" onclick="openDevotional(2); return false;">Read More &rarr;</a>
-          </div>
-          <!-- Devotional Card 3 -->
-          <div class="content-card" data-devotional="3">
-            <img src="https://images.unsplash.com/photo-1516979187457-637abb4f9353?q=80&w=2070&auto=format&fit=crop" alt="Study">
-            <h4>Walking in Love</h4>
-            <p class="devotional-meta">May 26, 2026 | By David Adeyemi</p>
-            <p>Love is not just a feeling—it's an action. Explore how showing genuine love to those around us reflects God's love and creates meaningful change in our communities...</p>
-            <a href="#" class="read-more" onclick="openDevotional(3); return false;">Read More &rarr;</a>
-          </div>
-          <!-- Add more devotional cards as needed -->
-        </div>
-      </div>
-    </section>
+        </section>
 
-    <!-- Bible Study Sessions Section -->
-    <section class="page-section" id="bible-study">
-      <div class="container">
-        <div class="section-title-container reveal">
-          <h2>Bible Study Sessions</h2>
-        </div>
-        <div class="page-grid reveal-grid">
-          <!-- Bible Study 1 -->
-          <div class="content-card" data-bible-study="1">
-            <img src="https://images.unsplash.com/photo-1469022563149-aa64dbd37dae?q=80&w=2070&auto=format&fit=crop" alt="Bible Study">
-            <h4>Understanding God's Grace</h4>
-            <p class="devotional-meta">May 28, 2026 | Led by Pastor Amina</p>
-            <p>An in-depth exploration of God's grace and how it transforms our lives through faith. Discover what the Bible teaches about unmerited favor...</p>
-            <a href="#" class="read-more" onclick="openBibleStudy(1); return false;">Learn More &rarr;</a>
+        <section class="page-section" id="bible-study" style="background-color: var(--surface);">
+          <div class="container">
+            <div class="section-title-container reveal">
+              <h2>Bible Study Sessions</h2>
+            </div>
+            <div class="page-grid reveal-grid">
+              <div class="content-card" data-bible-study="1">
+                <img src="https://images.unsplash.com/photo-1469022563149-aa64dbd37dae?q=80&w=2070&auto=format&fit=crop" alt="Bible Study" loading="lazy">
+                <h4>Understanding God's Grace</h4>
+                <p class="devotional-meta" style="color: var(--text-muted); font-size: var(--text-xs);">May 28, 2026 | Led by Pastor Amina</p>
+                <p>An in-depth exploration of God's grace and how it transforms our lives through faith...</p>
+                <a href="#" class="read-more" onclick="openBibleStudy(1); return false;">Learn More &rarr;</a>
+              </div>
+              <div class="content-card" data-bible-study="2">
+                <img src="https://images.unsplash.com/photo-1507842217343-583bb7270b66?q=80&w=2100&auto=format&fit=crop" alt="Scripture" loading="lazy">
+                <h4>The Beatitudes: Keys to Happiness</h4>
+                <p class="devotional-meta" style="color: var(--text-muted); font-size: var(--text-xs);">May 25, 2026 | Led by Brother Toyin</p>
+                <p>Jesus' teachings in Matthew 5 reveal the true path to spiritual happiness and fulfillment...</p>
+                <a href="#" class="read-more" onclick="openBibleStudy(2); return false;">Learn More &rarr;</a>
+              </div>
+              <div class="content-card" data-bible-study="3">
+                <img src="https://images.unsplash.com/photo-1495446815901-a7297e633e8d?q=80&w=2070&auto=format&fit=crop" alt="Study" loading="lazy">
+                <h4>The Armor of God</h4>
+                <p class="devotional-meta" style="color: var(--text-muted); font-size: var(--text-xs);">May 22, 2026 | Led by Sister Ife</p>
+                <p>Learn about the spiritual armor God provides for protection against life's challenges...</p>
+                <a href="#" class="read-more" onclick="openBibleStudy(3); return false;">Learn More &rarr;</a>
+              </div>
+            </div>
           </div>
-          <!-- Bible Study 2 -->
-          <div class="content-card" data-bible-study="2">
-            <img src="https://images.unsplash.com/photo-1507842217343-583bb7270b66?q=80&w=2100&auto=format&fit=crop" alt="Scripture">
-            <h4>The Beatitudes: Keys to Happiness</h4>
-            <p class="devotional-meta">May 25, 2026 | Led by Brother Toyin</p>
-            <p>Jesus' teachings in Matthew 5 reveal the true path to spiritual happiness and fulfillment. Join us as we study what it means to be blessed in God's kingdom...</p>
-            <a href="#" class="read-more" onclick="openBibleStudy(2); return false;">Learn More &rarr;</a>
-          </div>
-          <!-- Bible Study 3 -->
-          <div class="content-card" data-bible-study="3">
-            <img src="https://images.unsplash.com/photo-1495446815901-a7297e633e8d?q=80&w=2070&auto=format&fit=crop" alt="Study">
-            <h4>The Armor of God</h4>
-            <p class="devotional-meta">May 22, 2026 | Led by Sister Ife</p>
-            <p>Learn about the spiritual armor God provides for protection against life's challenges. Study Ephesians 6 and discover how to be fully equipped in your faith journey...</p>
-            <a href="#" class="read-more" onclick="openBibleStudy(3); return false;">Learn More &rarr;</a>
-          </div>
-        </div>
-      </div>
-    </section>
-
+        </section>
       </div>
 
-      <!-- Sidebar Newsletter -->
       <aside class="devotional-sidebar reveal">
         <div class="newsletter-section">
           <div class="newsletter-content">
             <h2>Never Miss a Devotional</h2>
-            <p>Subscribe to receive daily devotionals straight to your inbox. Strengthen your faith with scripture-based reflections every day.</p>
-            
-            <!-- Mailchimp Form -->
+            <p>Subscribe to receive daily devotionals straight to your inbox.</p>
             <div id="mc_embed_shell" class="newsletter-form">
               <form id="mc-form" class="mc-embedded-subscribe-form" method="post" action="https://nifesfutminna.us21.list-manage.com/subscribe/post" target="_blank">
                 <div class="mc-field-group">
-                  <input type="email" name="EMAIL" class="required email" placeholder="Enter your email address" required>
-                  <button type="submit" class="button newsletter-btn">Subscribe</button>
+                  <input type="email" name="EMAIL" class="required email" placeholder="Enter your email" required>
+                  <button type="submit" class="newsletter-btn">Subscribe</button>
                 </div>
                 <div id="mce-responses">
                   <div class="response" id="mce-error-response" style="display:none"></div>
@@ -135,17 +135,17 @@
     </div>
 
     <!-- Devotional Modal -->
-    <div id="devotionalModal" class="modal">
+    <div id="devotionalModal" class="modal" role="dialog" aria-modal="true" aria-label="Devotional reading">
       <div class="modal-content">
-        <span class="close" onclick="closeDevotional()">&times;</span>
+        <span class="close" onclick="closeDevotional()" aria-label="Close devotional">&times;</span>
         <div id="devotionalBody"></div>
       </div>
     </div>
 
     <!-- Bible Study Modal -->
-    <div id="bibleStudyModal" class="modal">
+    <div id="bibleStudyModal" class="modal" role="dialog" aria-modal="true" aria-label="Bible study reading">
       <div class="modal-content">
-        <span class="close" onclick="closeBibleStudy()">&times;</span>
+        <span class="close" onclick="closeBibleStudy()" aria-label="Close bible study">&times;</span>
         <div id="bibleStudyBody"></div>
       </div>
     </div>
@@ -154,27 +154,42 @@
   <footer class="site-footer">
     <div class="container">
       <div class="footer-content">
-        <a href="index.html" class="footer-logo">NIFES<span>.</span></a>
-        <p>Raising Christ-like students to transform the campus and society.</p>
-        <ul class="footer-socials">
-          <li><a href="https://www.facebook.com/nifesfutminnaofficial" target="_blank" rel="noopener noreferrer"
-              aria-label="Facebook"><i class="fab fa-facebook-f"></i></a></li>
-          <li><a href="https://www.instagram.com/nifesfutminna?igsh=MXMzZDZzZnR2ZWFsaQ==" target="_blank"
-              rel="noopener noreferrer" aria-label="Instagram"><i class="fab fa-instagram"></i></a></li>
-          <li><a href="https://www.tiktok.com/@nifesfutmx?_r=1&_t=ZS-94X9qqK7wH6" target="_blank"
-              rel="noopener noreferrer" aria-label="TikTok"><i class="fab fa-tiktok"></i></a></li>
-          <li><a href="#" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp"><i
-                class="fab fa-whatsapp"></i></a></li>
-          <li><a href="#" target="_blank" rel="noopener noreferrer" aria-label="Twitter"><i
-                class="fab fa-twitter"></i></a></li>
-          <li><a href="https://www.youtube.com/@nifesfutmx?si=S88---Y41wuoewbN" target="_blank"
-              rel="noopener noreferrer" aria-label="YouTube"><i class="fab fa-youtube"></i></a></li>
-        </ul>
-        <div class="footer-locations">
-          <p><strong>Locations:</strong> Chapel of Grace, Gidan Kwano | Chapel of Grace, Bosso</p>
-          <p>Federal University of Technology, Minna</p>
+        <div>
+          <a href="index.html" class="footer-logo">NIFES<span>.</span></a>
+          <p class="footer-tagline">Raising Christ-like students to transform the campus and society.</p>
+          <ul class="footer-socials">
+            <li><a href="https://www.facebook.com/nifesfutminnaofficial" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a></li>
+            <li><a href="https://www.instagram.com/nifesfutminna?igsh=MXMzZDZzZnR2ZWFsaQ==" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="fab fa-instagram"></i></a></li>
+            <li><a href="https://www.tiktok.com/@nifesfutmx?_r=1&_t=ZS-94X9qqK7wH6" target="_blank" rel="noopener noreferrer" aria-label="TikTok"><i class="fab fa-tiktok"></i></a></li>
+            <li><a href="#" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a></li>
+            <li><a href="#" target="_blank" rel="noopener noreferrer" aria-label="Twitter"><i class="fab fa-twitter"></i></a></li>
+            <li><a href="https://www.youtube.com/@nifesfutmx?si=S88---Y41wuoewbN" target="_blank" rel="noopener noreferrer" aria-label="YouTube"><i class="fab fa-youtube"></i></a></li>
+          </ul>
         </div>
+        <div class="footer-section">
+          <h5>Quick Links</h5>
+          <ul class="footer-links">
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="events.html">Events</a></li>
+            <li><a href="devotionals.html">Devotionals</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="join.html">Join Us</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h5>Contact</h5>
+          <div class="footer-locations">
+            <p><strong>Chapel of Grace, Gidan Kwano</strong></p>
+            <p><strong>Chapel of Grace, Bosso</strong></p>
+            <p style="margin-top: 0.5rem;">Federal University of Technology, Minna</p>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
         <p class="footer-copyright">&copy; 2026 NIFES FUTMinna. All Rights Reserved.</p>
+        <div class="footer-locations">
+          <p>Niger State, Nigeria</p>
+        </div>
       </div>
     </div>
   </footer>
@@ -190,15 +205,11 @@
           <h2>Faith in Uncertainty</h2>
           <p><strong>Scripture:</strong> Proverbs 3:5-6</p>
           <p><em>"Trust in the Lord with all your heart and lean not on your own understanding; in all your ways submit to him, and he will make your paths straight."</em></p>
-          
           <h3>Reflection</h3>
           <p>Life is filled with moments of uncertainty. We face decisions that seem impossible, situations that test our faith, and questions that seem to have no answers. In these moments, it's easy to rely on our own understanding and try to control every outcome.</p>
-          
           <p>However, the Scripture reminds us that true faith means trusting in God's plan, even when we can't see the entire path ahead. God's wisdom surpasses our understanding, and His ways are perfect.</p>
-          
           <h3>Key Takeaway</h3>
-          <p>Today, choose to surrender your worries and uncertainties to God. Trust that He is guiding your steps, even in the darkness. Remember, faith is not about seeing the entire staircase—it's about taking the next step with confidence in God's guidance.</p>
-          
+          <p>Today, choose to surrender your worries and uncertainties to God. Trust that He is guiding your steps, even in the darkness. Remember, faith is not about seeing the entire staircase — it's about taking the next step with confidence in God's guidance.</p>
           <h3>Prayer</h3>
           <p>"Lord, help me to trust in You completely, even when the path ahead is unclear. Give me the courage to surrender my fears and doubts to You. I believe that You have a perfect plan for my life. Amen."</p>
         `
@@ -212,15 +223,11 @@
           <h2>The Power of Prayer</h2>
           <p><strong>Scripture:</strong> Philippians 4:6-7</p>
           <p><em>"Do not be anxious about anything, but in every situation, by prayer and petition, with thanksgiving, present your requests to God. And the peace of God, which transcends all understanding, will guard your hearts and your minds in Christ Jesus."</em></p>
-          
           <h3>Reflection</h3>
-          <p>Prayer is one of the most powerful tools available to us as believers. It's not merely asking God for things, but rather, it's a profound conversation with the Creator of the universe. Through prayer, we can lay down our burdens, express our gratitude, and seek His guidance.</p>
-          
+          <p>Prayer is one of the most powerful tools available to us as believers. It's not merely asking God for things, but rather, it's a profound conversation with the Creator of the universe.</p>
           <p>When we pray consistently, we begin to experience a transformation in our hearts and minds. Anxiety loses its grip, peace floods our souls, and we find clarity in confusion.</p>
-          
           <h3>Key Takeaway</h3>
-          <p>Make prayer a daily habit. Don't wait until you're in crisis to talk to God. Share your joys, your struggles, your dreams, and your fears with Him. As you do, you'll discover the transformative power of a prayer-filled life.</p>
-          
+          <p>Make prayer a daily habit. Don't wait until you're in crisis to talk to God. Share your joys, your struggles, your dreams, and your fears with Him.</p>
           <h3>Prayer</h3>
           <p>"Lord, I thank You for the privilege of prayer. Help me to make prayer a central part of my life. Give me the discipline to pray without ceasing, and open my heart to experience the peace that comes from Your presence. Amen."</p>
         `
@@ -234,17 +241,13 @@
           <h2>Walking in Love</h2>
           <p><strong>Scripture:</strong> 1 John 4:7-8</p>
           <p><em>"Dear friends, let us love one another, for love comes from God. Everyone who loves has been born of God and knows God. Whoever does not love does not know God, because God is love."</em></p>
-          
           <h3>Reflection</h3>
-          <p>Love is the foundation of our faith. It's not merely a warm feeling or romantic gesture, but rather an active choice to show compassion, kindness, and selflessness to those around us. When we love others, we reflect the nature of God Himself.</p>
-          
-          <p>True love challenges us to see beyond our own needs and desires and to extend grace and mercy to others. It transforms communities, heals broken relationships, and brings hope to the hopeless.</p>
-          
+          <p>Love is the foundation of our faith. It's not merely a warm feeling or romantic gesture, but rather an active choice to show compassion, kindness, and selflessness to those around us.</p>
+          <p>True love challenges us to see beyond our own needs and desires and to extend grace and mercy to others.</p>
           <h3>Key Takeaway</h3>
-          <p>This week, make a conscious effort to show love in tangible ways. Visit someone who is lonely, help someone in need, forgive someone who has hurt you, or simply listen with compassion. As you walk in love, you become an instrument of God's grace.</p>
-          
+          <p>This week, make a conscious effort to show love in tangible ways. Visit someone who is lonely, help someone in need, forgive someone who has hurt you, or simply listen with compassion.</p>
           <h3>Prayer</h3>
-          <p>"Father, fill my heart with Your love. Help me to see others as You see them—with compassion and grace. Give me the courage to love unconditionally and the wisdom to extend mercy even when it's difficult. Let my love be a testimony to Your goodness. Amen."</p>
+          <p>"Father, fill my heart with Your love. Help me to see others as You see them — with compassion and grace. Give me the courage to love unconditionally and the wisdom to extend mercy even when it's difficult. Amen."</p>
         `
       }
     };
@@ -253,23 +256,20 @@
       const devotional = devotionals[id];
       const modal = document.getElementById('devotionalModal');
       const body = document.getElementById('devotionalBody');
-      
       body.innerHTML = `
         <div class="devotional-header">
           <h2>${devotional.title}</h2>
           <p class="devotional-meta">${devotional.date} | By ${devotional.author}</p>
         </div>
-        <div class="devotional-content">
-          ${devotional.content}
-        </div>
+        <div class="devotional-content">${devotional.content}</div>
       `;
-      
       modal.style.display = 'block';
+      document.body.style.overflow = 'hidden';
     }
 
     function closeDevotional() {
-      const modal = document.getElementById('devotionalModal');
-      modal.style.display = 'none';
+      document.getElementById('devotionalModal').style.display = 'none';
+      document.body.style.overflow = '';
     }
 
     const bibleStudies = {
@@ -277,15 +277,12 @@
         title: "Understanding God's Grace",
         leader: "Pastor Amina",
         date: "May 28, 2026",
-        scripture: "Romans 3:21-26",
         content: `
           <h2>Understanding God's Grace</h2>
           <p><strong>Scripture:</strong> Romans 3:21-26</p>
-          <p><em>"But now apart from the law the righteousness of God has been made known, to which the Law and the Prophets testify. This righteousness is given through faith in Jesus Christ to all who believe..."</em></p>
-          
+          <p><em>"But now apart from the law the righteousness of God has been made known, to which the Law and the Prophets testify..."</em></p>
           <h3>Overview</h3>
-          <p>Grace is one of the most foundational concepts in Christianity. It means receiving something we don't deserve—God's favor, forgiveness, and salvation through Jesus Christ alone.</p>
-          
+          <p>Grace is one of the most foundational concepts in Christianity. It means receiving something we don't deserve — God's favor, forgiveness, and salvation through Jesus Christ alone.</p>
           <h3>Key Points</h3>
           <ul style="margin-left: 1.5rem; margin-bottom: 1rem;">
             <li>Grace is unmerited favor from God</li>
@@ -293,86 +290,36 @@
             <li>Grace flows through faith in Jesus Christ</li>
             <li>Grace transforms our lives and makes us righteous before God</li>
           </ul>
-          
-          <h3>Discussion Questions</h3>
-          <ol style="margin-left: 1.5rem; margin-bottom: 1rem;">
-            <li>How does understanding God's grace change your perspective on salvation?</li>
-            <li>What does it mean to live under grace rather than under the law?</li>
-            <li>How can we extend grace to others as we have received it from God?</li>
-          </ol>
-          
           <h3>Prayer</h3>
-          <p>"Lord, thank You for Your amazing grace. Help me to fully comprehend the depth of Your love and forgiveness. May I live in the reality of Your grace and extend it to others. Amen."</p>
+          <p>"Lord, thank You for Your amazing grace. Help me to fully comprehend the depth of Your love and forgiveness. Amen."</p>
         `
       },
       2: {
         title: "The Beatitudes: Keys to Happiness",
         leader: "Brother Toyin",
         date: "May 25, 2026",
-        scripture: "Matthew 5:3-12",
         content: `
           <h2>The Beatitudes: Keys to Happiness</h2>
           <p><strong>Scripture:</strong> Matthew 5:3-12</p>
-          <p><em>"Blessed are the poor in spirit, for theirs is the kingdom of heaven. Blessed are those who mourn, for they will be comforted..."</em></p>
-          
+          <p><em>"Blessed are the poor in spirit, for theirs is the kingdom of heaven..."</em></p>
           <h3>Overview</h3>
-          <p>The Beatitudes are Jesus' description of the blessed life. They reveal a radically different understanding of happiness—one that is based on spiritual values rather than worldly success.</p>
-          
-          <h3>The Eight Beatitudes</h3>
-          <ul style="margin-left: 1.5rem; margin-bottom: 1rem;">
-            <li><strong>Poor in Spirit:</strong> Recognizing our need for God</li>
-            <li><strong>Those Who Mourn:</strong> Sorrowing over sin; receiving comfort</li>
-            <li><strong>The Meek:</strong> Gentle strength; inheriting the earth</li>
-            <li><strong>Hunger & Thirst for Righteousness:</strong> Satisfied by God</li>
-            <li><strong>The Merciful:</strong> Receiving mercy</li>
-            <li><strong>Pure in Heart:</strong> Seeing God</li>
-            <li><strong>Peacemakers:</strong> Called children of God</li>
-            <li><strong>Persecuted for Righteousness:</strong> Belonging to God's kingdom</li>
-          </ul>
-          
-          <h3>Discussion Questions</h3>
-          <ol style="margin-left: 1.5rem; margin-bottom: 1rem;">
-            <li>Which Beatitude resonates most deeply with you? Why?</li>
-            <li>How do the Beatitudes challenge society's definition of success?</li>
-            <li>What does it mean to be "blessed" in the context of each Beatitude?</li>
-          </ol>
-          
+          <p>The Beatitudes are Jesus' description of the blessed life. They reveal a radically different understanding of happiness — one based on spiritual values rather than worldly success.</p>
           <h3>Prayer</h3>
-          <p>"Father, help me to embrace the values of the Beatitudes in my daily life. Teach me what it means to be poor in spirit, meek, merciful, and pure in heart. May I experience the blessedness that comes from living according to Your kingdom values. Amen."</p>
+          <p>"Father, help me to embrace the values of the Beatitudes in my daily life. Amen."</p>
         `
       },
       3: {
         title: "The Armor of God",
         leader: "Sister Ife",
         date: "May 22, 2026",
-        scripture: "Ephesians 6:10-18",
         content: `
           <h2>The Armor of God</h2>
           <p><strong>Scripture:</strong> Ephesians 6:10-18</p>
-          <p><em>"Put on the full armor of God so that you can take your stand against the devil's schemes. For our struggle is not against flesh and blood, but against the rulers, against the authorities, against the powers of this dark world and against the spiritual forces of evil in the heavenly realms."</em></p>
-          
+          <p><em>"Put on the full armor of God so that you can take your stand against the devil's schemes."</em></p>
           <h3>Overview</h3>
-          <p>Paul describes six pieces of spiritual armor that protect believers in their spiritual warfare. Each piece represents a spiritual resource we can use to resist temptation and remain faithful to God.</p>
-          
-          <h3>The Six Pieces of Armor</h3>
-          <ul style="margin-left: 1.5rem; margin-bottom: 1rem;">
-            <li><strong>Belt of Truth:</strong> Living and standing on God's truth</li>
-            <li><strong>Breastplate of Righteousness:</strong> Living a holy, obedient life</li>
-            <li><strong>Shoes of the Gospel of Peace:</strong> Ready to share the good news</li>
-            <li><strong>Shield of Faith:</strong> Trust in God to protect us</li>
-            <li><strong>Helmet of Salvation:</strong> Confident assurance of salvation</li>
-            <li><strong>Sword of the Spirit:</strong> God's Word as our offensive weapon</li>
-          </ul>
-          
-          <h3>Discussion Questions</h3>
-          <ol style="margin-left: 1.5rem; margin-bottom: 1rem;">
-            <li>Why is spiritual armor necessary for believers?</li>
-            <li>Which piece of armor do you most need to strengthen in your life?</li>
-            <li>How can we actively "put on" each piece of armor daily?</li>
-          </ol>
-          
+          <p>Paul describes six pieces of spiritual armor that protect believers in their spiritual warfare.</p>
           <h3>Prayer</h3>
-          <p>"Heavenly Father, I put on Your armor today. Give me truth, righteousness, and faith to stand against spiritual opposition. Equip me with salvation and Your Word. Help me to remain vigilant and faithful. Amen."</p>
+          <p>"Heavenly Father, I put on Your armor today. Equip me with truth, righteousness, and faith. Amen."</p>
         `
       }
     };
@@ -381,35 +328,35 @@
       const study = bibleStudies[id];
       const modal = document.getElementById('bibleStudyModal');
       const body = document.getElementById('bibleStudyBody');
-      
       body.innerHTML = `
         <div class="devotional-header">
           <h2>${study.title}</h2>
           <p class="devotional-meta">${study.date} | Led by ${study.leader}</p>
         </div>
-        <div class="devotional-content">
-          ${study.content}
-        </div>
+        <div class="devotional-content">${study.content}</div>
       `;
-      
       modal.style.display = 'block';
+      document.body.style.overflow = 'hidden';
     }
 
     function closeBibleStudy() {
-      const modal = document.getElementById('bibleStudyModal');
-      modal.style.display = 'none';
+      document.getElementById('bibleStudyModal').style.display = 'none';
+      document.body.style.overflow = '';
     }
 
     window.onclick = function(event) {
       const devotionalModal = document.getElementById('devotionalModal');
       const bibleStudyModal = document.getElementById('bibleStudyModal');
-      if (event.target == devotionalModal) {
-        devotionalModal.style.display = 'none';
-      }
-      if (event.target == bibleStudyModal) {
-        bibleStudyModal.style.display = 'none';
-      }
+      if (event.target == devotionalModal) closeDevotional();
+      if (event.target == bibleStudyModal) closeBibleStudy();
     }
+
+    document.addEventListener('keydown', function(e) {
+      if (e.key === 'Escape') {
+        closeDevotional();
+        closeBibleStudy();
+      }
+    });
   </script>
 
   <script src="animations.js"></script>

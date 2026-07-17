@@ -5,17 +5,29 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Our Executives - NIFES FUTMinna</title>
+  <meta name="description" content="Meet the dedicated student executive team serving NIFES FUTMinna across Gidan Kwano and Bosso campuses.">
+  <meta property="og:title" content="Our Executives - NIFES FUTMinna">
+  <meta property="og:description" content="A team of dedicated students serving the fellowship and its members.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <link rel="stylesheet" href="Style.css">
-  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
+  <a href="#main-content" class="skip-link">Skip to main content</a>
 
-  <nav class="main-nav">
+  <nav class="main-nav" aria-label="Main navigation">
     <a href="index.html" class="logo">
       <img src="nifes-logo.png" alt="NIFES Logo">
       NIFES FUTMinna
     </a>
+    <button class="hamburger" aria-label="Toggle navigation menu" aria-expanded="false">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+    <div class="nav-overlay"></div>
     <ul class="nav-links">
       <li><a href="index.html">Home</a></li>
       <li><a href="about.html">About</a></li>
@@ -35,10 +47,12 @@
     </div>
   </header>
 
-  <main>
-    <div class="exec-tabs">
-      <button class="tab-link active" onclick="openTab(event, 'gidan-kwano')">Gidan Kwano</button>
-      <button class="tab-link" onclick="openTab(event, 'bosso')">Bosso</button>
+  <main id="main-content">
+    <div style="text-align: center; margin-top: var(--space-xl);">
+      <div class="exec-tabs">
+        <button class="tab-link active" onclick="openTab(event, 'gidan-kwano')">Gidan Kwano</button>
+        <button class="tab-link" onclick="openTab(event, 'bosso')">Bosso</button>
+      </div>
     </div>
 
     <div id="gidan-kwano" class="tab-content active">
@@ -48,110 +62,78 @@
             <h2>FUTMinna Executives</h2>
           </div>
           <div class="page-grid reveal-grid">
-            <!-- Placeholder Cards -->
             <div class="content-card exec-card">
-              <div class="exec-avatar-placeholder">
-                <i class="fas fa-user-shield"></i>
-              </div>
+              <div class="exec-avatar-placeholder"><i class="fas fa-user-shield"></i></div>
               <p class="exec-role">President</p>
             </div>
             <div class="content-card exec-card">
-              <div class="exec-avatar-placeholder">
-                <i class="fas fa-user-tie"></i>
-              </div>
+              <div class="exec-avatar-placeholder"><i class="fas fa-user-tie"></i></div>
               <p class="exec-role">Vice President</p>
             </div>
             <div class="content-card exec-card">
-              <div class="exec-avatar-placeholder">
-                <i class="fas fa-pen-nib"></i>
-              </div>
+              <div class="exec-avatar-placeholder"><i class="fas fa-pen-nib"></i></div>
               <p class="exec-role">General Secretary</p>
             </div>
             <div class="content-card exec-card">
-              <div class="exec-avatar-placeholder">
-                <i class="fas fa-wallet"></i>
-              </div>
+              <div class="exec-avatar-placeholder"><i class="fas fa-wallet"></i></div>
               <p class="exec-role">Treasurer</p>
             </div>
             <div class="content-card exec-card">
-              <div class="exec-avatar-placeholder">
-                <i class="fas fa-female"></i>
-              </div>
+              <div class="exec-avatar-placeholder"><i class="fas fa-female"></i></div>
               <p class="exec-role">Sisters Coordinator/Welfare Secretary</p>
             </div>
             <div class="content-card exec-card">
-              <div class="exec-avatar-placeholder">
-                <i class="fas fa-male"></i>
-              </div>
+              <div class="exec-avatar-placeholder"><i class="fas fa-male"></i></div>
               <p class="exec-role">Brothers Coordinator</p>
             </div>
             <div class="content-card exec-card">
-              <div class="exec-avatar-placeholder">
-                <i class="fas fa-calculator"></i>
-              </div>
+              <div class="exec-avatar-placeholder"><i class="fas fa-calculator"></i></div>
               <p class="exec-role">Financial Secretary</p>
             </div>
             <div class="content-card exec-card">
-              <div class="exec-avatar-placeholder">
-                <i class="fas fa-hand-holding-heart"></i>
-              </div>
+              <div class="exec-avatar-placeholder"><i class="fas fa-hand-holding-heart"></i></div>
               <p class="exec-role">Ushering Unit Secretary</p>
             </div>
             <div class="content-card exec-card">
-              <div class="exec-avatar-placeholder">
-                <i class="fas fa-bullhorn"></i>
-              </div>
+              <div class="exec-avatar-placeholder"><i class="fas fa-bullhorn"></i></div>
               <p class="exec-role">Evangelism Unit Secretary</p>
             </div>
             <div class="content-card exec-card">
-              <div class="exec-avatar-placeholder">
-                <i class="fas fa-user-plus"></i>
-              </div>
+              <div class="exec-avatar-placeholder"><i class="fas fa-user-plus"></i></div>
               <p class="exec-role">Follow Up Secretary</p>
             </div>
             <div class="content-card exec-card">
-              <div class="exec-avatar-placeholder">
-                <i class="fas fa-praying-hands"></i>
-              </div>
+              <div class="exec-avatar-placeholder"><i class="fas fa-praying-hands"></i></div>
               <p class="exec-role">Prayer Unit Secretary</p>
             </div>
             <div class="content-card exec-card">
-              <div class="exec-avatar-placeholder">
-                <i class="fas fa-scroll"></i>
-              </div>
+              <div class="exec-avatar-placeholder"><i class="fas fa-scroll"></i></div>
               <p class="exec-role">Press Unit Secretary</p>
             </div>
             <div class="content-card exec-card">
-              <div class="exec-avatar-placeholder">
-                <i class="fas fa-book-open"></i>
-              </div>
+              <div class="exec-avatar-placeholder"><i class="fas fa-book-open"></i></div>
               <p class="exec-role">Bible Study Unit Secretary</p>
             </div>
             <div class="content-card exec-card">
-              <div class="exec-avatar-placeholder">
-                <i class="fas fa-theater-masks"></i>
-              </div>
+              <div class="exec-avatar-placeholder"><i class="fas fa-theater-masks"></i></div>
               <p class="exec-role">Drama Unit Secretary</p>
             </div>
             <div class="content-card exec-card">
-              <div class="exec-avatar-placeholder">
-                <i class="fas fa-tools"></i>
-              </div>
+              <div class="exec-avatar-placeholder"><i class="fas fa-tools"></i></div>
               <p class="exec-role">Technical Unit Secretary</p>
             </div>
             <div class="content-card exec-card">
-              <div class="exec-avatar-placeholder">
-                <i class="fas fa-pen"></i>
-              </div>
+              <div class="exec-avatar-placeholder"><i class="fas fa-pen"></i></div>
               <p class="exec-role">Assistant General Secretary</p>
             </div>
             <div class="content-card exec-card">
-              <div class="exec-avatar-placeholder">
-                <i class="fas fa-music"></i>
-              </div>
+              <div class="exec-avatar-placeholder"><i class="fas fa-graduation-cap"></i></div>
+              <p class="exec-role">Academic Coordinator</p>
+            </div>
+            <div class="content-card exec-card">
+              <div class="exec-avatar-placeholder"><i class="fas fa-music"></i></div>
               <p class="exec-role">Music Director</p>
             </div>
-            <!-- Add more as needed -->
           </div>
         </div>
       </section>
@@ -164,52 +146,78 @@
             <h2>Bosso Executives</h2>
           </div>
           <div class="page-grid reveal-grid">
-            <!-- Placeholder Cards -->
             <div class="content-card exec-card">
-              <div class="exec-avatar-placeholder">
-                <i class="fas fa-user-shield"></i>
-              </div>
+              <div class="exec-avatar-placeholder"><i class="fas fa-user-shield"></i></div>
               <p class="exec-role">President</p>
             </div>
             <div class="content-card exec-card">
-              <div class="exec-avatar-placeholder">
-                <i class="fas fa-user-tie"></i>
-              </div>
+              <div class="exec-avatar-placeholder"><i class="fas fa-user-tie"></i></div>
               <p class="exec-role">Vice President</p>
             </div>
             <div class="content-card exec-card">
-              <div class="exec-avatar-placeholder">
-                <i class="fas fa-pen-nib"></i>
-              </div>
+              <div class="exec-avatar-placeholder"><i class="fas fa-pen-nib"></i></div>
               <p class="exec-role">General Secretary</p>
             </div>
             <div class="content-card exec-card">
-              <div class="exec-avatar-placeholder">
-                <i class="fas fa-wallet"></i>
-              </div>
+              <div class="exec-avatar-placeholder"><i class="fas fa-wallet"></i></div>
               <p class="exec-role">Treasurer</p>
             </div>
             <div class="content-card exec-card">
-              <div class="exec-avatar-placeholder">
-                <i class="fas fa-female"></i>
-              </div>
+              <div class="exec-avatar-placeholder"><i class="fas fa-female"></i></div>
               <p class="exec-role">Sisters Coordinator</p>
             </div>
             <div class="content-card exec-card">
-              <div class="exec-avatar-placeholder">
-                <i class="fas fa-male"></i>
-              </div>
+              <div class="exec-avatar-placeholder"><i class="fas fa-male"></i></div>
               <p class="exec-role">Brothers Coordinator</p>
             </div>
             <div class="content-card exec-card">
-              <div class="exec-avatar-placeholder">
-                <i class="fas fa-calculator"></i>
-              </div>
+              <div class="exec-avatar-placeholder"><i class="fas fa-calculator"></i></div>
               <p class="exec-role">Financial Secretary</p>
             </div>
-
-
-            <!-- Add more as needed -->
+            <div class="content-card exec-card">
+              <div class="exec-avatar-placeholder"><i class="fas fa-hand-holding-heart"></i></div>
+              <p class="exec-role">Ushering Unit Secretary</p>
+            </div>
+            <div class="content-card exec-card">
+              <div class="exec-avatar-placeholder"><i class="fas fa-bullhorn"></i></div>
+              <p class="exec-role">Evangelism Unit Secretary</p>
+            </div>
+            <div class="content-card exec-card">
+              <div class="exec-avatar-placeholder"><i class="fas fa-user-plus"></i></div>
+              <p class="exec-role">Follow Up Secretary</p>
+            </div>
+            <div class="content-card exec-card">
+              <div class="exec-avatar-placeholder"><i class="fas fa-praying-hands"></i></div>
+              <p class="exec-role">Prayer Unit Secretary</p>
+            </div>
+            <div class="content-card exec-card">
+              <div class="exec-avatar-placeholder"><i class="fas fa-scroll"></i></div>
+              <p class="exec-role">Press Unit Secretary</p>
+            </div>
+            <div class="content-card exec-card">
+              <div class="exec-avatar-placeholder"><i class="fas fa-book-open"></i></div>
+              <p class="exec-role">Bible Study Unit Secretary</p>
+            </div>
+            <div class="content-card exec-card">
+              <div class="exec-avatar-placeholder"><i class="fas fa-theater-masks"></i></div>
+              <p class="exec-role">Drama Unit Secretary</p>
+            </div>
+            <div class="content-card exec-card">
+              <div class="exec-avatar-placeholder"><i class="fas fa-tools"></i></div>
+              <p class="exec-role">Technical Unit Secretary</p>
+            </div>
+            <div class="content-card exec-card">
+              <div class="exec-avatar-placeholder"><i class="fas fa-pen"></i></div>
+              <p class="exec-role">Assistant General Secretary</p>
+            </div>
+            <div class="content-card exec-card">
+              <div class="exec-avatar-placeholder"><i class="fas fa-graduation-cap"></i></div>
+              <p class="exec-role">Academic Coordinator</p>
+            </div>
+            <div class="content-card exec-card">
+              <div class="exec-avatar-placeholder"><i class="fas fa-music"></i></div>
+              <p class="exec-role">Music Director</p>
+            </div>
           </div>
         </div>
       </section>
@@ -219,27 +227,42 @@
   <footer class="site-footer">
     <div class="container">
       <div class="footer-content">
-        <a href="index.html" class="footer-logo">NIFES<span>.</span></a>
-        <p>Raising Christ-like students to transform the campus and society.</p>
-        <ul class="footer-socials">
-          <li><a href="https://www.facebook.com/nifesfutminnaofficial" target="_blank" rel="noopener noreferrer"
-              aria-label="Facebook"><i class="fab fa-facebook-f"></i></a></li>
-          <li><a href="https://www.instagram.com/nifesfutminna?igsh=MXMzZDZzZnR2ZWFsaQ==" target="_blank"
-              rel="noopener noreferrer" aria-label="Instagram"><i class="fab fa-instagram"></i></a></li>
-          <li><a href="https://www.tiktok.com/@nifesfutmx?_r=1&_t=ZS-94X9qqK7wH6" target="_blank"
-              rel="noopener noreferrer" aria-label="TikTok"><i class="fab fa-tiktok"></i></a></li>
-          <li><a href="#" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp"><i
-                class="fab fa-whatsapp"></i></a></li>
-          <li><a href="#" target="_blank" rel="noopener noreferrer" aria-label="Twitter"><i
-                class="fab fa-twitter"></i></a></li>
-          <li><a href="https://www.youtube.com/@nifesfutmx?si=S88---Y41wuoewbN" target="_blank"
-              rel="noopener noreferrer" aria-label="YouTube"><i class="fab fa-youtube"></i></a></li>
-        </ul>
-        <div class="footer-locations">
-          <p><strong>Locations:</strong> Chapel of Grace, Gidan Kwano | Chapel of Grace, Bosso</p>
-          <p>Federal University of Technology, Minna</p>
+        <div>
+          <a href="index.html" class="footer-logo">NIFES<span>.</span></a>
+          <p class="footer-tagline">Raising Christ-like students to transform the campus and society.</p>
+          <ul class="footer-socials">
+            <li><a href="https://www.facebook.com/nifesfutminnaofficial" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a></li>
+            <li><a href="https://www.instagram.com/nifesfutminna?igsh=MXMzZDZzZnR2ZWFsaQ==" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="fab fa-instagram"></i></a></li>
+            <li><a href="https://www.tiktok.com/@nifesfutmx?_r=1&_t=ZS-94X9qqK7wH6" target="_blank" rel="noopener noreferrer" aria-label="TikTok"><i class="fab fa-tiktok"></i></a></li>
+            <li><a href="#" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a></li>
+            <li><a href="#" target="_blank" rel="noopener noreferrer" aria-label="Twitter"><i class="fab fa-twitter"></i></a></li>
+            <li><a href="https://www.youtube.com/@nifesfutmx?si=S88---Y41wuoewbN" target="_blank" rel="noopener noreferrer" aria-label="YouTube"><i class="fab fa-youtube"></i></a></li>
+          </ul>
         </div>
+        <div class="footer-section">
+          <h5>Quick Links</h5>
+          <ul class="footer-links">
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="events.html">Events</a></li>
+            <li><a href="devotionals.html">Devotionals</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="join.html">Join Us</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h5>Contact</h5>
+          <div class="footer-locations">
+            <p><strong>Chapel of Grace, Gidan Kwano</strong></p>
+            <p><strong>Chapel of Grace, Bosso</strong></p>
+            <p style="margin-top: 0.5rem;">Federal University of Technology, Minna</p>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
         <p class="footer-copyright">&copy; 2026 NIFES FUTMinna. All Rights Reserved.</p>
+        <div class="footer-locations">
+          <p>Niger State, Nigeria</p>
+        </div>
       </div>
     </div>
   </footer>
@@ -250,7 +273,6 @@
   <script src="animations.js"></script>
 
   <script>
-    // Role to FontAwesome Icon mapping
     const roleIcons = {
       "president": "fas fa-user-shield",
       "vice president": "fas fa-user-tie",
@@ -269,6 +291,7 @@
       "drama unit secretary": "fas fa-theater-masks",
       "technical unit secretary": "fas fa-tools",
       "assistant general secretary": "fas fa-pen",
+      "academic coordinator": "fas fa-graduation-cap",
       "music director": "fas fa-music"
     };
 
@@ -279,12 +302,10 @@
           return value;
         }
       }
-      return "fas fa-user"; // default fallback
+      return "fas fa-user";
     }
 
-    // Realtime Syncing from Firebase Database if configured
     if (typeof db !== "undefined" && db) {
-      // Show skeleton loaders before data arrives
       const gkGrid = document.querySelector("#gidan-kwano .page-grid");
       const bossoGrid = document.querySelector("#bosso .page-grid");
       if (window.showSkeletonLoaders) {
@@ -312,19 +333,18 @@
         const card = document.createElement("div");
         card.className = "content-card exec-card";
         const iconClass = getRoleIcon(exec.role);
+        const imgHtml = exec.image && !exec.image.includes('placeholder')
+          ? `<img src="${exec.image}" alt="${exec.name}" style="width:110px;height:110px;border-radius:50%;object-fit:cover;margin:0 auto 1rem;border:2px solid var(--border);" loading="lazy">`
+          : `<div class="exec-avatar-placeholder"><i class="${iconClass}"></i></div>`;
         card.innerHTML = `
-          <div class="exec-avatar-placeholder">
-            <i class="${iconClass}"></i>
-          </div>
+          ${imgHtml}
+          <h4 style="color: var(--text-primary); font-size: var(--text-base); margin-bottom: 0.25rem;">${exec.name}</h4>
           <p class="exec-role">${exec.role}</p>
         `;
         grid.appendChild(card);
       });
 
-      // Re-trigger reveal grid observers on dynamic content
-      if (window.initScrollReveal) {
-        window.initScrollReveal();
-      }
+      if (window.initScrollReveal) window.initScrollReveal();
     }
   </script>
 

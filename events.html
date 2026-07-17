@@ -4,16 +4,28 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Events - NIFES FUTMinna</title>
+  <meta name="description" content="Join NIFES FUTMinna weekly fellowship events — Sunday Service, Tuesday Prayer Meeting, and Thursday Bible Study at FUTMinna.">
+  <meta property="og:title" content="Events - NIFES FUTMinna">
+  <meta property="og:description" content="Intentional times for worship, prayer, and growing in the Word together.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <link rel="stylesheet" href="Style.css">
-  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 </head>
 <body>
+  <a href="#main-content" class="skip-link">Skip to main content</a>
 
-  <nav class="main-nav">
+  <nav class="main-nav" aria-label="Main navigation">
     <a href="index.html" class="logo">
-        <img src="nifes-logo.png" alt="NIFES Logo">
-        NIFES FUTMinna
+      <img src="nifes-logo.png" alt="NIFES Logo">
+      NIFES FUTMinna
     </a>
+    <button class="hamburger" aria-label="Toggle navigation menu" aria-expanded="false">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+    <div class="nav-overlay"></div>
     <ul class="nav-links">
       <li><a href="index.html">Home</a></li>
       <li><a href="about.html">About</a></li>
@@ -33,7 +45,7 @@
     </div>
   </header>
 
-  <main>
+  <main id="main-content">
     <section class="page-section" id="weekly-rhythm">
       <div class="container">
         <div class="section-title-container reveal">
@@ -41,28 +53,28 @@
         </div>
         <div class="page-grid reveal-grid">
           <div class="content-card">
-            <img src="images/nifes-worship.jpg" alt="Sunday Service">
+            <img src="images/nifes-worship.jpg" alt="Sunday Service" loading="lazy">
             <h4>Sunday Service</h4>
             <p>The cornerstone of our week. A time of corporate worship, powerful preaching from the Word, and fellowship as one body in Christ. The perfect way to re-center your heart for the week ahead.</p>
-            <p><strong>Time:</strong> 4:00 PM</p>
+            <p><strong>Time:</strong> 2:30 PM</p>
           </div>
           <div class="content-card">
-            <img src="images/nifes-prayer.jpg" alt="Prayer Meeting">
-            <h4>Tuesday Prayer Meeting</h4>
-            <p>Join us as we seek God's face together. A dedicated time to intercede for our campus, our nation, and one another, strengthening our dependence on God.</p>
+            <img src="images/nifes-prayer.jpg" alt="Prayer Meeting" loading="lazy">
+            <h4>Prayer Meeting / Bible Study</h4>
+            <p>Join us as we seek God's face together through prayer and the Word. A dedicated time to intercede for our campus, our nation, and one another, strengthening our dependence on God.</p>
             <p><strong>Time:</strong> 7:00 PM</p>
           </div>
           <div class="content-card">
-            <img src="images/nifes-gathering.jpg" alt="Bible Study">
-            <h4>Thursday Bible Study</h4>
-            <p>Dive deeper into God's Word in a more interactive, small group setting. It's a safe place to ask questions, share insights, and grow in your understanding of Scripture.</p>
+            <img src="images/nifes-gathering.jpg" alt="Bible Study" loading="lazy">
+            <h4>Thursday Discipleship Cell Group</h4>
+            <p>Connect with a small cell group for deeper discipleship, accountability, and shared growth. A safe space to ask questions, pray together, and build life-long friendships.</p>
             <p><strong>Time:</strong> 7:00 PM</p>
           </div>
         </div>
       </div>
     </section>
 
-    <section class="page-section" id="special-events" style="background-color: var(--bg-card);">
+    <section class="page-section" id="special-events" style="background-color: var(--surface);">
       <div class="container">
         <div class="section-title-container reveal">
           <h2>Special Events</h2>
@@ -93,7 +105,7 @@
         </div>
         <div class="page-grid reveal-grid">
           <div class="content-card">
-            <img src="images/life-2026.jpg" alt="LIFE 2026 Conference">
+            <img src="images/life-2026.jpg" alt="LIFE 2026 Conference" loading="lazy">
             <h4>LIFE 2026</h4>
             <p>Our flagship annual conference bringing together students from across the nation for spiritual growth, powerful teaching, worship, and fellowship. Experience transformative messages, workshops, and an opportunity to connect with the wider NIFES movement.</p>
             <p><strong>Status:</strong> Coming Soon</p>
@@ -104,7 +116,7 @@
             <p><strong>Status:</strong> Coming Soon</p>
           </div>
           <div class="content-card">
-            <h4>Easter Discipleship Conference (EDC) </h4>
+            <h4>Easter Discipleship Conference (EDC)</h4>
             <p>A dedicated week focused on community outreach, street evangelism, and practical ministry in the surrounding communities, putting faith into action.</p>
             <p><strong>Status:</strong> Coming Soon</p>
           </div>
@@ -116,27 +128,42 @@
   <footer class="site-footer">
     <div class="container">
       <div class="footer-content">
-        <a href="index.html" class="footer-logo">NIFES<span>.</span></a>
-        <p>Raising Christ-like students to transform the campus and society.</p>
-        <ul class="footer-socials">
-          <li><a href="https://www.facebook.com/nifesfutminnaofficial" target="_blank" rel="noopener noreferrer"
-              aria-label="Facebook"><i class="fab fa-facebook-f"></i></a></li>
-          <li><a href="https://www.instagram.com/nifesfutminna?igsh=MXMzZDZzZnR2ZWFsaQ==" target="_blank"
-              rel="noopener noreferrer" aria-label="Instagram"><i class="fab fa-instagram"></i></a></li>
-          <li><a href="https://www.tiktok.com/@nifesfutmx?_r=1&_t=ZS-94X9qqK7wH6" target="_blank"
-              rel="noopener noreferrer" aria-label="TikTok"><i class="fab fa-tiktok"></i></a></li>
-          <li><a href="#" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp"><i
-                class="fab fa-whatsapp"></i></a></li>
-          <li><a href="#" target="_blank" rel="noopener noreferrer" aria-label="Twitter"><i
-                class="fab fa-twitter"></i></a></li>
-          <li><a href="https://www.youtube.com/@nifesfutmx?si=S88---Y41wuoewbN" target="_blank"
-              rel="noopener noreferrer" aria-label="YouTube"><i class="fab fa-youtube"></i></a></li>
-        </ul>
-        <div class="footer-locations">
-          <p><strong>Locations:</strong> Chapel of Grace, Gidan Kwano | Chapel of Grace, Bosso</p>
-          <p>Federal University of Technology, Minna</p>
+        <div>
+          <a href="index.html" class="footer-logo">NIFES<span>.</span></a>
+          <p class="footer-tagline">Raising Christ-like students to transform the campus and society.</p>
+          <ul class="footer-socials">
+            <li><a href="https://www.facebook.com/nifesfutminnaofficial" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a></li>
+            <li><a href="https://www.instagram.com/nifesfutminna?igsh=MXMzZDZzZnR2ZWFsaQ==" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="fab fa-instagram"></i></a></li>
+            <li><a href="https://www.tiktok.com/@nifesfutmx?_r=1&_t=ZS-94X9qqK7wH6" target="_blank" rel="noopener noreferrer" aria-label="TikTok"><i class="fab fa-tiktok"></i></a></li>
+            <li><a href="#" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a></li>
+            <li><a href="#" target="_blank" rel="noopener noreferrer" aria-label="Twitter"><i class="fab fa-twitter"></i></a></li>
+            <li><a href="https://www.youtube.com/@nifesfutmx?si=S88---Y41wuoewbN" target="_blank" rel="noopener noreferrer" aria-label="YouTube"><i class="fab fa-youtube"></i></a></li>
+          </ul>
         </div>
+        <div class="footer-section">
+          <h5>Quick Links</h5>
+          <ul class="footer-links">
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="events.html">Events</a></li>
+            <li><a href="devotionals.html">Devotionals</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="join.html">Join Us</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h5>Contact</h5>
+          <div class="footer-locations">
+            <p><strong>Chapel of Grace, Gidan Kwano</strong></p>
+            <p><strong>Chapel of Grace, Bosso</strong></p>
+            <p style="margin-top: 0.5rem;">Federal University of Technology, Minna</p>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
         <p class="footer-copyright">&copy; 2026 NIFES FUTMinna. All Rights Reserved.</p>
+        <div class="footer-locations">
+          <p>Niger State, Nigeria</p>
+        </div>
       </div>
     </div>
   </footer>
@@ -147,9 +174,7 @@
   <script src="animations.js"></script>
 
   <script>
-    // Realtime Syncing from Firebase Database if configured
     if (typeof db !== "undefined" && db) {
-      // Show skeleton loaders before data arrives
       const weeklyGrid = document.querySelector("#weekly-rhythm .page-grid");
       const programsGrid = document.querySelector("#upcoming-programs .page-grid");
       if (window.showSkeletonLoaders) {
@@ -159,15 +184,11 @@
 
       db.ref("nifes_data/weekly").on("value", snapshot => {
         const weekly = snapshot.val();
-        if (weekly) {
-          renderWeeklyList(weekly);
-        }
+        if (weekly) renderWeeklyList(weekly);
       });
       db.ref("nifes_data/programs").on("value", snapshot => {
         const programs = snapshot.val();
-        if (programs) {
-          renderProgramsList(programs);
-        }
+        if (programs) renderProgramsList(programs);
       });
     }
 
@@ -179,7 +200,7 @@
         const card = document.createElement("div");
         card.className = "content-card";
         card.innerHTML = `
-          <img src="${event.image || 'images/placeholder-glance.jpg'}" alt="${event.title}">
+          <img src="${event.image || 'images/placeholder-glance.jpg'}" alt="${event.title}" loading="lazy">
           <h4>${event.title}</h4>
           <p>${event.desc}</p>
           <p><strong>Time:</strong> ${event.time}</p>
@@ -196,7 +217,7 @@
       list.forEach(prog => {
         const card = document.createElement("div");
         card.className = "content-card";
-        const imgTag = prog.image ? `<img src="${prog.image}" alt="${prog.title}">` : '';
+        const imgTag = prog.image ? `<img src="${prog.image}" alt="${prog.title}" loading="lazy">` : '';
         card.innerHTML = `
           ${imgTag}
           <h4>${prog.title}</h4>

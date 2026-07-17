@@ -5,17 +5,32 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>NIFES FUTMinna - Faith, Fellowship, Future</title>
+  <meta name="description" content="NIFES FUTMinna — A Christ-centered student fellowship at Federal University of Technology, Minna. Join us for faith, fellowship, and future impact.">
+  <meta property="og:title" content="NIFES FUTMinna - Faith, Fellowship, Future">
+  <meta property="og:description" content="A Christ-centered movement raising disciples who impact the campus, church, and society for God's glory.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://nifesfutminna.org">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <link rel="stylesheet" href="Style.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 
 <body>
+  <a href="#main-content" class="skip-link">Skip to main content</a>
 
-  <nav class="main-nav">
+  <nav class="main-nav" aria-label="Main navigation">
     <a href="index.html" class="logo">
       <img src="nifes-logo.png" alt="NIFES Logo">
       NIFES Futminna
     </a>
+    <button class="hamburger" aria-label="Toggle navigation menu" aria-expanded="false">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+    <div class="nav-overlay"></div>
     <ul class="nav-links">
       <li><a href="index.html" class="active">Home</a></li>
       <li><a href="about.html">About</a></li>
@@ -26,20 +41,31 @@
       <li><a href="join.html" class="btn btn-secondary">Join Us</a></li>
     </ul>
   </nav>
-  <header class="page-hero">
-    <div class="page-hero-inner">
-      <div class="section-tag">Nigerian Fellowship of Evangelical Students</div>
-      <h1>Faith, Fellowship, Future</h1>
-      <p class="section-sub">A Christ-centered movement raising disciples who impact the campus, church, and society for
-        God's glory.</p>
-      <div class="hero-buttons">
-        <a href="join.html" class="btn btn-primary">Become a Member</a>
-        <a href="about.html" class="btn btn-secondary">Learn More</a>
+
+  <header class="hero-editorial">
+    <div class="hero-grid">
+      <div class="hero-image hero-image-main">
+        <img src="images/gallery/1.jpg" alt="NIFES Fellowship Gathering" loading="eager">
+      </div>
+      <div class="hero-image hero-image-secondary">
+        <img src="images/gallery/3.jpg" alt="Bible Study Session" loading="eager">
+      </div>
+      <div class="hero-image hero-image-accent">
+        <img src="images/gallery/5.jpg" alt="Worship Night" loading="eager">
+      </div>
+      <div class="hero-content">
+        <div class="section-tag">Nigerian Fellowship of Evangelical Students</div>
+        <h1>Faith, Fellowship, Future</h1>
+        <p>A Christ-centered movement raising disciples who impact the campus, church, and society for God's glory.</p>
+        <div class="hero-buttons">
+          <a href="join.html" class="btn btn-primary">Become a Member</a>
+          <a href="about.html" class="btn btn-secondary">Learn More</a>
+        </div>
       </div>
     </div>
   </header>
 
-  <main>
+  <main id="main-content">
     <section class="page-section" id="about">
       <div class="container">
         <div class="section-title-container reveal">
@@ -51,7 +77,7 @@
             <div class="flip-card" onclick="this.classList.toggle('flipped')">
               <div class="flip-card-inner">
                 <div class="flip-card-front">
-                  <img src="images\gallery\6.jpg" alt="Bible Study">
+                  <img src="images/gallery/6.jpg" alt="Bible Study" loading="lazy">
                   <h4>Word-Centered</h4>
                   <p>We are rooted in the timeless truth of Scripture, equipping students to know God deeply through His Word.</p>
                   <span class="click-to-reveal"><i class="fas fa-redo"></i> Click to reveal</span>
@@ -69,7 +95,7 @@
             <div class="flip-card" onclick="this.classList.toggle('flipped')">
               <div class="flip-card-inner">
                 <div class="flip-card-front">
-                  <img src="images\2.jpg" alt="Community">
+                  <img src="images/2.jpg" alt="Community" loading="lazy">
                   <h4>Community-Focused</h4>
                   <p>We are a family away from home, fostering authentic relationships and spiritual growth in a supportive environment.</p>
                   <span class="click-to-reveal"><i class="fas fa-redo"></i> Click to reveal</span>
@@ -87,7 +113,7 @@
             <div class="flip-card" onclick="this.classList.toggle('flipped')">
               <div class="flip-card-inner">
                 <div class="flip-card-front">
-                  <img src="images/gallery/5.jpg" alt="Mission">
+                  <img src="images/gallery/5.jpg" alt="Mission" loading="lazy">
                   <h4>Mission-Minded</h4>
                   <p>We are passionate about sharing the love of Christ on campus and beyond, raising leaders to serve society.</p>
                   <span class="click-to-reveal"><i class="fas fa-redo"></i> Click to reveal</span>
@@ -104,7 +130,7 @@
       </div>
     </section>
 
-    <section class="page-section" id="events" style="background-color: var(--bg-card);">
+    <section class="page-section" id="events" style="background-color: var(--surface);">
       <div class="container">
         <div class="section-title-container reveal">
           <h2>Join Our Weekly Fellowship</h2>
@@ -113,16 +139,16 @@
           <div class="content-card">
             <h4>Sunday Service</h4>
             <p>A time of corporate worship, powerful preaching, and fellowship. The perfect start to your week.</p>
-            <p><strong>Time:</strong> 4:00 PM</p>
+            <p><strong>Time:</strong> 2:30 PM</p>
           </div>
           <div class="content-card">
-            <h4>Tuesday Prayer Meeting</h4>
-            <p>Join us as we seek God's face together, praying for our campus, nation, and one another.</p>
+            <h4>Prayer Meeting / Bible Study</h4>
+            <p>Join us as we seek God's face together through prayer and the Word, for our campus, nation, and one another.</p>
             <p><strong>Time:</strong> 7:00 PM</p>
           </div>
           <div class="content-card">
-            <h4>Thursday Bible Study</h4>
-            <p>Dive deeper into God's Word in a small group setting. A place to ask questions and grow.</p>
+            <h4>Thursday Discipleship Cell Group</h4>
+            <p>Connect with a small cell group for deeper discipleship, accountability, and shared growth.</p>
             <p><strong>Time:</strong> 7:00 PM</p>
           </div>
         </div>
@@ -133,27 +159,42 @@
   <footer class="site-footer">
     <div class="container">
       <div class="footer-content">
-        <a href="index.html" class="footer-logo">NIFES<span>.</span></a>
-        <p>Raising Christ-like students to transform the campus and society.</p>
-        <ul class="footer-socials">
-          <li><a href="https://www.facebook.com/nifesfutminnaofficial" target="_blank" rel="noopener noreferrer"
-              aria-label="Facebook"><i class="fab fa-facebook-f"></i></a></li>
-          <li><a href="https://www.instagram.com/nifesfutminna?igsh=MXMzZDZzZnR2ZWFsaQ==" target="_blank"
-              rel="noopener noreferrer" aria-label="Instagram"><i class="fab fa-instagram"></i></a></li>
-          <li><a href="https://www.tiktok.com/@nifesfutmx?_r=1&_t=ZS-94X9qqK7wH6" target="_blank"
-              rel="noopener noreferrer" aria-label="TikTok"><i class="fab fa-tiktok"></i></a></li>
-          <li><a href="#" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp"><i
-                class="fab fa-whatsapp"></i></a></li>
-          <li><a href="#" target="_blank" rel="noopener noreferrer" aria-label="Twitter"><i
-                class="fab fa-twitter"></i></a></li>
-          <li><a href="https://www.youtube.com/@nifesfutmx?si=S88---Y41wuoewbN" target="_blank"
-              rel="noopener noreferrer" aria-label="YouTube"><i class="fab fa-youtube"></i></a></li>
-        </ul>
-        <div class="footer-locations">
-          <p><strong>Locations:</strong> Chapel of Grace, Gidan Kwano | Chapel of Grace, Bosso</p>
-          <p>Federal University of Technology, Minna</p>
+        <div>
+          <a href="index.html" class="footer-logo">NIFES<span>.</span></a>
+          <p class="footer-tagline">Raising Christ-like students to transform the campus and society.</p>
+          <ul class="footer-socials">
+            <li><a href="https://www.facebook.com/nifesfutminnaofficial" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a></li>
+            <li><a href="https://www.instagram.com/nifesfutminna?igsh=MXMzZDZzZnR2ZWFsaQ==" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="fab fa-instagram"></i></a></li>
+            <li><a href="https://www.tiktok.com/@nifesfutmx?_r=1&_t=ZS-94X9qqK7wH6" target="_blank" rel="noopener noreferrer" aria-label="TikTok"><i class="fab fa-tiktok"></i></a></li>
+            <li><a href="#" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a></li>
+            <li><a href="#" target="_blank" rel="noopener noreferrer" aria-label="Twitter"><i class="fab fa-twitter"></i></a></li>
+            <li><a href="https://www.youtube.com/@nifesfutmx?si=S88---Y41wuoewbN" target="_blank" rel="noopener noreferrer" aria-label="YouTube"><i class="fab fa-youtube"></i></a></li>
+          </ul>
         </div>
+        <div class="footer-section">
+          <h5>Quick Links</h5>
+          <ul class="footer-links">
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="events.html">Events</a></li>
+            <li><a href="devotionals.html">Devotionals</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="join.html">Join Us</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h5>Contact</h5>
+          <div class="footer-locations">
+            <p><strong>Chapel of Grace, Gidan Kwano</strong></p>
+            <p><strong>Chapel of Grace, Bosso</strong></p>
+            <p style="margin-top: 0.5rem;">Federal University of Technology, Minna</p>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
         <p class="footer-copyright">&copy; 2026 NIFES FUTMinna. All Rights Reserved.</p>
+        <div class="footer-locations">
+          <p>Niger State, Nigeria</p>
+        </div>
       </div>
     </div>
   </footer>
@@ -164,9 +205,7 @@
   <script src="animations.js"></script>
 
   <script>
-    // Realtime Syncing from Firebase Database if configured
     if (typeof db !== "undefined" && db) {
-      // Show skeleton loaders before data arrives
       const grid = document.querySelector("#events .page-grid");
       if (window.showSkeletonLoaders) {
         window.showSkeletonLoaders(grid, "content", 3);

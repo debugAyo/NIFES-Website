@@ -4,14 +4,18 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Admin Dashboard - NIFES FUTMinna</title>
+  <meta name="description" content="NIFES FUTMinna Admin Dashboard — manage executives, events, and programs.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <link rel="stylesheet" href="Style.css">
-  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
   
   <!-- Firebase Compat CDN Libraries -->
   <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-app-compat.js"></script>
   <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-auth-compat.js"></script>
   <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-database-compat.js"></script>
   <script src="config.js"></script>
+  <script src="animations.js"></script>
 
   <style>
     :root {
@@ -235,13 +239,20 @@
   </style>
 </head>
 <body>
+  <a href="#main-content" class="skip-link">Skip to main content</a>
 
   <!-- Navigation -->
-  <nav class="main-nav">
+  <nav class="main-nav" aria-label="Main navigation">
     <a href="index.html" class="logo">
       <img src="nifes-logo.png" alt="NIFES Logo">
       NIFES FUTMinna
     </a>
+    <button class="hamburger" aria-label="Toggle navigation menu" aria-expanded="false">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+    <div class="nav-overlay"></div>
     <ul class="nav-links">
       <li><a href="index.html">Home</a></li>
       <li><a href="about.html">About</a></li>
@@ -253,6 +264,7 @@
     </ul>
   </nav>
 
+  <main id="main-content">
   <div class="admin-container">
     
     <!-- Config Check Warning -->
@@ -344,6 +356,7 @@
     </div>
 
   </div>
+  </main>
 
   <div id="toast-message" class="toast">Changes Saved Successfully!</div>
 
@@ -626,9 +639,9 @@
           ]
         },
         weekly: [
-          { title: "Sunday Service", time: "4:00 PM", desc: "The cornerstone of our week. A time of corporate worship, powerful preaching from the Word, and fellowship as one body in Christ. The perfect way to re-center your heart for the week ahead.", image: "images/nifes-worship.jpg" },
-          { title: "Tuesday Prayer Meeting", time: "7:00 PM", desc: "Join us as we seek God's face together. A dedicated time to intercede for our campus, our nation, and one another, strengthening our dependence on God.", image: "images/nifes-prayer.jpg" },
-          { title: "Thursday Bible Study", time: "7:00 PM", desc: "Dive deeper into God's Word in a more interactive, small group setting. It's a safe place to ask questions, share insights, and grow in your understanding of Scripture.", image: "images/nifes-gathering.jpg" }
+          { title: "Sunday Service", time: "2:30 PM", desc: "The cornerstone of our week. A time of corporate worship, powerful preaching from the Word, and fellowship as one body in Christ. The perfect way to re-center your heart for the week ahead.", image: "images/nifes-worship.jpg" },
+          { title: "Prayer Meeting / Bible Study", time: "7:00 PM", desc: "Join us as we seek God's face together through prayer and the Word. A dedicated time to intercede for our campus, our nation, and one another, strengthening our dependence on God.", image: "images/nifes-prayer.jpg" },
+          { title: "Thursday Discipleship Cell Group", time: "7:00 PM", desc: "Connect with a small cell group for deeper discipleship, accountability, and shared growth. A safe space to ask questions, pray together, and build life-long friendships.", image: "images/nifes-gathering.jpg" }
         ],
         programs: [
           { title: "LIFE 2026", status: "Coming Soon", desc: "Our flagship annual conference bringing together students from across the nation for spiritual growth, powerful teaching, worship, and fellowship. Experience transformative messages, workshops, and an opportunity to connect with the wider NIFES movement.", image: "images/life-2026.jpg" },

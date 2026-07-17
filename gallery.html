@@ -4,16 +4,28 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Gallery - NIFES FUTMinna</title>
+  <meta name="description" content="Browse photos from worship, Bible study, fellowship events, and outreach missions at NIFES FUTMinna.">
+  <meta property="og:title" content="Gallery - NIFES FUTMinna">
+  <meta property="og:description" content="A visual story of worship, community, and mission at NIFES FUTMinna.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <link rel="stylesheet" href="Style.css">
-  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 </head>
 <body>
+  <a href="#main-content" class="skip-link">Skip to main content</a>
 
-  <nav class="main-nav">
+  <nav class="main-nav" aria-label="Main navigation">
     <a href="index.html" class="logo">
-        <img src="nifes-logo.png" alt="NIFES Logo">
-        NIFES FUTMinna
+      <img src="nifes-logo.png" alt="NIFES Logo">
+      NIFES FUTMinna
     </a>
+    <button class="hamburger" aria-label="Toggle navigation menu" aria-expanded="false">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+    <div class="nav-overlay"></div>
     <ul class="nav-links">
       <li><a href="index.html">Home</a></li>
       <li><a href="about.html">About</a></li>
@@ -33,107 +45,88 @@
     </div>
   </header>
 
-  <main>
+  <main id="main-content">
     <section class="page-section" id="gallery-main">
       <div class="container">
-        <!-- Gallery Category Filters -->
         <div class="gallery-filters reveal">
           <button class="filter-btn active" data-filter="all">All Photos</button>
           <button class="filter-btn" data-filter="worship">Worship & Prayer</button>
-          <button class="filter-btn" data-filter="study">Bible Study & Discipleship</button>
-          <button class="filter-btn" data-filter="community">Fellowship & Community</button>
-          <button class="filter-btn" data-filter="outreach">Missions & Outreach</button>
+          <button class="filter-btn" data-filter="study">Bible Study</button>
+          <button class="filter-btn" data-filter="community">Community</button>
+          <button class="filter-btn" data-filter="outreach">Outreach</button>
         </div>
 
         <div class="gallery-grid-new reveal-grid">
-          <!-- Item 1 -->
           <div class="gallery-item" data-category="worship">
-            <img src="images/gallery/1.jpg" alt="Worship Session GK">
+            <img src="images/gallery/1.jpg" alt="Worship Session GK" loading="lazy">
             <div class="gallery-caption">Worship Session GK</div>
           </div>
-          <!-- Item 2 -->
           <div class="gallery-item" data-category="community">
-            <img src="images/gallery/2.jpg" alt="Sisters Fellowship">
+            <img src="images/gallery/2.jpg" alt="Sisters Fellowship" loading="lazy">
             <div class="gallery-caption">Sisters Fellowship</div>
           </div>
-          <!-- Item 3 -->
           <div class="gallery-item" data-category="community">
-            <img src="images/gallery/3.jpg" alt="Brothers Fellowship">
+            <img src="images/gallery/3.jpg" alt="Brothers Fellowship" loading="lazy">
             <div class="gallery-caption">Brothers Fellowship</div>
           </div>
-          <!-- Item 4 -->
           <div class="gallery-item" data-category="worship">
-            <img src="images/gallery/4.jpg" alt="Tuesday Prayer Service">
+            <img src="images/gallery/4.jpg" alt="Tuesday Prayer Service" loading="lazy">
             <div class="gallery-caption">Tuesday Prayer Service</div>
           </div>
-          <!-- Item 5 -->
           <div class="gallery-item" data-category="outreach">
-            <img src="images/gallery/5.jpg" alt="Rural Missions Outreach">
+            <img src="images/gallery/5.jpg" alt="Rural Missions Outreach" loading="lazy">
             <div class="gallery-caption">Rural Missions Outreach</div>
           </div>
-          <!-- Item 6 -->
           <div class="gallery-item" data-category="study">
-            <img src="images/gallery/6.jpg" alt="Thursday Bible Study">
+            <img src="images/gallery/6.jpg" alt="Thursday Bible Study" loading="lazy">
             <div class="gallery-caption">Thursday Bible Study</div>
           </div>
-          <!-- Item 7 -->
           <div class="gallery-item" data-category="worship">
-            <img src="images/nifes-worship.jpg" alt="Fellowship Worship Encounter">
+            <img src="images/nifes-worship.jpg" alt="Fellowship Worship Encounter" loading="lazy">
             <div class="gallery-caption">Fellowship Worship Encounter</div>
           </div>
-          <!-- Item 8 -->
           <div class="gallery-item" data-category="worship">
-            <img src="images/nifes-prayer.jpg" alt="Intercessory Prayer Session">
+            <img src="images/nifes-prayer.jpg" alt="Intercessory Prayer Session" loading="lazy">
             <div class="gallery-caption">Intercessory Prayer Session</div>
           </div>
-          <!-- Item 9 -->
           <div class="gallery-item" data-category="worship">
-            <img src="images/praise_session.jpg" alt="Sunday Service Praise Session">
+            <img src="images/praise_session.jpg" alt="Sunday Service Praise Session" loading="lazy">
             <div class="gallery-caption">Sunday Service Praise Session</div>
           </div>
-          <!-- Item 10 -->
           <div class="gallery-item" data-category="worship">
-            <img src="images/prayer_meeting_session.jpg" alt="Tuesday Prayer Convergence">
+            <img src="images/prayer_meeting_session.jpg" alt="Tuesday Prayer Convergence" loading="lazy">
             <div class="gallery-caption">Tuesday Prayer Convergence</div>
           </div>
-          <!-- Item 11 -->
           <div class="gallery-item" data-category="study">
-            <img src="images/bible_study_session.jpg" alt="Bible Study Discussion Group">
+            <img src="images/bible_study_session.jpg" alt="Bible Study Discussion Group" loading="lazy">
             <div class="gallery-caption">Bible Study Discussion Group</div>
           </div>
-          <!-- Item 12 -->
           <div class="gallery-item" data-category="study">
-            <img src="images/bibl.jpg" alt="Word Study Session">
+            <img src="images/bibl.jpg" alt="Word Study Session" loading="lazy">
             <div class="gallery-caption">Word Study Session</div>
           </div>
-          <!-- Item 13 -->
           <div class="gallery-item" data-category="study">
-            <img src="images/might_use_as_bs.jpg" alt="GK Leaders Bible Study">
+            <img src="images/might_use_as_bs.jpg" alt="GK Leaders Bible Study" loading="lazy">
             <div class="gallery-caption">GK Leaders Bible Study</div>
           </div>
-          <!-- Item 14 -->
           <div class="gallery-item" data-category="community">
-            <img src="images/nifes-gathering.jpg" alt="Sunday Fellowship Gathering">
+            <img src="images/nifes-gathering.jpg" alt="Sunday Fellowship Gathering" loading="lazy">
             <div class="gallery-caption">Sunday Fellowship Gathering</div>
           </div>
-          <!-- Item 15 -->
           <div class="gallery-item" data-category="community">
-            <img src="images/nifes-gathering22.jpg" alt="Members Welcome Social">
+            <img src="images/nifes-gathering22.jpg" alt="Members Welcome Social" loading="lazy">
             <div class="gallery-caption">Members Welcome Social</div>
           </div>
-          <!-- Item 16 -->
           <div class="gallery-item" data-category="community">
-            <img src="images/life-2026.jpg" alt="National Conference Delegates">
+            <img src="images/life-2026.jpg" alt="National Conference Delegates" loading="lazy">
             <div class="gallery-caption">National Conference Delegates</div>
           </div>
-          <!-- Item 17 -->
           <div class="gallery-item" data-category="outreach">
-            <img src="images/naa.jpg" alt="Campus Evangelism Drive">
+            <img src="images/naa.jpg" alt="Campus Evangelism Drive" loading="lazy">
             <div class="gallery-caption">Campus Evangelism Drive</div>
           </div>
-          <!-- Item 18 -->
           <div class="gallery-item" data-category="outreach">
-            <img src="images/placeholder-glance.jpg" alt="Leadership Retreat">
+            <img src="images/placeholder-glance.jpg" alt="Leadership Retreat" loading="lazy">
             <div class="gallery-caption">Leadership Retreat</div>
           </div>
         </div>
@@ -144,36 +137,51 @@
   <footer class="site-footer">
     <div class="container">
       <div class="footer-content">
-        <a href="index.html" class="footer-logo">NIFES<span>.</span></a>
-        <p>Raising Christ-like students to transform the campus and society.</p>
-        <ul class="footer-socials">
-          <li><a href="https://www.facebook.com/nifesfutminnaofficial" target="_blank" rel="noopener noreferrer"
-              aria-label="Facebook"><i class="fab fa-facebook-f"></i></a></li>
-          <li><a href="https://www.instagram.com/nifesfutminna?igsh=MXMzZDZzZnR2ZWFsaQ==" target="_blank"
-              rel="noopener noreferrer" aria-label="Instagram"><i class="fab fa-instagram"></i></a></li>
-          <li><a href="https://www.tiktok.com/@nifesfutmx?_r=1&_t=ZS-94X9qqK7wH6" target="_blank"
-              rel="noopener noreferrer" aria-label="TikTok"><i class="fab fa-tiktok"></i></a></li>
-          <li><a href="#" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp"><i
-                class="fab fa-whatsapp"></i></a></li>
-          <li><a href="#" target="_blank" rel="noopener noreferrer" aria-label="Twitter"><i
-                class="fab fa-twitter"></i></a></li>
-          <li><a href="https://www.youtube.com/@nifesfutmx?si=S88---Y41wuoewbN" target="_blank"
-              rel="noopener noreferrer" aria-label="YouTube"><i class="fab fa-youtube"></i></a></li>
-        </ul>
-        <div class="footer-locations">
-          <p><strong>Locations:</strong> Chapel of Grace, Gidan Kwano | Chapel of Grace, Bosso</p>
-          <p>Federal University of Technology, Minna</p>
+        <div>
+          <a href="index.html" class="footer-logo">NIFES<span>.</span></a>
+          <p class="footer-tagline">Raising Christ-like students to transform the campus and society.</p>
+          <ul class="footer-socials">
+            <li><a href="https://www.facebook.com/nifesfutminnaofficial" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a></li>
+            <li><a href="https://www.instagram.com/nifesfutminna?igsh=MXMzZDZzZnR2ZWFsaQ==" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="fab fa-instagram"></i></a></li>
+            <li><a href="https://www.tiktok.com/@nifesfutmx?_r=1&_t=ZS-94X9qqK7wH6" target="_blank" rel="noopener noreferrer" aria-label="TikTok"><i class="fab fa-tiktok"></i></a></li>
+            <li><a href="#" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a></li>
+            <li><a href="#" target="_blank" rel="noopener noreferrer" aria-label="Twitter"><i class="fab fa-twitter"></i></a></li>
+            <li><a href="https://www.youtube.com/@nifesfutmx?si=S88---Y41wuoewbN" target="_blank" rel="noopener noreferrer" aria-label="YouTube"><i class="fab fa-youtube"></i></a></li>
+          </ul>
         </div>
+        <div class="footer-section">
+          <h5>Quick Links</h5>
+          <ul class="footer-links">
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="events.html">Events</a></li>
+            <li><a href="devotionals.html">Devotionals</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="join.html">Join Us</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h5>Contact</h5>
+          <div class="footer-locations">
+            <p><strong>Chapel of Grace, Gidan Kwano</strong></p>
+            <p><strong>Chapel of Grace, Bosso</strong></p>
+            <p style="margin-top: 0.5rem;">Federal University of Technology, Minna</p>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
         <p class="footer-copyright">&copy; 2026 NIFES FUTMinna. All Rights Reserved.</p>
+        <div class="footer-locations">
+          <p>Niger State, Nigeria</p>
+        </div>
       </div>
     </div>
   </footer>
 
   <!-- Lightbox Modal -->
-  <div id="gallery-lightbox" class="lightbox">
-    <span class="lightbox-close">&times;</span>
-    <a class="lightbox-prev">&#10094;</a>
-    <a class="lightbox-next">&#10095;</a>
+  <div id="gallery-lightbox" class="lightbox" role="dialog" aria-modal="true" aria-label="Image lightbox">
+    <span class="lightbox-close" aria-label="Close lightbox">&times;</span>
+    <a class="lightbox-prev" aria-label="Previous image">&#10094;</a>
+    <a class="lightbox-next" aria-label="Next image">&#10095;</a>
     <div class="lightbox-content">
       <img id="lightbox-img" src="" alt="">
       <div id="lightbox-caption" class="lightbox-caption"></div>
@@ -181,16 +189,15 @@
   </div>
 
   <script src="animations.js"></script>
-  
+
   <script>
     document.addEventListener("DOMContentLoaded", () => {
-      // 1. Gallery Filters Logic
+      // Gallery Filters
       const filterButtons = document.querySelectorAll('.filter-btn');
       const galleryItems = document.querySelectorAll('.gallery-item');
 
       filterButtons.forEach(btn => {
         btn.addEventListener('click', () => {
-          // Remove active from all buttons
           filterButtons.forEach(b => b.classList.remove('active'));
           btn.classList.add('active');
 
@@ -204,28 +211,23 @@
                 item.timeoutId = null;
               }
               item.style.display = 'block';
-              // Trigger reflow for transition
               item.offsetHeight;
               item.style.opacity = '1';
               item.style.transform = 'scale(1) translateY(0)';
             } else {
               item.style.opacity = '0';
               item.style.transform = 'scale(0.9) translateY(15px)';
-              if (item.timeoutId) {
-                clearTimeout(item.timeoutId);
-              }
+              if (item.timeoutId) clearTimeout(item.timeoutId);
               item.timeoutId = setTimeout(() => {
-                if (item.style.opacity === '0') {
-                  item.style.display = 'none';
-                }
+                if (item.style.opacity === '0') item.style.display = 'none';
                 item.timeoutId = null;
-              }, 350); // Match CSS transition duration
+              }, 350);
             }
           });
         });
       });
 
-      // 2. Lightbox Logic
+      // Lightbox
       let currentImageIndex = 0;
       let visibleImages = [];
 
@@ -246,12 +248,13 @@
         if (!item) return;
         const img = item.querySelector('img');
         const caption = item.querySelector('.gallery-caption');
-        
+
         lightboxImg.style.opacity = '0';
         lightboxImg.style.transform = 'scale(0.95)';
-        
+
         setTimeout(() => {
           lightboxImg.src = img.src;
+          lightboxImg.alt = img.alt;
           lightboxCaption.textContent = caption ? caption.textContent : '';
           lightboxImg.style.opacity = '1';
           lightboxImg.style.transform = 'scale(1)';
@@ -268,17 +271,12 @@
 
       function navigateLightbox(direction) {
         currentImageIndex += direction;
-        if (currentImageIndex >= visibleImages.length) {
-          currentImageIndex = 0;
-        } else if (currentImageIndex < 0) {
-          currentImageIndex = visibleImages.length - 1;
-        }
+        if (currentImageIndex >= visibleImages.length) currentImageIndex = 0;
+        else if (currentImageIndex < 0) currentImageIndex = visibleImages.length - 1;
         showLightbox(currentImageIndex);
       }
 
-      // Attach event listeners
       galleryItems.forEach(item => {
-        // Initial inline styles for transition compatibility
         item.style.opacity = '1';
         item.style.transform = 'scale(1) translateY(0)';
         item.style.transition = 'opacity 0.4s cubic-bezier(0.16, 1, 0.3, 1), transform 0.4s cubic-bezier(0.16, 1, 0.3, 1)';
@@ -286,29 +284,16 @@
         item.addEventListener('click', () => {
           updateVisibleImages();
           const index = visibleImages.indexOf(item);
-          if (index !== -1) {
-            showLightbox(index);
-          }
+          if (index !== -1) showLightbox(index);
         });
       });
 
       closeBtn.addEventListener('click', hideLightbox);
-      
       lightbox.addEventListener('click', (e) => {
-        if (e.target === lightbox || e.target.classList.contains('lightbox-content')) {
-          hideLightbox();
-        }
+        if (e.target === lightbox || e.target.classList.contains('lightbox-content')) hideLightbox();
       });
-
-      prevBtn.addEventListener('click', (e) => {
-        e.stopPropagation();
-        navigateLightbox(-1);
-      });
-
-      nextBtn.addEventListener('click', (e) => {
-        e.stopPropagation();
-        navigateLightbox(1);
-      });
+      prevBtn.addEventListener('click', (e) => { e.stopPropagation(); navigateLightbox(-1); });
+      nextBtn.addEventListener('click', (e) => { e.stopPropagation(); navigateLightbox(1); });
 
       document.addEventListener('keydown', (e) => {
         if (!lightbox.classList.contains('show')) return;
