@@ -13,6 +13,7 @@
   <link rel="stylesheet" href="Style.css">
 </head>
 <body>
+  <div class="page-loader" aria-hidden="true"><div class="loader-spinner"></div></div>
   <a href="#main-content" class="skip-link">Skip to main content</a>
 
   <nav class="main-nav" aria-label="Main navigation">
@@ -33,6 +34,7 @@
       <li><a href="events.html">Events</a></li>
       <li><a href="devotionals.html">Devotionals</a></li>
       <li><a href="gallery.html">Gallery</a></li>
+      <li><a href="contact.html">Contact</a></li>
       <li><a href="join.html" class="btn btn-secondary active">Join Us</a></li>
     </ul>
   </nav>
@@ -62,7 +64,7 @@
             <img src="https://images.unsplash.com/photo-1554224155-16954405a255?q=80&w=2070&auto=format&fit=crop" alt="Connect Form" loading="lazy">
             <h4>Fill Out a Connect Form</h4>
             <p>Let us know you're here! Fill out our digital connect form so we can get in touch with you personally and help you find your place in the fellowship.</p>
-            <a href="#" class="read-more">Fill Out Form &rarr;</a>
+            <a href="#connect-form" class="read-more">Fill Out Form &rarr;</a>
           </div>
           <div class="content-card">
             <img src="https://images.unsplash.com/photo-1586769852836-bc069f19e1b6?q=80&w=2070&auto=format&fit=crop" alt="WhatsApp Group" loading="lazy">
@@ -74,25 +76,84 @@
       </div>
     </section>
 
-    <section class="page-section" id="contact-info" style="background-color: var(--surface);">
+    <section class="page-section" id="connect-form" style="background-color: var(--surface);">
       <div class="container">
         <div class="section-title-container reveal">
-          <h2>Contact Information</h2>
+          <h2>Connect Form</h2>
+          <p class="section-sub">Fill out this form and a fellowship leader will reach out to you personally.</p>
         </div>
-        <div class="page-grid-text reveal-grid">
-          <div>
-            <h3>Meeting Venue</h3>
-            <p><strong>Chapel of Grace</strong><br>Federal University of Technology, Minna<br>FUTMinna Campus, Niger State</p>
-          </div>
-          <div>
-            <h3>Get in Touch</h3>
-            <p>For questions, prayer requests, or more information, please don't hesitate to reach out to one of our executives or connect with us on social media.</p>
-            <ul class="footer-socials" style="justify-content: flex-start; margin-top: 1rem;">
-              <li><a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a></li>
-              <li><a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a></li>
-              <li><a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a></li>
-            </ul>
-          </div>
+        <div class="connect-form-wrapper reveal">
+          <form id="nifes-connect-form" action="https://formspree.io/f/xwvgozkb" method="POST" class="connect-form">
+            <div class="form-row">
+              <div class="form-group">
+                <label for="fullname">Full Name <span class="required">*</span></label>
+                <input type="text" id="fullname" name="fullname" class="form-input" placeholder="e.g. John Doe" required>
+              </div>
+              <div class="form-group">
+                <label for="phone">Phone Number <span class="required">*</span></label>
+                <input type="tel" id="phone" name="phone" class="form-input" placeholder="e.g. 08012345678" required>
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="form-group">
+                <label for="email">Email Address</label>
+                <input type="email" id="email" name="email" class="form-input" placeholder="e.g. john@example.com">
+              </div>
+              <div class="form-group">
+                <label for="campus">Campus <span class="required">*</span></label>
+                <select id="campus" name="campus" class="form-input" required>
+                  <option value="" disabled selected>Select your campus</option>
+                  <option value="Gidan Kwano">Gidan Kwano</option>
+                  <option value="Bosso">Bosso</option>
+                </select>
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="form-group">
+                <label for="department">Department</label>
+                <input type="text" id="department" name="department" class="form-input" placeholder="e.g. Computer Science">
+              </div>
+              <div class="form-group">
+                <label for="level">Level</label>
+                <select id="level" name="level" class="form-input">
+                  <option value="" disabled selected>Select your level</option>
+                  <option value="100">100 Level</option>
+                  <option value="200">200 Level</option>
+                  <option value="300">300 Level</option>
+                  <option value="400">400 Level</option>
+                  <option value="500">500 Level</option>
+                  <option value="Postgraduate">Postgraduate</option>
+                </select>
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="how-heard">How did you hear about us?</label>
+              <select id="how-heard" name="how_heard" class="form-input">
+                <option value="" disabled selected>Select an option</option>
+                <option value="Friend">Friend / Word of Mouth</option>
+                <option value="Social Media">Social Media</option>
+                <option value="Church">Church / Pastor</option>
+                <option value="Campus Outreach">Campus Outreach</option>
+                <option value="Other">Other</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="message">Anything you'd like us to know?</label>
+              <textarea id="message" name="message" class="form-input form-textarea" rows="4" placeholder="Prayer request, questions, or just say hello..."></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary connect-submit-btn">
+              <span class="btn-text">Submit Form</span>
+              <span class="btn-loading" style="display: none;"><i class="fas fa-spinner fa-spin"></i> Sending...</span>
+            </button>
+            <div class="form-success" style="display: none;">
+              <i class="fas fa-check-circle"></i>
+              <p><strong>Thank you!</strong> Your form has been submitted. A fellowship leader will reach out to you soon.</p>
+            </div>
+            <div class="form-error" style="display: none;">
+              <i class="fas fa-exclamation-circle"></i>
+              <p><strong>Oops!</strong> Something went wrong. Please try again or <a href="contact.html">contact us directly</a>.</p>
+            </div>
+          </form>
         </div>
       </div>
     </section>
@@ -132,6 +193,57 @@
   </footer>
 
   <script src="animations.js"></script>
+  <script>
+    const connectForm = document.getElementById("nifes-connect-form");
+    if (connectForm) {
+      connectForm.addEventListener("submit", async (e) => {
+        e.preventDefault();
+
+        const submitBtn = connectForm.querySelector(".connect-submit-btn");
+        const btnText = submitBtn.querySelector(".btn-text");
+        const btnLoading = submitBtn.querySelector(".btn-loading");
+        const successMsg = connectForm.querySelector(".form-success");
+        const errorMsg = connectForm.querySelector(".form-error");
+
+        btnText.style.display = "none";
+        btnLoading.style.display = "inline-flex";
+        submitBtn.disabled = true;
+        successMsg.style.display = "none";
+        errorMsg.style.display = "none";
+
+        try {
+          const formData = new FormData(connectForm);
+          const data = Object.fromEntries(formData.entries());
+
+          const response = await fetch(connectForm.action, {
+            method: "POST",
+            headers: { "Content-Type": "application/json", Accept: "application/json" },
+            body: JSON.stringify(data)
+          });
+
+          if (response.ok) {
+            connectForm.reset();
+            successMsg.style.display = "block";
+            successMsg.scrollIntoView({ behavior: "smooth", block: "center" });
+          } else {
+            const result = await response.json();
+            if (result.errors) {
+              console.error("Formspree errors:", result.errors);
+            }
+            throw new Error("Form submission failed");
+          }
+        } catch (err) {
+          console.error("Connect form error:", err);
+          errorMsg.style.display = "block";
+          errorMsg.scrollIntoView({ behavior: "smooth", block: "center" });
+        } finally {
+          btnText.style.display = "inline";
+          btnLoading.style.display = "none";
+          submitBtn.disabled = false;
+        }
+      });
+    }
+  </script>
 
 </body>
 </html>

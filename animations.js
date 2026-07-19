@@ -5,6 +5,8 @@
  */
 
 document.addEventListener("DOMContentLoaded", () => {
+  initPageLoader();
+  initImageFadeIn();
   initHeroAnimations();
   initScrollReveal();
   initStickyNavbar();
@@ -253,3 +255,42 @@ window.showSkeletonLoaders = function(container, type, count = 3) {
 // Expose globally for dynamic data loading
 window.initScrollReveal = initScrollReveal;
 window.initHeroAnimations = initHeroAnimations;
+
+/* ==========================================================================
+   8. Page Loader
+   ========================================================================== */
+function initPageLoader() {
+  const loader = document.querySelector(".page-loader");
+  if (!loader) return;
+
+  window.addEventListener("load", () => {
+    setTimeout(() => {
+      loader.classList.add("loaded");
+    }, 200);
+  });
+
+  // Fallback: remove loader after 3s max
+  setTimeout(() => {
+    loader.classList.add("loaded");
+  }, 3000);
+}
+
+/* ==========================================================================
+   9. Image Fade-In on Load
+   ========================================================================== */
+function initImageFadeIn() {
+  const images = document.querySelectorAll(".content-card img, .flip-card-front img, .gallery-item img, .page-hero-split .page-hero-split-image img");
+
+  images.forEach(img => {
+    if (img.complete) {
+      img.classList.add("loaded");
+    } else {
+      img.addEventListener("load", () => {
+        img.classList.add("loaded");
+      });
+      img.addEventListener("error", () => {
+        img.classList.add("loaded");
+      });
+    }
+  });
+}
