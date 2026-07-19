@@ -909,7 +909,7 @@ ul, ol {
    ========================================================================== */
 .site-footer {
   background: var(--primary);
-  padding: var(--space-3xl) var(--space-xl) var(--space-xl);
+  padding: var(--space-2xl) var(--space-xl) var(--space-lg);
   color: var(--text-inverse);
   position: relative;
   overflow: hidden;
@@ -929,7 +929,7 @@ ul, ol {
   max-width: 1100px;
   margin: 0 auto;
   display: grid;
-  grid-template-columns: 1.5fr 1fr 1fr;
+  grid-template-columns: 1.5fr 1fr;
   gap: var(--space-2xl);
   text-align: left;
 }
@@ -951,7 +951,7 @@ ul, ol {
   font-size: var(--text-sm);
   color: rgba(255, 255, 255, 0.7);
   line-height: var(--leading-relaxed);
-  margin-bottom: var(--space-lg);
+  margin-bottom: var(--space-md);
 }
 
 .footer-section h5 {
@@ -987,7 +987,7 @@ ul, ol {
   list-style: none;
   display: flex;
   gap: var(--space-sm);
-  margin-top: var(--space-md);
+  margin-top: var(--space-sm);
 }
 
 .footer-socials a {
@@ -1013,8 +1013,8 @@ ul, ol {
 }
 
 .footer-bottom {
-  margin-top: var(--space-2xl);
-  padding-top: var(--space-lg);
+  margin-top: var(--space-lg);
+  padding-top: var(--space-md);
   border-top: 1px solid rgba(255, 255, 255, 0.1);
   display: flex;
   justify-content: space-between;
@@ -2331,13 +2331,17 @@ ul, ol {
 
   /* Footer — Compact Mobile */
   .site-footer {
-    padding: var(--space-xl) var(--space-lg) var(--space-lg);
+    padding: var(--space-md) var(--space-md) var(--space-sm);
   }
 
   .footer-content {
-    grid-template-columns: 1fr;
-    text-align: center;
-    gap: var(--space-lg);
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    text-align: left;
+    gap: var(--space-md) var(--space-md);
+  }
+
+  .footer-content > div:first-child {
+    grid-column: 1 / -1;
   }
 
   .footer-tagline {
@@ -2345,14 +2349,16 @@ ul, ol {
   }
 
   .footer-socials {
-    justify-content: center;
+    justify-content: flex-start;
+    flex-wrap: wrap;
   }
 
   .footer-bottom {
     flex-direction: column;
-    text-align: center;
-    margin-top: var(--space-lg);
-    padding-top: var(--space-md);
+    align-items: flex-start;
+    text-align: left;
+    margin-top: var(--space-md);
+    padding-top: var(--space-sm);
   }
 
   /* Newsletter */
@@ -2574,43 +2580,60 @@ ul, ol {
 
   /* Footer — Extra Compact */
   .site-footer {
-    padding: var(--space-lg) var(--space-md) var(--space-md);
+    padding: var(--space-xs) var(--space-sm) var(--space-xs);
+  }
+
+  .footer-content {
+    grid-template-columns: 1fr;
+    gap: var(--space-xs);
+    text-align: center;
   }
 
   .footer-logo {
-    font-size: var(--text-xl);
+    font-size: var(--text-sm);
+    margin-bottom: 0;
   }
 
   .footer-tagline {
     display: none;
   }
 
-  .footer-links li {
-    margin-bottom: var(--space-xs);
-  }
-
-  .footer-links a {
-    font-size: var(--text-xs);
-  }
-
   .footer-section h5 {
-    font-size: var(--text-xs);
-    margin-bottom: var(--space-sm);
+    font-size: 10px;
+    margin-bottom: 2px;
+    letter-spacing: 0.04em;
+  }
+
+  .footer-locations p {
+    font-size: 10px;
+    line-height: 1.3;
+  }
+
+  .footer-location-note {
+    display: none;
+  }
+
+  .footer-socials {
+    margin-top: var(--space-2xs);
+    justify-content: center;
+    gap: var(--space-xs);
   }
 
   .footer-socials a {
-    width: 32px;
-    height: 32px;
-    font-size: var(--text-xs);
+    width: 24px;
+    height: 24px;
+    font-size: 10px;
   }
 
   .footer-bottom {
-    margin-top: var(--space-md);
-    padding-top: var(--space-sm);
+    margin-top: var(--space-2xs);
+    padding-top: var(--space-2xs);
+    align-items: center;
+    text-align: center;
   }
 
   .footer-copyright {
-    font-size: 11px;
+    font-size: 9px;
   }
 
   /* Newsletter */
