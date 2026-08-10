@@ -33,6 +33,7 @@
       <li><a href="executives">Executives</a></li>
       <li><a href="events">Events</a></li>
       <li><a href="devotionals">Devotionals</a></li>
+      <li><a href="prayer">Prayer</a></li>
       <li><a href="gallery">Gallery</a></li>
       <li><a href="contact">Contact</a></li>
       <li><a href="join" class="btn btn-secondary">Join Us</a></li>
@@ -236,9 +237,19 @@
             <li><a href="https://www.facebook.com/nifesfutminnaofficial" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a></li>
             <li><a href="https://www.instagram.com/nifesfutminna?igsh=MXMzZDZzZnR2ZWFsaQ==" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="fab fa-instagram"></i></a></li>
             <li><a href="https://www.tiktok.com/@nifesfutmx?_r=1&_t=ZS-94X9qqK7wH6" target="_blank" rel="noopener noreferrer" aria-label="TikTok"><i class="fab fa-tiktok"></i></a></li>
-            <li><a href="#" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a></li>
-            <li><a href="#" target="_blank" rel="noopener noreferrer" aria-label="Twitter"><i class="fab fa-twitter"></i></a></li>
+            <li><a href="#" data-site="whatsappChat" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a></li>
+            <li><a href="#" data-site="twitter" aria-label="Twitter"><i class="fab fa-twitter"></i></a></li>
             <li><a href="https://www.youtube.com/@nifesfutmx?si=S88---Y41wuoewbN" target="_blank" rel="noopener noreferrer" aria-label="YouTube"><i class="fab fa-youtube"></i></a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h5>Explore</h5>
+          <ul class="footer-links">
+            <li><a href="new-here">New Here?</a></li>
+            <li><a href="prayer">Prayer Requests</a></li>
+            <li><a href="media">Media</a></li>
+            <li><a href="gallery">Gallery</a></li>
+            <li><a href="events">Events</a></li>
           </ul>
         </div>
         <div class="footer-section">
@@ -254,16 +265,29 @@
         <p class="footer-copyright">&copy; 2026 NIFES FUTMinna. All Rights Reserved.</p>
         <div class="footer-locations">
           <p>Niger State, Nigeria</p>
+          <p><a href="privacy" style="color: rgba(255,255,255,0.7);">Privacy Policy</a></p>
         </div>
       </div>
     </div>
   </footer>
 
+  <button class="theme-toggle" id="theme-toggle" aria-label="Toggle dark mode" title="Toggle dark mode">
+    <i class="fas fa-moon" aria-hidden="true"></i>
+  </button>
+
+  <a href="#" data-site="whatsappChat" class="wa-float" aria-label="Chat with us on WhatsApp" title="Chat with us on WhatsApp">
+    <i class="fab fa-whatsapp" aria-hidden="true"></i>
+  </a>
+
+  <script src="config.js"></script>
+  <script src="site-data.js"></script>
+  <script src="site-links.js"></script>
   <script src="animations.js"></script>
 
   <script>
     document.addEventListener("DOMContentLoaded", () => {
       initSequentialTypewriter();
+      if (window.initThemeToggle) window.initThemeToggle();
     });
 
     function initSequentialTypewriter() {

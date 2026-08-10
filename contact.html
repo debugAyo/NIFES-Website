@@ -35,6 +35,7 @@
       <li><a href="executives">Executives</a></li>
       <li><a href="events">Events</a></li>
       <li><a href="devotionals">Devotionals</a></li>
+      <li><a href="prayer">Prayer</a></li>
       <li><a href="gallery">Gallery</a></li>
       <li><a href="contact" class="active">Contact</a></li>
       <li><a href="join" class="btn btn-secondary">Join Us</a></li>
@@ -60,19 +61,19 @@
             <div class="contact-card-icon"><i class="fas fa-comments"></i></div>
             <h4>General Enquiries</h4>
             <p>Questions about the fellowship, upcoming events, or how to get involved? We're happy to help.</p>
-            <a href="#" class="read-more">Chat on WhatsApp &rarr;</a>
+            <a href="#" data-site="whatsappChat" class="read-more">Chat on WhatsApp &rarr;</a>
           </div>
           <div class="content-card">
             <div class="contact-card-icon"><i class="fas fa-praying-hands"></i></div>
             <h4>Prayer Requests</h4>
             <p>Share your prayer needs with us. Our prayer team stands with you in faith and intercession.</p>
-            <a href="#" class="read-more">Send a Request &rarr;</a>
+            <a href="prayer" class="read-more">Send a Request &rarr;</a>
           </div>
           <div class="content-card">
             <div class="contact-card-icon"><i class="fas fa-handshake"></i></div>
             <h4>Partnership & Media</h4>
             <p>Interested in collaborating, sponsoring, or media coverage? Let's work together for God's glory.</p>
-            <a href="mailto:nifesfutminna@email.com" class="read-more">Send an Email &rarr;</a>
+            <a href="media" class="read-more">Explore Media &rarr;</a>
           </div>
         </div>
       </div>
@@ -84,55 +85,15 @@
           <h2>Reach Our Leaders</h2>
           <p class="section-sub">Connect directly with any of our fellowship leaders. Tap to call or chat.</p>
         </div>
-        <div class="leaders-grid reveal-grid">
-          <a href="tel:+234XXXXXXXXXX" class="leader-contact">
+        <div class="leaders-grid reveal-grid" id="leaders-grid">
+          <div class="leader-contact">
             <div class="leader-avatar"><i class="fas fa-user-shield"></i></div>
             <div class="leader-info">
               <h4>President</h4>
-              <p>John Doe</p>
-              <span class="leader-phone"><i class="fas fa-phone"></i> +234 XXX XXX XXXX</span>
+              <p>NIFES FUTMinna</p>
+              <span class="leader-phone"><i class="fas fa-phone"></i> Loading&hellip;</span>
             </div>
-          </a>
-          <a href="tel:+234XXXXXXXXXX" class="leader-contact">
-            <div class="leader-avatar"><i class="fas fa-user-tie"></i></div>
-            <div class="leader-info">
-              <h4>Vice President</h4>
-              <p>Jane Smith</p>
-              <span class="leader-phone"><i class="fas fa-phone"></i> +234 XXX XXX XXXX</span>
-            </div>
-          </a>
-          <a href="tel:+234XXXXXXXXXX" class="leader-contact">
-            <div class="leader-avatar"><i class="fas fa-pen-nib"></i></div>
-            <div class="leader-info">
-              <h4>General Secretary</h4>
-              <p>Emmanuel David</p>
-              <span class="leader-phone"><i class="fas fa-phone"></i> +234 XXX XXX XXXX</span>
-            </div>
-          </a>
-          <a href="tel:+234XXXXXXXXXX" class="leader-contact">
-            <div class="leader-avatar"><i class="fas fa-wallet"></i></div>
-            <div class="leader-info">
-              <h4>Treasurer</h4>
-              <p>Grace Okonkwo</p>
-              <span class="leader-phone"><i class="fas fa-phone"></i> +234 XXX XXX XXXX</span>
-            </div>
-          </a>
-          <a href="tel:+234XXXXXXXXXX" class="leader-contact">
-            <div class="leader-avatar"><i class="fas fa-female"></i></div>
-            <div class="leader-info">
-              <h4>Sisters Coordinator</h4>
-              <p>Faith Abraham</p>
-              <span class="leader-phone"><i class="fas fa-phone"></i> +234 XXX XXX XXXX</span>
-            </div>
-          </a>
-          <a href="tel:+234XXXXXXXXXX" class="leader-contact">
-            <div class="leader-avatar"><i class="fas fa-male"></i></div>
-            <div class="leader-info">
-              <h4>Brothers Coordinator</h4>
-              <p>Samuel Ola</p>
-              <span class="leader-phone"><i class="fas fa-phone"></i> +234 XXX XXX XXXX</span>
-            </div>
-          </a>
+          </div>
         </div>
       </div>
     </section>
@@ -168,9 +129,19 @@
             <li><a href="https://www.facebook.com/nifesfutminnaofficial" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a></li>
             <li><a href="https://www.instagram.com/nifesfutminna?igsh=MXMzZDZzZnR2ZWFsaQ==" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="fab fa-instagram"></i></a></li>
             <li><a href="https://www.tiktok.com/@nifesfutmx?_r=1&_t=ZS-94X9qqK7wH6" target="_blank" rel="noopener noreferrer" aria-label="TikTok"><i class="fab fa-tiktok"></i></a></li>
-            <li><a href="#" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a></li>
-            <li><a href="#" target="_blank" rel="noopener noreferrer" aria-label="Twitter"><i class="fab fa-twitter"></i></a></li>
+            <li><a href="#" data-site="whatsappChat" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a></li>
+            <li><a href="#" data-site="twitter" aria-label="Twitter"><i class="fab fa-twitter"></i></a></li>
             <li><a href="https://www.youtube.com/@nifesfutmx?si=S88---Y41wuoewbN" target="_blank" rel="noopener noreferrer" aria-label="YouTube"><i class="fab fa-youtube"></i></a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h5>Explore</h5>
+          <ul class="footer-links">
+            <li><a href="new-here">New Here?</a></li>
+            <li><a href="prayer">Prayer Requests</a></li>
+            <li><a href="media">Media</a></li>
+            <li><a href="gallery">Gallery</a></li>
+            <li><a href="events">Events</a></li>
           </ul>
         </div>
         <div class="footer-section">
@@ -186,12 +157,71 @@
         <p class="footer-copyright">&copy; 2026 NIFES FUTMinna. All Rights Reserved.</p>
         <div class="footer-locations">
           <p>Niger State, Nigeria</p>
+          <p><a href="privacy" style="color: rgba(255,255,255,0.7);">Privacy Policy</a></p>
         </div>
       </div>
     </div>
   </footer>
 
+  <button class="theme-toggle" id="theme-toggle" aria-label="Toggle dark mode" title="Toggle dark mode">
+    <i class="fas fa-moon" aria-hidden="true"></i>
+  </button>
+
+  <a href="#" data-site="whatsappChat" class="wa-float" aria-label="Chat with us on WhatsApp" title="Chat with us on WhatsApp">
+    <i class="fab fa-whatsapp" aria-hidden="true"></i>
+  </a>
+
+  <script src="config.js"></script>
+  <script src="site-data.js"></script>
+  <script src="site-links.js"></script>
   <script src="animations.js"></script>
+
+  <script>
+    function renderLeaders() {
+      const grid = document.getElementById("leaders-grid");
+      if (!grid) return;
+      if (!window.SITE_DATA || !SITE_DATA.leaders) {
+        grid.innerHTML = `<p class="section-sub" style="grid-column: 1 / -1;">Leader contacts are coming soon.</p>`;
+        return;
+      }
+      grid.innerHTML = "";
+      SITE_DATA.leaders.forEach(leader => {
+        const anchor = document.createElement("a");
+        anchor.className = "leader-contact";
+        if (leader.whatsapp) {
+          anchor.href = "#";
+          anchor.setAttribute("data-site", "whatsapp");
+          anchor.setAttribute("data-site-phone", leader.whatsapp);
+        } else if (leader.phone) {
+          const tel = leader.phone.replace(/[^0-9+]/g, "");
+          anchor.href = "tel:" + tel;
+        } else {
+          anchor.href = `mailto:${leader.email || ""}`;
+        }
+        const phoneTag = leader.phone
+          ? `<span class="leader-phone"><i class="fas fa-phone"></i> ${leader.phone}</span>`
+          : (leader.whatsapp
+            ? `<span class="leader-phone"><i class="fab fa-whatsapp"></i> Chat on WhatsApp</span>`
+            : '');
+        anchor.innerHTML = `
+          <div class="leader-avatar"><i class="fas fa-user-tie"></i></div>
+          <div class="leader-info">
+            <h4>${leader.role}</h4>
+            <p>${leader.name}</p>
+            ${phoneTag}
+          </div>
+        `;
+        grid.appendChild(anchor);
+      });
+      if (window.initScrollReveal) window.initScrollReveal();
+    }
+
+    renderLeaders();
+
+    if (window.initThemeToggle) {
+      window.initThemeToggle();
+    }
+  </script>
 
 </body>
 

@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Prayer Requests - NIFES FUTMinna</title>
+  <meta name="description" content="Share a prayer request with the NIFES FUTMinna prayer team. We stand with you in faith and intercession.">
+  <meta property="og:title" content="Prayer Requests - NIFES FUTMinna">
+  <meta property="og:description" content="Share a prayer request with NIFES FUTMinna. Our prayer team stands with you in faith and intercession.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="Style.css">
+</head>
+<body>
+  <div class="page-loader" aria-hidden="true"><div class="loader-spinner"></div></div>
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <nav class="main-nav" aria-label="Main navigation">
+    <a href="index" class="logo">
+      <img src="nifes-logo.png" alt="NIFES Logo">
+      NIFES FUTMinna
+    </a>
+    <button class="hamburger" aria-label="Toggle navigation menu" aria-expanded="false">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+    <div class="nav-overlay"></div>
+    <ul class="nav-links">
+      <li><a href="index">Home</a></li>
+      <li><a href="about">About</a></li>
+      <li><a href="executives">Executives</a></li>
+      <li><a href="events">Events</a></li>
+      <li><a href="devotionals">Devotionals</a></li>
+      <li><a href="prayer" class="active">Prayer</a></li>
+      <li><a href="gallery">Gallery</a></li>
+      <li><a href="contact">Contact</a></li>
+      <li><a href="join" class="btn btn-secondary">Join Us</a></li>
+    </ul>
+  </nav>
+
+  <header class="page-hero">
+    <div class="page-hero-inner">
+      <div class="section-tag">We Stand With You</div>
+      <h1>Share a Prayer Request</h1>
+      <p class="section-sub">Whatever you're facing — exams, family, relationships, decisions, or just life — our prayer team would be honored to pray with you.</p>
+    </div>
+  </header>
+
+  <main id="main-content">
+    <section class="page-section" id="prayer-form">
+      <div class="container">
+        <div class="page-grid-text reveal-grid" style="grid-template-columns: 1fr 1fr; align-items: start; gap: 2rem;">
+          <div>
+            <div class="section-title-container" style="margin-bottom: 1rem;">
+              <h2>How It Works</h2>
+            </div>
+            <ol class="steps-list">
+              <li>
+                <h4>Share Your Request</h4>
+                <p>Fill in the form beside this. You can choose to keep your name anonymous if you prefer.</p>
+              </li>
+              <li>
+                <h4>Our Team Prays</h4>
+                <p>Your request goes directly to our prayer unit, who bring it before God in their regular prayer meetings.</p>
+              </li>
+              <li>
+                <h4>You're Not Alone</h4>
+                <p>If you leave a contact, a prayer partner may reach out to check in and pray with you personally.</p>
+              </li>
+            </ol>
+            <div class="content-card" style="margin-top: 1.5rem;">
+              <h4>Join Our Weekly Prayer Meeting</h4>
+              <p>Pray with us in person every week.</p>
+              <p><strong>Day:</strong> Tuesday &bull; <strong>Time:</strong> 7:00 PM</p>
+              <p><strong>Venue:</strong> Chapel of Grace, Gidan Kwano / Bosso</p>
+            </div>
+          </div>
+          <div>
+            <div class="connect-form-wrapper">
+              <form id="nifes-prayer-form" action="https://formspree.io/f/xwvgozkb" method="POST" class="connect-form">
+                <div class="form-row">
+                  <div class="form-group">
+                    <label for="p-name">Your Name <span class="optional">(optional)</span></label>
+                    <input type="text" id="p-name" name="name" class="form-input" placeholder="e.g. John Doe">
+                  </div>
+                  <div class="form-group">
+                    <label for="p-contact">Phone / WhatsApp <span class="optional">(optional)</span></label>
+                    <input type="text" id="p-contact" name="contact" class="form-input" placeholder="e.g. 08012345678">
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label for="p-campus">Campus <span class="optional">(optional)</span></label>
+                  <select id="p-campus" name="campus" class="form-input">
+                    <option value="" disabled selected>Select your campus</option>
+                    <option value="Gidan Kwano">Gidan Kwano</option>
+                    <option value="Bosso">Bosso</option>
+                    <option value="Other / Not a student">Other / Not a student</option>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <label for="p-request">Your Prayer Request <span class="required">*</span></label>
+                  <textarea id="p-request" name="request" class="form-input form-textarea" rows="6" placeholder="Share what you'd like us to pray about..." required></textarea>
+                </div>
+                <div class="form-group">
+                  <label class="checkbox-label">
+                    <input type="checkbox" id="p-private" name="private" value="yes" style="width: auto; margin-right: 0.5rem;">
+                    Keep my request private &amp; anonymous (only shared with the prayer team)
+                  </label>
+                </div>
+                <button type="submit" class="btn btn-primary connect-submit-btn">
+                  <span class="btn-text"><i class="fas fa-praying-hands" style="margin-right: 6px;"></i> Send Request</span>
+                  <span class="btn-loading" style="display: none;"><i class="fas fa-spinner fa-spin"></i> Sending...</span>
+                </button>
+                <div class="form-success" style="display: none;">
+                  <i class="fas fa-check-circle"></i>
+                  <p><strong>Thank you!</strong> Your request has been received. Our prayer team will pray for you.</p>
+                </div>
+                <div class="form-error" style="display: none;">
+                  <i class="fas fa-exclamation-circle"></i>
+                  <p><strong>Oops!</strong> Something went wrong. Please try again or <a href="contact">contact us directly</a>.</p>
+                </div>
+              </form>
+            </div>
+            <p class="section-sub" style="margin-top: 1rem; font-size: var(--text-sm);">Prefer to talk now? <a href="#" data-site="whatsappChat" style="text-decoration: underline;">Chat with us on WhatsApp</a> — someone will pray with you right away.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="page-section surface-section" id="prayer-scripture">
+      <div class="container">
+        <div class="section-title-container reveal">
+          <h2>Standing on God's Promises</h2>
+        </div>
+        <div class="page-grid reveal-grid">
+          <div class="content-card">
+            <div class="testimonial-quote-icon"><i class="fas fa-quote-left" aria-hidden="true"></i></div>
+            <p class="testimonial-quote">"Ask and it will be given to you; seek and you will find; knock and the door will be opened to you."</p>
+            <div class="testimonial-author"><strong>Matthew 7:7</strong><span>Jesus Christ</span></div>
+          </div>
+          <div class="content-card">
+            <div class="testimonial-quote-icon"><i class="fas fa-quote-left" aria-hidden="true"></i></div>
+            <p class="testimonial-quote">"Do not be anxious about anything, but in every situation, by prayer and petition, with thanksgiving, present your requests to God."</p>
+            <div class="testimonial-author"><strong>Philippians 4:6</strong><span>Apostle Paul</span></div>
+          </div>
+          <div class="content-card">
+            <div class="testimonial-quote-icon"><i class="fas fa-quote-left" aria-hidden="true"></i></div>
+            <p class="testimonial-quote">"Therefore confess your sins to each other and pray for each other so that you may be healed. The prayer of a righteous person is powerful and effective."</p>
+            <div class="testimonial-author"><strong>James 5:16</strong><span>James</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-content">
+        <div>
+          <a href="index" class="footer-logo">NIFES<span>.</span></a>
+          <p class="footer-tagline">Raising Christ-like students to transform the campus and society.</p>
+          <ul class="footer-socials">
+            <li><a href="https://www.facebook.com/nifesfutminnaofficial" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a></li>
+            <li><a href="https://www.instagram.com/nifesfutminna?igsh=MXMzZDZzZnR2ZWFsaQ==" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="fab fa-instagram"></i></a></li>
+            <li><a href="https://www.tiktok.com/@nifesfutmx?_r=1&_t=ZS-94X9qqK7wH6" target="_blank" rel="noopener noreferrer" aria-label="TikTok"><i class="fab fa-tiktok"></i></a></li>
+            <li><a href="#" data-site="whatsappChat" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a></li>
+            <li><a href="#" data-site="twitter" aria-label="Twitter"><i class="fab fa-twitter"></i></a></li>
+            <li><a href="https://www.youtube.com/@nifesfutmx?si=S88---Y41wuoewbN" target="_blank" rel="noopener noreferrer" aria-label="YouTube"><i class="fab fa-youtube"></i></a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h5>Explore</h5>
+          <ul class="footer-links">
+            <li><a href="new-here">New Here?</a></li>
+            <li><a href="prayer">Prayer Requests</a></li>
+            <li><a href="media">Media</a></li>
+            <li><a href="gallery">Gallery</a></li>
+            <li><a href="events">Events</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h5>Contact</h5>
+          <div class="footer-locations">
+            <p><strong>Chapel of Grace, Gidan Kwano</strong></p>
+            <p><strong>Chapel of Grace, Bosso</strong></p>
+            <p class="footer-location-note">Federal University of Technology, Minna</p>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p class="footer-copyright">&copy; 2026 NIFES FUTMinna. All Rights Reserved.</p>
+        <div class="footer-locations">
+          <p>Niger State, Nigeria</p>
+          <p><a href="privacy" style="color: rgba(255,255,255,0.7);">Privacy Policy</a></p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <button class="theme-toggle" id="theme-toggle" aria-label="Toggle dark mode" title="Toggle dark mode">
+    <i class="fas fa-moon" aria-hidden="true"></i>
+  </button>
+
+  <a href="#" data-site="whatsappChat" class="wa-float" aria-label="Chat with us on WhatsApp" title="Chat with us on WhatsApp">
+    <i class="fab fa-whatsapp" aria-hidden="true"></i>
+  </a>
+
+  <script src="config.js"></script>
+  <script src="site-data.js"></script>
+  <script src="site-links.js"></script>
+  <script src="animations.js"></script>
+
+  <script>
+    const prayerForm = document.getElementById("nifes-prayer-form");
+    if (prayerForm) {
+      prayerForm.addEventListener("submit", async (e) => {
+        e.preventDefault();
+
+        const submitBtn = prayerForm.querySelector(".connect-submit-btn");
+        const btnText = submitBtn.querySelector(".btn-text");
+        const btnLoading = submitBtn.querySelector(".btn-loading");
+        const successMsg = prayerForm.querySelector(".form-success");
+        const errorMsg = prayerForm.querySelector(".form-error");
+
+        btnText.style.display = "none";
+        btnLoading.style.display = "inline-flex";
+        submitBtn.disabled = true;
+        successMsg.style.display = "none";
+        errorMsg.style.display = "none";
+
+        try {
+          const formData = new FormData(prayerForm);
+          const data = Object.fromEntries(formData.entries());
+          data.subject = "Prayer Request — NIFES FUTMinna Website";
+
+          const response = await fetch(prayerForm.action, {
+            method: "POST",
+            headers: { "Content-Type": "application/json", Accept: "application/json" },
+            body: JSON.stringify(data)
+          });
+
+          if (response.ok) {
+            prayerForm.reset();
+            successMsg.style.display = "block";
+            successMsg.scrollIntoView({ behavior: "smooth", block: "center" });
+          } else {
+            throw new Error("Form submission failed");
+          }
+        } catch (err) {
+          console.error("Prayer form error:", err);
+          errorMsg.style.display = "block";
+          errorMsg.scrollIntoView({ behavior: "smooth", block: "center" });
+        } finally {
+          btnText.style.display = "inline";
+          btnLoading.style.display = "none";
+          submitBtn.disabled = false;
+        }
+      });
+    }
+  </script>
+
+</body>
+</html>
