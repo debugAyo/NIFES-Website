@@ -165,7 +165,7 @@ const SITE_DATA = {
     },
     {
       quote: "Through the prayer meeting and Bible studies, God gave me clarity about my purpose. NIFES shaped the person I am becoming in my career and my faith.",
-      name: "Zainab B.", role: "200 Level — Biochemistry"
+      name: "John", role: "200 Level — Biochemistry"
     }
   ],
 
