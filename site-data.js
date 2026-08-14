@@ -52,7 +52,7 @@ const SITE_DATA = {
       time: "7:00 PM",
       desc: "Join us as we seek God's face together through prayer and the Word. A dedicated time to intercede for our campus, our nation, and one another, strengthening our dependence on God.",
       image: "images/nifes-prayer.jpg",
-      day: 1,
+      day: 2,
       hour: 19,
       minute: 0
     },
@@ -97,24 +97,24 @@ const SITE_DATA = {
    * --------------------------------------------------------------- */
   executives: {
     gk: [
-      { name: "Samuel Peter", role: "President", image: "images/executives/sir_peter_gk_president1.jpg" },
-      { name: "Okpanachi Daniel", role: "Vice President", image: "images/executives/sir_daniel_gk_vp.jpg" },
-      { name: "Onyedim Gift", role: "General Secretary", image: "" },
-      { name: "Ibrahim Abigail", role: "Treasurer", image: "images/executives/treasurer_cord.jpg" },
-      { name: "Enyojo Abigail", role: "Sisters Coordinator/Welfare Secretary", image: "images/executives/sister_cord.jpg" },
+      { name: "Samuel Peter", role: "President", image: "images/executives/gk/president.jpg" },
+      { name: "Okpanachi Daniel", role: "Vice President", image: "" },
+      { name: "Onyedim Gift", role: "General Secretary", image: "images/executives/gk/gen_sec.JPG" },
+      { name: "Ibrahim Abigail", role: "Treasurer", image: "images/executives/gk/treasurer.jpg" },
+      { name: "Enyojo Abigail", role: "Sisters Coordinator/Welfare Secretary", image: "images/executives/gk/sis_cord.jpg" },
       { name: "Boniface Chisom", role: "Brothers Coordinator", image: "" },
-      { name: "Onoja Fidelia", role: "Financial Secretary", image: "images/executives/financialsec_cord.jpg" },
-      { name: "Na'allah Beauty", role: "Ushering Unit Secretary", image: "images/executives/ushering_cord.jpg" },
-      { name: "Zimuzor Wisdom", role: "Evangelism Unit Secretary", image: "images/executives/evangelism_cord.jpg" },
-      { name: "Emejor Kingsley", role: "Follow Up Secretary", image: "images/executives/followup_cord.jpg" },
-      { name: "Williams Tabitha", role: "Prayer Unit Secretary", image: "" },
-      { name: "Jordan Anibe", role: "Press Unit Secretary", image: "images/executives/press_cord.jpg" },
-      { name: "Isah Joshua", role: "Bible Study Unit Secretary", image: "images/executives/biblestudy_cord.jpg" },
+      { name: "Onoja Fidelia", role: "Financial Secretary", image: "" },
+      { name: "Na'allah Beauty", role: "Ushering Unit Secretary", image: "images/executives/gk/ushering_cord.jpg" },
+      { name: "Zimuzor Wisdom", role: "Evangelism Unit Secretary", image: "images/executives/gk/evangelism_cord.JPG" },
+      { name: "Emejor Kingsley", role: "Follow Up Secretary", image: "" },
+      { name: "Williams Tabitha", role: "Prayer Unit Secretary", image: "images/executives/gk/prayer_cord.JPG" },
+      { name: "Jordan Anibe", role: "Press Unit Secretary", image: "" },
+      { name: "Isah Joshua", role: "Bible Study Unit Secretary", image: "images/executives/gk/bible_cord.JPG" },
       { name: "Achimugu Caleb", role: "Drama Unit Secretary", image: "" },
-      { name: "Oyewale Lifted", role: "Technical Unit Secretary", image: "images/executives/technical_cord.jpg" },
-      { name: "Oma-benedi Sophia", role: "Assistant General Secretary", image: "" },
-      { name: "Innocent Healer", role: "Music Director", image: "images/executives/music_cord.jpg" },
-      { name: "Academic Coordinator", role: "Academic Coordinator", image: "images/executives/academic_cord.jpg" }
+      { name: "Oyewale Lifted", role: "Technical Unit Secretary", image: "images/executives/gk/technical_cord.JPG" },
+      { name: "Oma-benedi Sophia", role: "Assistant General Secretary", image: "images/executives/gk/ass_gen_sec.JPG" },
+      { name: "Innocent Healer", role: "Music Director", image: "images/executives/gk/music_director.jpg" },
+      { name: "Academic Coordinator", role: "Academic Coordinator", image: "images/executives/gk/academic_cord.JPG" }
     ],
     bosso: [
       // [Update] All Bosso entries are dummy until real names/photos are provided
