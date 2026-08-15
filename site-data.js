@@ -142,20 +142,20 @@ const SITE_DATA = {
       { name: "Whyte Victoria Samuel", role: "General Secretary", image: "images/executives/gk/gen_sec.JPG" },
       { name: "Divine Uzoma", role: "Bible Study Secretary", image: "images/executives/gk/bible_cord.JPG" },
       { name: "Adama Ojochonu Augustine", role: "Publicity Secretary", image: "images/executives/gk/publi_cord.jpg" },
-      { name: "Ogbe Loveth Ufedojo", role: "Treasurer", image: "" },
+      { name: "Ogbe Loveth Ufedojo", role: "Treasurer", image: "images/executives/gk/financial_sec.jpg" },
       { name: "Abdullateef Musa Olamilekan", role: "Academic Coordinator", image: "images/executives/gk/academic_cord.JPG" },
       { name: "Sunday Blessing Ogechukwu", role: "Sisters Coordinator/Welfare", image: "images/executives/gk/sis_cord.jpg" },
       { name: "Isah Josiah", role: "Prayer Secretary", image: "images/executives/gk/prayer_cord.JPG" },
       { name: "Israel Emmanuel Ufedojo", role: "Drama Coordinator", image: "" },
       { name: "Oyewale Lifted Olayinka", role: "Technical Coordinator", image: "images/executives/gk/technical_cord.JPG" },
       { name: "Boniface Chinaemeze Great", role: "Music Director", image: "images/executives/gk/music_director.jpg" },
-      { name: "Aigbedion Ehinomhen Favour", role: "Follow Up Secretary", image: "images/executives/gk/followup_cord.jpg" },
-      { name: "Armstrong Dozie Chimeremeze", role: "Evangelism Secretary", image: "" },
+      { name: "Armstrong Dozie Chimeremeze", role: "Follow Up Secretary", image: "images/executives/gk/followup_cord.jpg" },
+      { name: "Aigbedion Ehinomhen Favour", role: "Evangelism Secretary", image: "" },
       { name: "Anita Olamide Shehu", role: "Assistant General Secretary", image: "images/executives/gk/ass_gen_sec.JPG" },
       { name: "Tsaku Ephraim Arigu", role: "Ushering Coordinator", image: "images/executives/gk/ushering_cord.jpg" },
       { name: "Praise Samita Enang", role: "Brothers Coordinator", image: "" },
       { name: "Godswill Beng", role: "FYB Coordinator", image: "" },
-      { name: "Fidelia Onoja", role: "Financial Secretary", image: "images/executives/gk/financial_sec.jpg" }
+      { name: "Fidelia Onoja", role: "Financial Secretary", image: "" }
     ],
     bosso: [
       { name: "Odafe Oghenekewe Daniel", role: "President", image: "images/executives/bosso/president.jpg" },
@@ -183,7 +183,7 @@ const SITE_DATA = {
    * --------------------------------------------------------------- */
   leaders: [
     { role: "President", name: "Okpanachi Daniel", phone: "+234 807 815 0481", icon: "fas fa-user-shield" },
-    { role: "Follow Up Secretary", name: "Aigbedion Ehinomhen Favour", phone: "+234 808 521 7921", icon: "fas fa-handshake" }
+    { role: "Follow Up Secretary", name: "Armstrong Dozie Chimeremeze", phone: "+234 808 521 7921", icon: "fas fa-handshake" }
   ],
 
   /* ---------------------------------------------------------------
