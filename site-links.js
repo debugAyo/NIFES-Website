@@ -121,7 +121,9 @@
       });
       document.body.appendChild(btn);
     }
-    applyTheme(getStoredTheme() || "auto");
+    // Keep the site visually consistent across devices by defaulting to the
+    // light blue-and-white theme unless the user explicitly changes it.
+    applyTheme(getStoredTheme() || "light");
   }
 
   /* ------------------------------------------------------------------
