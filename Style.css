@@ -1818,11 +1818,16 @@ ul, ol {
   letter-spacing: 0.06em;
   color: var(--accent);
   margin-top: auto;
-  display: flex;
+  align-self: center;
+  display: inline-flex;
   align-items: center;
   justify-content: center;
   gap: var(--space-xs);
-  opacity: 0.6;
+  background: var(--accent-50);
+  border: 1px solid var(--accent-100);
+  border-radius: var(--radius-full);
+  padding: 6px 14px;
+  opacity: 1;
   transition: opacity var(--duration-fast);
 }
 
@@ -3308,7 +3313,6 @@ html[data-theme="dark"] body,
 html[data-theme="dark"] .content-card,
 html[data-theme="dark"] .page-grid-text div,
 html[data-theme="dark"] .flip-card-front,
-html[data-theme="dark"] .flip-card-back,
 html[data-theme="dark"] .exec-card,
 html[data-theme="dark"] .testimonial-card,
 html[data-theme="dark"] .unit-card,
@@ -3321,6 +3325,11 @@ html[data-theme="dark"] .panel {
   background-color: var(--surface-elevated);
   color: var(--text-primary);
   border-color: var(--border);
+}
+
+html[data-theme="dark"] .flip-card-back {
+  background: var(--primary-dark);
+  color: #ffffff;
 }
 
 html[data-theme="dark"] .content-card h4,
