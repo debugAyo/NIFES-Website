@@ -54,6 +54,10 @@
         <div class="section-title-container reveal">
           <h2>Our Weekly Rhythm</h2>
         </div>
+        <div class="campus-toggle reveal">
+          <button type="button" class="campus-btn active" data-campus="gk">Gidan Kwano</button>
+          <button type="button" class="campus-btn" data-campus="bosso">Bosso</button>
+        </div>
         <div class="page-grid reveal-grid">
           <div class="content-card">
             <img src="images/nifes-worship.jpg" alt="Sunday Service" loading="lazy">
@@ -63,13 +67,13 @@
           </div>
           <div class="content-card">
             <img src="images/nifes-prayer.jpg" alt="Prayer Meeting" loading="lazy">
-            <h4>Prayer Meeting / Bible Study</h4>
+            <h4>Tuesday: Prayer Meeting / Bible Study</h4>
             <p>Join us as we seek God's face together through prayer and the Word. A dedicated time to intercede for our campus, our nation, and one another, strengthening our dependence on God.</p>
             <p><strong>Time:</strong> 7:00 PM</p>
           </div>
           <div class="content-card">
             <img src="images/nifes-gathering.jpg" alt="Bible Study" loading="lazy">
-            <h4>Thursday Discipleship Cell Group</h4>
+            <h4>Thursday: Discipleship Cell Group</h4>
             <p>Connect with a small cell group for deeper discipleship, accountability, and shared growth. A safe space to ask questions, pray together, and build life-long friendships.</p>
             <p><strong>Time:</strong> 7:00 PM</p>
           </div>
@@ -192,6 +196,7 @@
   <script>
     const weeklyGrid = document.querySelector("#weekly-rhythm .page-grid");
     const programsGrid = document.querySelector("#upcoming-programs .page-grid");
+    let activeCampus = "gk";
     if (window.showSkeletonLoaders) {
       window.showSkeletonLoaders(weeklyGrid, "content", 3);
       window.showSkeletonLoaders(programsGrid, "content", 3);
@@ -215,7 +220,7 @@
       const grid = document.querySelector("#weekly-rhythm .page-grid");
       if (!grid) return;
       grid.innerHTML = "";
-      list.forEach(event => {
+      (list || []).filter(event => !event.campus || event.campus === activeCampus).forEach(event => {
         const card = document.createElement("div");
         card.className = "content-card";
         const imgTag = event.image ? `<img src="${event.image}" alt="${event.title}" loading="lazy">` : '';
@@ -230,6 +235,14 @@
       if (window.initScrollReveal) window.initScrollReveal();
     }
 
+    document.querySelectorAll(".campus-btn").forEach(btn => {
+      btn.addEventListener("click", () => {
+        activeCampus = btn.getAttribute("data-campus");
+        document.querySelectorAll(".campus-btn").forEach(b => b.classList.toggle("active", b === btn));
+        if (window.SITE_DATA && SITE_DATA.weekly) renderWeeklyList(SITE_DATA.weekly);
+      });
+    });
+
     function renderProgramsList(list) {
       const grid = document.querySelector("#upcoming-programs .page-grid");
       if (!grid) return;
@@ -237,7 +250,8 @@
       list.forEach(prog => {
         const card = document.createElement("div");
         card.className = "content-card";
-        const imgTag = prog.image ? `<img src="${prog.image}" alt="${prog.title}" loading="lazy">` : '';
+        const isLtcImage = prog.image && (prog.image.includes('ltc.jpg') || prog.title.toLowerCase().includes('leadership training'));
+        const imgTag = prog.image ? `<img src="${prog.image}" alt="${prog.title}" loading="lazy" class="${isLtcImage ? 'ltc-image' : ''}">` : '';
         const dateTag = prog.date ? `<p><strong>Date:</strong> ${prog.date}</p>` : '';
         const statusTag = prog.status ? `<p><strong>Status:</strong> ${prog.status}</p>` : '';
         const linkTag = (prog.gallery || prog.link) ? `<a href="${(prog.gallery || prog.link)}.html" class="btn btn-primary" style="margin-top: var(--space-sm); display: inline-flex;"><i class="fas fa-images" style="margin-right: 6px;"></i> View Gallery</a>` : '';

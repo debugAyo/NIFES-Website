@@ -555,6 +555,43 @@ ul, ol {
   transform: translateY(-1px);
 }
 
+.campus-toggle {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-xs);
+  justify-content: center;
+  margin-bottom: var(--space-lg);
+}
+
+.campus-btn {
+  padding: 0.6rem 1.5rem;
+  border-radius: var(--radius-full);
+  font-family: var(--font-body);
+  font-size: var(--text-sm);
+  font-weight: 600;
+  border: 2px solid var(--border);
+  background-color: transparent;
+  color: var(--text-muted);
+  cursor: pointer;
+  transition: transform var(--duration-normal) var(--ease-out),
+              background-color var(--duration-normal) var(--ease-out),
+              color var(--duration-normal) var(--ease-out),
+              box-shadow var(--duration-normal) var(--ease-out),
+              border-color var(--duration-normal) var(--ease-out);
+}
+
+.campus-btn:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+}
+
+.campus-btn.active {
+  background: linear-gradient(135deg, var(--accent), var(--accent-dark));
+  color: #ffffff;
+  border-color: var(--accent);
+  box-shadow: var(--shadow-accent);
+}
+
 .hero-buttons {
   display: flex;
   gap: var(--space-md);
@@ -728,6 +765,11 @@ ul, ol {
   object-fit: cover;
   border-radius: 18px;
   margin-bottom: var(--space-md);
+}
+
+.content-card img.ltc-image {
+  object-position: center 30%;
+  transform: scale(0.9);
 }
 
 .content-card h4 {
@@ -3183,41 +3225,41 @@ ul, ol {
    30. Dark Mode — token overrides via [data-theme="dark"]
    ========================================================================== */
 html[data-theme="dark"] {
-  --primary: #0d1b3e;
-  --primary-light: #123364;
-  --primary-dark: #060e22;
-  --primary-50: rgba(120, 160, 230, 0.08);
-  --primary-100: rgba(120, 160, 230, 0.16);
-  --primary-200: rgba(120, 160, 230, 0.28);
+  --primary: #0f223d;
+  --primary-light: #1b3a62;
+  --primary-dark: #0c1a2f;
+  --primary-50: rgba(15, 34, 61, 0.06);
+  --primary-100: rgba(15, 34, 61, 0.12);
+  --primary-200: rgba(15, 34, 61, 0.22);
 
-  --accent: #ff3d8b;
-  --accent-light: #ff6ba8;
-  --accent-dark: #c21257;
-  --accent-50: rgba(255, 61, 139, 0.1);
-  --accent-100: rgba(255, 61, 139, 0.18);
-  --accent-200: rgba(255, 61, 139, 0.3);
+  --accent: #f1538a;
+  --accent-light: #ff7aab;
+  --accent-dark: #d83d75;
+  --accent-50: rgba(241, 83, 138, 0.12);
+  --accent-100: rgba(241, 83, 138, 0.18);
+  --accent-200: rgba(241, 83, 138, 0.28);
 
   --white: #ffffff;
-  --surface: #0f172a;
-  --surface-elevated: #1e293b;
-  --surface-hover: #273449;
-  --border: #334155;
-  --border-light: #293548;
+  --surface: #edf1f5;
+  --surface-elevated: #f6f8fb;
+  --surface-hover: #e6ecf3;
+  --border: #d8dee8;
+  --border-light: #e5ebf2;
 
-  --text-primary: #eef2f7;
-  --text-secondary: #c7d0dd;
-  --text-muted: #8a97a8;
+  --text-primary: #1b2940;
+  --text-secondary: #3d4d68;
+  --text-muted: #68798d;
 
-  --shadow-xs: 0 1px 2px rgba(0, 0, 0, 0.4);
-  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.4), 0 1px 2px rgba(0, 0, 0, 0.3);
-  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.4), 0 2px 4px -2px rgba(0, 0, 0, 0.3);
-  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.4), 0 4px 6px -4px rgba(0, 0, 0, 0.3);
-  --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.45), 0 8px 10px -6px rgba(0, 0, 0, 0.3);
-  --shadow-2xl: 0 25px 50px -12px rgba(0, 0, 0, 0.6);
+  --shadow-xs: 0 1px 2px rgba(15, 34, 61, 0.08);
+  --shadow-sm: 0 1px 3px rgba(15, 34, 61, 0.08), 0 1px 2px rgba(15, 34, 61, 0.05);
+  --shadow-md: 0 4px 6px -1px rgba(15, 34, 61, 0.08), 0 2px 4px -2px rgba(15, 34, 61, 0.06);
+  --shadow-lg: 0 10px 15px -3px rgba(15, 34, 61, 0.08), 0 4px 6px -4px rgba(15, 34, 61, 0.06);
+  --shadow-xl: 0 20px 25px -5px rgba(15, 34, 61, 0.08), 0 8px 10px -6px rgba(15, 34, 61, 0.05);
+  --shadow-2xl: 0 25px 50px -12px rgba(15, 34, 61, 0.15);
 }
 
 html[data-theme="dark"] body {
-  background-color: var(--surface);
+  background: linear-gradient(180deg, #edf1f5 0%, #e7edf7 100%);
   color: var(--text-primary);
 }
 
@@ -3257,6 +3299,52 @@ html[data-theme="dark"] .row-item .action-btn {
 
 html[data-theme="dark"] .form-input {
   background-color: var(--surface);
+}
+
+html[data-theme="dark"] body,
+html[data-theme="dark"] .content-card,
+html[data-theme="dark"] .page-grid-text div,
+html[data-theme="dark"] .flip-card-front,
+html[data-theme="dark"] .flip-card-back,
+html[data-theme="dark"] .exec-card,
+html[data-theme="dark"] .testimonial-card,
+html[data-theme="dark"] .unit-card,
+html[data-theme="dark"] .page-grid-text p,
+html[data-theme="dark"] .page-grid-text ul,
+html[data-theme="dark"] .content-card p,
+html[data-theme="dark"] .item-card,
+html[data-theme="dark"] .card,
+html[data-theme="dark"] .panel {
+  background-color: var(--surface-elevated);
+  color: var(--text-primary);
+  border-color: var(--border);
+}
+
+html[data-theme="dark"] .content-card h4,
+html[data-theme="dark"] .content-card h3,
+html[data-theme="dark"] .page-grid-text h3,
+html[data-theme="dark"] .exec-name,
+html[data-theme="dark"] .testimonial-author strong,
+html[data-theme="dark"] .section-title-container h2 {
+  color: var(--text-primary);
+}
+
+html[data-theme="dark"] .content-card p,
+html[data-theme="dark"] .page-grid-text p,
+html[data-theme="dark"] .page-grid-text ul,
+html[data-theme="dark"] .section-sub,
+html[data-theme="dark"] .testimonial-quote,
+html[data-theme="dark"] .testimonial-author span,
+html[data-theme="dark"] .unit-card p,
+html[data-theme="dark"] .leader-info p,
+html[data-theme="dark"] .leader-info span {
+  color: var(--text-secondary);
+}
+
+html[data-theme="dark"] .theme-toggle {
+  background-color: var(--surface-elevated);
+  color: var(--text-primary);
+  border-color: var(--border);
 }
 
 /* ==========================================================================

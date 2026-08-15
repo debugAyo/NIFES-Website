@@ -16,17 +16,14 @@ const SITE_DATA = {
    * Global links & contact details
    * --------------------------------------------------------------- */
   links: {
-    // [Update] Replace with the real fellowship WhatsApp group invite link
-    whatsappGroup: "https://chat.whatsapp.com/DUMMY_REPLACE_WITH_REAL_GROUP_LINK",
-    // [Update] Replace with real WhatsApp number (international format, no "+")
-    whatsappNumber: "2348000000000",
+    whatsappGroup: "https://chat.whatsapp.com/BMBYz6EiBY1CnmKTqMNAG0?s=cl&p=a&mlu=0&ilr=0",
+    whatsappNumber: "2348078150481",
     whatsappMessage: "Hello NIFES FUTMinna! I'd love to connect with the fellowship.",
     twitter: "https://x.com/nifesfutminna26",
     // [Update] Replace with the fellowship's real contact email
     email: "contact@nifesfutminna.org",
-    // [Update] Replace with the fellowship phone number
-    phoneDisplay: "+234 800 000 0000",
-    phoneTel: "+2348000000000",
+    phoneDisplay: "+234 807 815 0481",
+    phoneTel: "+2348078150481",
     facebook: "https://www.facebook.com/nifesfutminnaofficial",
     instagram: "https://www.instagram.com/nifesfutminna?igsh=MXMzZDZzZnR2ZWFsaQ==",
     youtube: "https://youtube.com/@nifesfutminnaa",
@@ -45,25 +42,68 @@ const SITE_DATA = {
       image: "images/nifes-worship.jpg",
       day: 0,
       hour: 14,
-      minute: 30
+      minute: 30,
+      campus: "gk"
     },
     {
-      title: "Prayer Meeting / Bible Study",
+      title: "Tuesday: Prayer Meeting / Bible Study",
       time: "7:00 PM",
       desc: "Join us as we seek God's face together through prayer and the Word. A dedicated time to intercede for our campus, our nation, and one another, strengthening our dependence on God.",
       image: "images/nifes-prayer.jpg",
       day: 2,
       hour: 19,
-      minute: 0
+      minute: 0,
+      campus: "gk"
     },
     {
-      title: "Thursday Discipleship Cell Group",
+      title: "Thursday: Discipleship Cell Group",
       time: "7:00 PM",
       desc: "Connect with a small cell group for deeper discipleship, accountability, and shared growth. A safe space to ask questions, pray together, and build life-long friendships.",
       image: "images/nifes-gathering.jpg",
       day: 3,
       hour: 19,
-      minute: 0
+      minute: 0,
+      campus: "gk"
+    },
+    {
+      title: "Sunday Service",
+      time: "2:30 PM",
+      desc: "The cornerstone of our week. A time of corporate worship, powerful preaching from the Word, and fellowship as one body in Christ. The perfect way to re-center your heart for the week ahead.",
+      image: "images/nifes-worship.jpg",
+      day: 0,
+      hour: 14,
+      minute: 30,
+      campus: "bosso"
+    },
+    {
+      title: "Tuesday: Prayer Meeting",
+      time: "7:00 PM",
+      desc: "Join us as we seek God's face together in prayer. A dedicated time to intercede for our campus, our nation, and one another, strengthening our dependence on God.",
+      image: "images/nifes-prayer.jpg",
+      day: 2,
+      hour: 19,
+      minute: 0,
+      campus: "bosso"
+    },
+    {
+      title: "Thursday: Bible Study",
+      time: "7:00 PM",
+      desc: "Dive deeper into the Word of God together. A time of study, discussion, and application as we grow in understanding and obedience together.",
+      image: "images/bible_study_session.jpg",
+      day: 3,
+      hour: 19,
+      minute: 0,
+      campus: "bosso"
+    },
+    {
+      title: "Saturday: Discipleship Cell Group",
+      time: "7:00 PM",
+      desc: "Connect with a small cell group for deeper discipleship, accountability, and shared growth. A safe space to ask questions, pray together, and build life-long friendships.",
+      image: "images/nifes-gathering.jpg",
+      day: 6,
+      hour: 19,
+      minute: 0,
+      campus: "bosso"
     }
   ],
 
@@ -82,13 +122,13 @@ const SITE_DATA = {
       title: "Leadership Training (LTC)",
       status: "Coming Soon",
       desc: "Intensive training programs designed to equip campus leaders with practical skills in discipleship, evangelism, and ministry management for effective campus witness.",
-      image: "images/nifes-gathering22.jpg"
+      image: "images/gallery/upcoming_programs/ltc.jpg"
     },
     {
       title: "Easter Discipleship Conference (EDC)",
       status: "Coming Soon",
       desc: "A dedicated week focused on community outreach, street evangelism, and practical ministry in the surrounding communities, putting faith into action.",
-      image: "images/bible_study_session.jpg"
+      image: "images/gallery/upcoming_programs/edc.jpg"
     }
   ],
 
@@ -101,21 +141,21 @@ const SITE_DATA = {
       { name: "Kingsley Chikezie Emejor", role: "Vice President", image: "" },
       { name: "Whyte Victoria Samuel", role: "General Secretary", image: "images/executives/gk/gen_sec.JPG" },
       { name: "Divine Uzoma", role: "Bible Study Secretary", image: "images/executives/gk/bible_cord.JPG" },
-      { name: "Adama Ojochonu Augustine", role: "Publicity Secretary", image: "" },
-      { name: "Ogbe Loveth Ufedojo", role: "Financial Secretary", image: "" },
+      { name: "Adama Ojochonu Augustine", role: "Publicity Secretary", image: "images/executives/gk/publi_cord.jpg" },
+      { name: "Ogbe Loveth Ufedojo", role: "Treasurer", image: "" },
       { name: "Abdullateef Musa Olamilekan", role: "Academic Coordinator", image: "images/executives/gk/academic_cord.JPG" },
       { name: "Sunday Blessing Ogechukwu", role: "Sisters Coordinator/Welfare", image: "images/executives/gk/sis_cord.jpg" },
       { name: "Isah Josiah", role: "Prayer Secretary", image: "images/executives/gk/prayer_cord.JPG" },
       { name: "Israel Emmanuel Ufedojo", role: "Drama Coordinator", image: "" },
       { name: "Oyewale Lifted Olayinka", role: "Technical Coordinator", image: "images/executives/gk/technical_cord.JPG" },
       { name: "Boniface Chinaemeze Great", role: "Music Director", image: "images/executives/gk/music_director.jpg" },
-      { name: "Aigbedion Ehinomhen Favour", role: "Evangelism Secretary", image: "images/executives/gk/evangelism_cord.JPG" },
-      { name: "Armstrong Dozie Chimeremeze", role: "Follow Up Secretary", image: "" },
+      { name: "Aigbedion Ehinomhen Favour", role: "Follow Up Secretary", image: "images/executives/gk/followup_cord.jpg" },
+      { name: "Armstrong Dozie Chimeremeze", role: "Evangelism Secretary", image: "" },
       { name: "Anita Olamide Shehu", role: "Assistant General Secretary", image: "images/executives/gk/ass_gen_sec.JPG" },
       { name: "Tsaku Ephraim Arigu", role: "Ushering Coordinator", image: "images/executives/gk/ushering_cord.jpg" },
       { name: "Praise Samita Enang", role: "Brothers Coordinator", image: "" },
       { name: "Godswill Beng", role: "FYB Coordinator", image: "" },
-      { name: "Fidelia Onoja", role: "Treasurer", image: "images/executives/gk/treasurer.jpg" }
+      { name: "Fidelia Onoja", role: "Financial Secretary", image: "images/executives/gk/financial_sec.jpg" }
     ],
     bosso: [
       { name: "Odafe Oghenekewe Daniel", role: "President", image: "images/executives/bosso/president.jpg" },
@@ -142,12 +182,8 @@ const SITE_DATA = {
    * Leaders (Contact page) — [Update] dummy names/phones
    * --------------------------------------------------------------- */
   leaders: [
-    { role: "President", name: "Okpanachi Daniel", phone: "+234 800 000 0000", icon: "fas fa-user-shield" },
-    { role: "Vice President", name: "Kingsley Chikezie Emejor", phone: "+234 800 000 0001", icon: "fas fa-user-tie" },
-    { role: "General Secretary", name: "Whyte Victoria Samuel", phone: "+234 800 000 0002", icon: "fas fa-pen-nib" },
-    { role: "Treasurer", name: "Fidelia Onoja", phone: "+234 800 000 0003", icon: "fas fa-wallet" },
-    { role: "Sisters Coordinator", name: "Sunday Blessing Ogechukwu", phone: "+234 800 000 0004", icon: "fas fa-female" },
-    { role: "Brothers Coordinator", name: "Praise Samita Enang", phone: "+234 800 000 0005", icon: "fas fa-male" }
+    { role: "President", name: "Okpanachi Daniel", phone: "+234 807 815 0481", icon: "fas fa-user-shield" },
+    { role: "Follow Up Secretary", name: "Aigbedion Ehinomhen Favour", phone: "+234 808 521 7921", icon: "fas fa-handshake" }
   ],
 
   /* ---------------------------------------------------------------
