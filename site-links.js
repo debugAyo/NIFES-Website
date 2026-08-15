@@ -38,9 +38,12 @@
       youtube: data.links.youtube,
       instagram: data.links.instagram,
       facebook: data.links.facebook,
-      tiktok: data.links.tiktok,
+      spotify: data.links.spotify,
+      audiomack: data.links.audiomack,
       phone: "tel:" + data.links.phoneTel
     };
+
+    const externalKeys = ["twitter", "whatsappGroup", "spotify", "audiomack", "youtube", "instagram", "facebook"];
 
     document.querySelectorAll("[data-site]").forEach(el => {
       const key = el.getAttribute("data-site");
@@ -53,7 +56,7 @@
         el.setAttribute("rel", "noopener noreferrer");
       } else if (map[key]) {
         el.setAttribute("href", map[key]);
-        if (key === "twitter" || key === "whatsappGroup") {
+        if (externalKeys.includes(key)) {
           el.setAttribute("target", "_blank");
           el.setAttribute("rel", "noopener noreferrer");
         }

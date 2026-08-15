@@ -99,7 +99,7 @@ Some social links use placeholder `href="#"`. Check and update on all pages:
 - WhatsApp (`#`) — replace with group invite link
 - Twitter (`#`) — replace with actual Twitter/X profile URL
 
-Already correct: Facebook, Instagram, TikTok, YouTube links.
+Already correct: Facebook, Instagram, YouTube links.
 
 ---
 

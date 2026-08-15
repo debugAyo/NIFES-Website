@@ -236,10 +236,11 @@
           <ul class="footer-socials">
             <li><a href="https://www.facebook.com/nifesfutminnaofficial" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a></li>
             <li><a href="https://www.instagram.com/nifesfutminna?igsh=MXMzZDZzZnR2ZWFsaQ==" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="fab fa-instagram"></i></a></li>
-            <li><a href="https://www.tiktok.com/@nifesfutmx?_r=1&_t=ZS-94X9qqK7wH6" target="_blank" rel="noopener noreferrer" aria-label="TikTok"><i class="fab fa-tiktok"></i></a></li>
             <li><a href="#" data-site="whatsappChat" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a></li>
             <li><a href="#" data-site="twitter" aria-label="Twitter"><i class="fab fa-twitter"></i></a></li>
-            <li><a href="https://www.youtube.com/@nifesfutmx?si=S88---Y41wuoewbN" target="_blank" rel="noopener noreferrer" aria-label="YouTube"><i class="fab fa-youtube"></i></a></li>
+            <li><a href="https://youtube.com/@nifesfutminnaa" target="_blank" rel="noopener noreferrer" aria-label="YouTube"><i class="fab fa-youtube"></i></a></li>
+            <li><a href="#" data-site="spotify" aria-label="Spotify"><i class="fab fa-spotify"></i></a></li>
+            <li><a href="#" data-site="audiomack" aria-label="Audiomack"><i class="fas fa-headphones"></i></a></li>
           </ul>
         </div>
         <div class="footer-section">
@@ -296,6 +297,14 @@
       "welfare secretary": "fas fa-heart",
       "brothers coordinator": "fas fa-male",
       "financial secretary": "fas fa-calculator",
+      "publicity secretary": "fas fa-newspaper",
+      "bible study secretary": "fas fa-book-open",
+      "prayer secretary": "fas fa-praying-hands",
+      "drama coordinator": "fas fa-theater-masks",
+      "technical coordinator": "fas fa-tools",
+      "ushering coordinator": "fas fa-hand-holding-heart",
+      "evangelism secretary": "fas fa-bullhorn",
+      "fyb coordinator": "fas fa-user-graduate",
       "ushering unit secretary": "fas fa-hand-holding-heart",
       "evangelism unit secretary": "fas fa-bullhorn",
       "follow up secretary": "fas fa-user-plus",
@@ -365,6 +374,7 @@
           : `<div class="exec-avatar-placeholder"><i class="${iconClass}"></i></div>`;
         card.innerHTML = `
           ${imgHtml}
+          <h3 class="exec-name">${exec.name || "Executive"}</h3>
           <p class="exec-role">${exec.role}</p>
         `;
         grid.appendChild(card);

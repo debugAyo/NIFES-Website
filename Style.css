@@ -860,7 +860,12 @@ ul, ol {
 }
 
 .exec-name {
-  display: none;
+  font-size: var(--text-lg);
+  font-weight: 700;
+  color: var(--text-primary);
+  line-height: var(--leading-snug);
+  margin: 0 0 var(--space-xs);
+  padding: 0 var(--space-sm);
 }
 
 .exec-role {

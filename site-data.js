@@ -21,8 +21,7 @@ const SITE_DATA = {
     // [Update] Replace with real WhatsApp number (international format, no "+")
     whatsappNumber: "2348000000000",
     whatsappMessage: "Hello NIFES FUTMinna! I'd love to connect with the fellowship.",
-    // [Update] Replace with real Twitter / X handle
-    twitter: "https://x.com/nifesfutminna",
+    twitter: "https://x.com/nifesfutminna26",
     // [Update] Replace with the fellowship's real contact email
     email: "contact@nifesfutminna.org",
     // [Update] Replace with the fellowship phone number
@@ -30,8 +29,9 @@ const SITE_DATA = {
     phoneTel: "+2348000000000",
     facebook: "https://www.facebook.com/nifesfutminnaofficial",
     instagram: "https://www.instagram.com/nifesfutminna?igsh=MXMzZDZzZnR2ZWFsaQ==",
-    tiktok: "https://www.tiktok.com/@nifesfutmx?_r=1&_t=ZS-94X9qqK7wH6",
-    youtube: "https://www.youtube.com/@nifesfutmx"
+    youtube: "https://youtube.com/@nifesfutminnaa",
+    spotify: "https://open.spotify.com/show/0bRcfd9Nz6wG315jKBrO0z",
+    audiomack: "https://audiomack.com/NIFESFUTMINNA"
   },
 
   /* ---------------------------------------------------------------
@@ -75,7 +75,7 @@ const SITE_DATA = {
       title: "LIFE 2026",
       status: "That's a wrap!",
       desc: "Our flagship annual conference bringing together students from across the nation for spiritual growth, powerful teaching, worship, and fellowship. Experience transformative messages, workshops, and an opportunity to connect with the wider NIFES movement.",
-      image: "images/life-2026.jpg",
+      image: "images/life26/_MG_6704.jpg",
       gallery: "gallery-life2026"
     },
     {
@@ -97,24 +97,25 @@ const SITE_DATA = {
    * --------------------------------------------------------------- */
   executives: {
     gk: [
-      { name: "Samuel Peter", role: "President", image: "images/executives/gk/president.jpg" },
-      { name: "Okpanachi Daniel", role: "Vice President", image: "" },
-      { name: "Onyedim Gift", role: "General Secretary", image: "images/executives/gk/gen_sec.JPG" },
-      { name: "Ibrahim Abigail", role: "Treasurer", image: "images/executives/gk/treasurer.jpg" },
-      { name: "Enyojo Abigail", role: "Sisters Coordinator/Welfare Secretary", image: "images/executives/gk/sis_cord.jpg" },
-      { name: "Boniface Chisom", role: "Brothers Coordinator", image: "" },
-      { name: "Onoja Fidelia", role: "Financial Secretary", image: "" },
-      { name: "Na'allah Beauty", role: "Ushering Unit Secretary", image: "images/executives/gk/ushering_cord.jpg" },
-      { name: "Zimuzor Wisdom", role: "Evangelism Unit Secretary", image: "images/executives/gk/evangelism_cord.JPG" },
-      { name: "Emejor Kingsley", role: "Follow Up Secretary", image: "" },
-      { name: "Williams Tabitha", role: "Prayer Unit Secretary", image: "images/executives/gk/prayer_cord.JPG" },
-      { name: "Jordan Anibe", role: "Press Unit Secretary", image: "" },
-      { name: "Isah Joshua", role: "Bible Study Unit Secretary", image: "images/executives/gk/bible_cord.JPG" },
-      { name: "Achimugu Caleb", role: "Drama Unit Secretary", image: "" },
-      { name: "Oyewale Lifted", role: "Technical Unit Secretary", image: "images/executives/gk/technical_cord.JPG" },
-      { name: "Oma-benedi Sophia", role: "Assistant General Secretary", image: "images/executives/gk/ass_gen_sec.JPG" },
-      { name: "Innocent Healer", role: "Music Director", image: "images/executives/gk/music_director.jpg" },
-      { name: "Academic Coordinator", role: "Academic Coordinator", image: "images/executives/gk/academic_cord.JPG" }
+      { name: "Okpanachi Daniel", role: "President", image: "images/executives/gk/president.jpg" },
+      { name: "Kingsley Chikezie Emejor", role: "Vice President", image: "" },
+      { name: "Whyte Victoria Samuel", role: "General Secretary", image: "images/executives/gk/gen_sec.JPG" },
+      { name: "Divine Uzoma", role: "Bible Study Secretary", image: "images/executives/gk/bible_cord.JPG" },
+      { name: "Adama Ojochonu Augustine", role: "Publicity Secretary", image: "" },
+      { name: "Ogbe Loveth Ufedojo", role: "Financial Secretary", image: "" },
+      { name: "Abdullateef Musa Olamilekan", role: "Academic Coordinator", image: "images/executives/gk/academic_cord.JPG" },
+      { name: "Sunday Blessing Ogechukwu", role: "Sisters Coordinator/Welfare", image: "images/executives/gk/sis_cord.jpg" },
+      { name: "Isah Josiah", role: "Prayer Secretary", image: "images/executives/gk/prayer_cord.JPG" },
+      { name: "Israel Emmanuel Ufedojo", role: "Drama Coordinator", image: "" },
+      { name: "Oyewale Lifted Olayinka", role: "Technical Coordinator", image: "images/executives/gk/technical_cord.JPG" },
+      { name: "Boniface Chinaemeze Great", role: "Music Director", image: "images/executives/gk/music_director.jpg" },
+      { name: "Aigbedion Ehinomhen Favour", role: "Evangelism Secretary", image: "images/executives/gk/evangelism_cord.JPG" },
+      { name: "Armstrong Dozie Chimeremeze", role: "Follow Up Secretary", image: "" },
+      { name: "Anita Olamide Shehu", role: "Assistant General Secretary", image: "images/executives/gk/ass_gen_sec.JPG" },
+      { name: "Tsaku Ephraim Arigu", role: "Ushering Coordinator", image: "images/executives/gk/ushering_cord.jpg" },
+      { name: "Praise Samita Enang", role: "Brothers Coordinator", image: "" },
+      { name: "Godswill Beng", role: "FYB Coordinator", image: "" },
+      { name: "Fidelia Onoja", role: "Treasurer", image: "images/executives/gk/treasurer.jpg" }
     ],
     bosso: [
       // [Update] All Bosso entries are dummy until real names/photos are provided
@@ -143,12 +144,12 @@ const SITE_DATA = {
    * Leaders (Contact page) — [Update] dummy names/phones
    * --------------------------------------------------------------- */
   leaders: [
-    { role: "President", name: "Emeka Okafor", phone: "+234 800 000 0000", icon: "fas fa-user-shield" },
-    { role: "Vice President", name: "Blessing Adewale", phone: "+234 800 000 0001", icon: "fas fa-user-tie" },
-    { role: "General Secretary", name: "Emmanuel David", phone: "+234 800 000 0002", icon: "fas fa-pen-nib" },
-    { role: "Treasurer", name: "Grace Okonkwo", phone: "+234 800 000 0003", icon: "fas fa-wallet" },
-    { role: "Sisters Coordinator", name: "Faith Abraham", phone: "+234 800 000 0004", icon: "fas fa-female" },
-    { role: "Brothers Coordinator", name: "Samuel Ola", phone: "+234 800 000 0005", icon: "fas fa-male" }
+    { role: "President", name: "Okpanachi Daniel", phone: "+234 800 000 0000", icon: "fas fa-user-shield" },
+    { role: "Vice President", name: "Kingsley Chikezie Emejor", phone: "+234 800 000 0001", icon: "fas fa-user-tie" },
+    { role: "General Secretary", name: "Whyte Victoria Samuel", phone: "+234 800 000 0002", icon: "fas fa-pen-nib" },
+    { role: "Treasurer", name: "Fidelia Onoja", phone: "+234 800 000 0003", icon: "fas fa-wallet" },
+    { role: "Sisters Coordinator", name: "Sunday Blessing Ogechukwu", phone: "+234 800 000 0004", icon: "fas fa-female" },
+    { role: "Brothers Coordinator", name: "Praise Samita Enang", phone: "+234 800 000 0005", icon: "fas fa-male" }
   ],
 
   /* ---------------------------------------------------------------
