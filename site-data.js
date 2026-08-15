@@ -17,7 +17,7 @@ const SITE_DATA = {
    * --------------------------------------------------------------- */
   links: {
     whatsappGroup: "https://chat.whatsapp.com/BMBYz6EiBY1CnmKTqMNAG0?s=cl&p=a&mlu=0&ilr=0",
-    whatsappNumber: "2348078150481",
+    whatsappNumber: "2348052526786",
     whatsappMessage: "Hello NIFES FUTMinna! I'd love to connect with the fellowship.",
     twitter: "https://x.com/nifesfutminna26",
     // [Update] Replace with the fellowship's real contact email
@@ -97,11 +97,11 @@ const SITE_DATA = {
     },
     {
       title: "Saturday: Discipleship Cell Group",
-      time: "7:00 PM",
+      time: "5:00 PM",
       desc: "Connect with a small cell group for deeper discipleship, accountability, and shared growth. A safe space to ask questions, pray together, and build life-long friendships.",
       image: "images/gallery/3.jpg",
       day: 6,
-      hour: 19,
+      hour: 17,
       minute: 0,
       campus: "bosso"
     }

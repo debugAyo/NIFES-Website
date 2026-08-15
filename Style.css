@@ -671,17 +671,21 @@ ul, ol {
    ========================================================================== */
 .page-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 1fr));
   gap: var(--space-xl);
   align-items: stretch;
 }
 
 .page-grid-text {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 1fr));
   gap: var(--space-2xl);
   text-align: center;
   align-items: stretch;
+}
+
+.prayer-grid {
+  grid-template-columns: 1fr 1fr;
 }
 
 .page-grid-text div {
@@ -774,6 +778,22 @@ ul, ol {
 .content-card img.ltc-image {
   object-position: center 30%;
   transform: scale(0.9);
+}
+
+#get-connected .content-card img {
+  height: 260px;
+}
+
+@media (max-width: 768px) {
+  #get-connected .content-card img {
+    height: 220px;
+  }
+}
+
+@media (max-width: 480px) {
+  #get-connected .content-card img {
+    height: 180px;
+  }
 }
 
 .content-card h4 {
@@ -2414,6 +2434,10 @@ ul, ol {
     gap: var(--space-lg);
   }
 
+  .prayer-grid {
+    grid-template-columns: 1fr;
+  }
+
   /* Content Card */
   .content-card {
     padding: var(--space-md);
@@ -3091,6 +3115,19 @@ ul, ol {
   border: 1px solid var(--border-light);
 }
 
+/* Shield the form from .page-grid-text descendant rules (padding/centering/hover) */
+.page-grid-text .connect-form-wrapper {
+  padding: var(--space-2xl);
+  text-align: left;
+  border-radius: var(--radius-xl);
+  transform: none;
+}
+
+.page-grid-text .connect-form-wrapper:hover {
+  transform: none;
+  box-shadow: var(--shadow-md);
+}
+
 .connect-form .form-row {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -3212,20 +3249,30 @@ ul, ol {
 }
 
 @media (max-width: 768px) {
-  .connect-form-wrapper {
+  .connect-form-wrapper,
+  .page-grid-text .connect-form-wrapper {
     padding: var(--space-xl);
   }
 }
 
-@media (max-width: 480px) {
-  .connect-form-wrapper {
+@media (max-width: 640px) {
+  .connect-form-wrapper,
+  .page-grid-text .connect-form-wrapper {
     padding: var(--space-lg);
     border-radius: var(--radius-lg);
   }
 
+  .prayer-grid > div {
+    padding: var(--space-sm);
+  }
+
   .connect-form .form-row {
     grid-template-columns: 1fr;
-    gap: 0;
+    gap: var(--space-md);
+  }
+
+  .connect-form .form-group {
+    margin-bottom: var(--space-sm);
   }
 }
 
