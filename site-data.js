@@ -138,11 +138,11 @@ const SITE_DATA = {
   executives: {
     gk: [
       { name: "Okpanachi Daniel", role: "President", image: "images/executives/gk/president.jpg" },
-      { name: "Kingsley Chikezie Emejor", role: "Vice President", image: "" },
+      { name: "Kingsley Chikezie Emejor", role: "Vice President", image: "images/executives/gk/vice_president.jpg" },
       { name: "Whyte Victoria Samuel", role: "General Secretary", image: "images/executives/gk/gen_sec.JPG" },
       { name: "Divine Uzoma", role: "Bible Study Secretary", image: "images/executives/gk/bible_cord.JPG" },
       { name: "Adama Ojochonu Augustine", role: "Publicity Secretary", image: "images/executives/gk/publi_cord.jpg" },
-      { name: "Ogbe Loveth Ufedojo", role: "Treasurer", image: "images/executives/gk/financial_sec.jpg" },
+      { name: "Ogbe Loveth Ufedojo", role: "Financial Secretary", image: "images/executives/gk/financial_sec.jpg" },
       { name: "Abdullateef Musa Olamilekan", role: "Academic Coordinator", image: "images/executives/gk/academic_cord.JPG" },
       { name: "Sunday Blessing Ogechukwu", role: "Sisters Coordinator/Welfare", image: "images/executives/gk/sis_cord.jpg" },
       { name: "Isah Josiah", role: "Prayer Secretary", image: "images/executives/gk/prayer_cord.JPG" },
@@ -150,12 +150,12 @@ const SITE_DATA = {
       { name: "Oyewale Lifted Olayinka", role: "Technical Coordinator", image: "images/executives/gk/technical_cord.JPG" },
       { name: "Boniface Chinaemeze Great", role: "Music Director", image: "images/executives/gk/music_director.jpg" },
       { name: "Armstrong Dozie Chimeremeze", role: "Follow Up Secretary", image: "images/executives/gk/followup_cord.jpg" },
-      { name: "Aigbedion Ehinomhen Favour", role: "Evangelism Secretary", image: "" },
+      { name: "Aigbedion Ehinomhen Favour", role: "Evangelism Secretary", image: "images/executives/gk/evangelism_cord.jpg" },
       { name: "Anita Olamide Shehu", role: "Assistant General Secretary", image: "images/executives/gk/ass_gen_sec.JPG" },
       { name: "Tsaku Ephraim Arigu", role: "Ushering Coordinator", image: "images/executives/gk/ushering_cord.jpg" },
       { name: "Praise Samita Enang", role: "Brothers Coordinator", image: "" },
-      { name: "Godswill Beng", role: "FYB Coordinator", image: "" },
-      { name: "Fidelia Onoja", role: "Financial Secretary", image: "" }
+      { name: "Godswill Beng", role: "FYB Coordinator", image: "images/executives/gk/fyb_coordi.jpg" },
+      { name: "Fidelia Onoja", role: "Treasurer", image: "images/executives/gk/treasurer.jpg" }
     ],
     bosso: [
       { name: "Odafe Oghenekewe Daniel", role: "President", image: "images/executives/bosso/president.jpg" },
@@ -174,7 +174,8 @@ const SITE_DATA = {
       { name: "Echu Emmanuel", role: "Drama Coordinator", image: "images/executives/bosso/drama_cord.jpg" },
       { name: "Atuogu-Ukah Michael Chimere", role: "Technical Coordinator", image: "images/executives/bosso/technical_cord.jpg" },
       { name: "Kucha KingDavid", role: "Evangelism Secretary", image: "images/executives/bosso/evangelism_sec.jpg" },
-      { name: "Vincent Elaigwu Owoicho Echi", role: "Publicity & Media Secretary", image: "images/executives/bosso/publicity_media_sec.jpg" }
+      { name: "Vincent Elaigwu Owoicho Echi", role: "Publicity & Media Secretary", image: "images/executives/bosso/publicity_media_sec.jpg" },
+      { name: "Moshood Ibrahim Lawal", role: "Music Director", image: "images/executives/bosso/music_director.jpg" }
     ]
   },
 
@@ -182,8 +183,8 @@ const SITE_DATA = {
    * Leaders (Contact page) — [Update] dummy names/phones
    * --------------------------------------------------------------- */
   leaders: [
-    { role: "President", name: "Okpanachi Daniel", phone: "+234 807 815 0481", icon: "fas fa-user-shield" },
-    { role: "Follow Up Secretary", name: "Armstrong Dozie Chimeremeze", phone: "+234 808 521 7921", icon: "fas fa-handshake" }
+    { role: "Central President", name: "Odafe Oghenekwe Daniel", phone: "+234 908 071 1702", icon: "fas fa-user-shield" },
+    { role: "Central Vice President", name: "Okpanachi Daniel", phone: "+234 807 815 0481", icon: "fas fa-user-tie" }
   ],
 
   /* ---------------------------------------------------------------

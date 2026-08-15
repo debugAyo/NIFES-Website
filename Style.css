@@ -379,6 +379,10 @@ ul, ol {
   background: linear-gradient(180deg, var(--primary) 0%, var(--primary-dark) 100%);
 }
 
+.about-hero::before {
+  background: linear-gradient(180deg, rgba(2, 24, 56, 0.82) 0%, rgba(6, 44, 88, 0.88) 100%);
+}
+
 .page-hero-inner {
   position: relative;
   z-index: 2;
@@ -789,18 +793,25 @@ ul, ol {
 }
 
 .unit-card {
-  display: grid;
-  grid-template-columns: 96px 1fr;
-  gap: var(--space-md);
-  align-items: center;
-  text-align: left;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
 }
 
-.unit-card img {
-  width: 96px;
-  height: 96px;
-  margin-bottom: 0;
-  border-radius: var(--radius-md);
+.content-card.unit-card img {
+  width: 100%;
+  height: 220px;
+  margin-bottom: var(--space-md);
+  border-radius: var(--radius-lg);
+  object-fit: cover;
+  cursor: zoom-in;
+  transition: transform var(--duration-normal) var(--ease-out),
+              box-shadow var(--duration-normal) var(--ease-out);
+}
+
+.content-card.unit-card img:hover {
+  transform: scale(1.02);
+  box-shadow: var(--shadow-md);
 }
 
 .unit-card h4 {
@@ -808,24 +819,16 @@ ul, ol {
 }
 
 .unit-card p {
-  grid-column: 2;
   margin-bottom: 0;
 }
 
 @media (max-width: 640px) {
   .unit-card {
-    grid-template-columns: 1fr;
     text-align: center;
   }
 
-  .unit-card img,
-  .unit-card p {
-    grid-column: auto;
-  }
-
-  .unit-card img {
-    width: 100%;
-    height: 180px;
+  .content-card.unit-card img {
+    height: 200px;
   }
 }
 
@@ -888,8 +891,8 @@ ul, ol {
 }
 
 .exec-photo-wrap {
-  width: 200px;
-  height: 200px;
+  width: min(200px, 62vw);
+  height: min(200px, 62vw);
   box-sizing: border-box;
   padding: 0;
   margin: 0 auto var(--space-md);
@@ -902,13 +905,13 @@ ul, ol {
               box-shadow var(--duration-normal) var(--ease-out);
 }
 
-.exec-photo {
+.exec-photo-wrap .exec-photo {
   width: 100%;
   height: 100%;
   display: block;
   border-radius: 50%;
   object-fit: cover;
-  object-position: center 18%;
+  object-position: center 20%;
   background: var(--surface-elevated);
 }
 

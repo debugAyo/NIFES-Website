@@ -40,7 +40,7 @@
     </ul>
   </nav>
 
-  <header class="page-hero">
+  <header class="page-hero about-hero" style="background-image: url('images/gallery/statement/beauty.jpg');">
     <div class="page-hero-inner">
       <div class="section-tag">Our Story</div>
       <h1>A Fellowship Shaped for Students</h1>
@@ -104,12 +104,12 @@
         </div>
         <div class="page-grid reveal-grid">
           <div class="content-card">
-            <img src="images/placeholder-hero-1.jpg" alt="Vision" loading="lazy">
+            <img src="images/gallery/statement/vision.jpg" alt="Vision" loading="lazy">
             <h4>Our Vision</h4>
             <p>To be a movement of Christ-like students in Nigeria's tertiary institutions transforming the campus, and society upon graduation.</p>
           </div>
           <div class="content-card">
-            <img src="images/bible_study_session.jpg" alt="Mission" loading="lazy">
+            <img src="images/gallery/statement/mission.jpg" alt="Mission" loading="lazy">
             <h4>Our Mission</h4>
             <p>NIFES exists to reach out to students through evangelism and discipleship training, to mobilize them upon graduation to impact the campus, church and society with godly values.</p>
           </div>
@@ -205,12 +205,12 @@
         </div>
         <div class="page-grid reveal-grid units-grid">
           <div class="content-card unit-card">
-            <img src="images/bible_study_session.jpg" alt="Bible Study Unit" loading="lazy">
+            <img src="images/units/bible-study/bible_study_unit.jpg" alt="Bible Study Unit" loading="lazy">
             <h4>Bible Study Unit</h4>
             <p>Helps students understand the Bible better through study time, simple discussions, and practical lessons for everyday life.</p>
           </div>
           <div class="content-card unit-card">
-            <img src="images/nifes-gathering.jpg" alt="Evangelism Unit" loading="lazy">
+            <img src="images/units/evangelism/evangelism_unit.jpg" alt="Evangelism Unit" loading="lazy">
             <h4>Evangelism Unit</h4>
             <p>Shares the gospel with students on campus through outreach, friendly conversations, and soul-winning events.</p>
           </div>
@@ -230,7 +230,7 @@
             <p>Leads the fellowship in worship through songs, choruses, and special ministrations that draw hearts to God.</p>
           </div>
           <div class="content-card unit-card">
-            <img src="images/praise_session.jpg" alt="Drama Unit" loading="lazy">
+            <img src="images/units/drama/drama_unit.jpg" alt="Drama Unit" loading="lazy">
             <h4>Drama Unit</h4>
             <p>Uses drama, skits, and creative presentations to share Bible truths in a fun and easy-to-understand way.</p>
           </div>
@@ -240,12 +240,12 @@
             <p>Helps meetings run smoothly by handling sound, visuals, microphones, and other technical support.</p>
           </div>
           <div class="content-card unit-card">
-            <img src="images/nifes-prayer.jpg" alt="Ushering Unit" loading="lazy">
+            <img src="images/units/ushering/ushering_unit.jpg" alt="Ushering Unit" loading="lazy">
             <h4>Ushering Unit</h4>
             <p>Greets members and guests, helps with seating, and makes sure everyone feels welcome and comfortable.</p>
           </div>
           <div class="content-card unit-card">
-            <img src="images/might_use_as_bs.jpg" alt="Prayer Unit" loading="lazy">
+            <img src="images/units/prayer/prayer_unit.jpg" alt="Prayer Unit" loading="lazy">
             <h4>Prayer Unit</h4>
             <p>Stands in prayer for the fellowship, its members, and the campus, asking God for help, growth, and revival.</p>
           </div>
@@ -299,6 +299,15 @@
     </div>
   </footer>
 
+  <!-- Unit Image Lightbox -->
+  <div id="unit-lightbox" class="lightbox" role="dialog" aria-modal="true" aria-label="View full image">
+    <span class="lightbox-close" aria-label="Close">&times;</span>
+    <div class="lightbox-content">
+      <img id="unit-lightbox-img" src="" alt="">
+      <div id="unit-lightbox-caption" class="lightbox-caption"></div>
+    </div>
+  </div>
+
   <button class="theme-toggle" id="theme-toggle" aria-label="Toggle dark mode" title="Toggle dark mode">
     <i class="fas fa-moon" aria-hidden="true"></i>
   </button>
@@ -316,7 +325,42 @@
     document.addEventListener("DOMContentLoaded", () => {
       initSequentialTypewriter();
       if (window.initThemeToggle) window.initThemeToggle();
+      initUnitLightbox();
     });
+
+    function initUnitLightbox() {
+      const lightbox = document.getElementById('unit-lightbox');
+      const lightboxImg = document.getElementById('unit-lightbox-img');
+      const lightboxCaption = document.getElementById('unit-lightbox-caption');
+      const closeBtn = lightbox.querySelector('.lightbox-close');
+      const unitImages = document.querySelectorAll('.unit-card img');
+
+      function openLightbox(img) {
+        lightboxImg.src = img.src;
+        lightboxImg.alt = img.alt;
+        lightboxCaption.textContent = img.alt || '';
+        lightbox.classList.add('show');
+        document.body.style.overflow = 'hidden';
+      }
+
+      function closeLightbox() {
+        lightbox.classList.remove('show');
+        document.body.style.overflow = '';
+        lightboxImg.src = '';
+      }
+
+      unitImages.forEach(img => {
+        img.addEventListener('click', () => openLightbox(img));
+      });
+
+      closeBtn.addEventListener('click', closeLightbox);
+      lightbox.addEventListener('click', (e) => {
+        if (e.target === lightbox || e.target.classList.contains('lightbox-content')) closeLightbox();
+      });
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && lightbox.classList.contains('show')) closeLightbox();
+      });
+    }
 
     function initSequentialTypewriter() {
       const paragraphs = document.querySelectorAll('.typewriter-paragraph');
