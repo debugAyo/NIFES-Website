@@ -171,6 +171,14 @@ const SITE_DATA = {
     {
       quote: "NIFES helped me put my academics first without losing my faith. From academic prayer meetings to mentorship and tutorials from senior students, the fellowship carried me to a 5.0 CGPA in my 100 Level. Here, excellence is part of worship.",
       name: "Emmanuel", role: "100 Level — Computer Science"
+    },
+    {
+      quote: "Before NIFES, I was just trying to survive school. The fellowship gave me direction, prayer partners, and a stronger relationship with God. My grades improved and my faith grew at the same time.",
+      name: "Maryam S.", role: "200 Level — Physics"
+    },
+    {
+      quote: "Joining NIFES changed my mentality. I learned discipline, consistency, and how to live with purpose. It helped me balance academics, spiritual growth, and leadership without feeling overwhelmed.",
+      name: "Samuel T.", role: "300 Level — Electrical Engineering"
     }
   ],
 
