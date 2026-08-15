@@ -831,8 +831,8 @@ ul, ol {
 }
 
 .exec-photo-wrap {
-  width: 180px;
-  height: 180px;
+  width: 200px;
+  height: 200px;
   box-sizing: border-box;
   padding: 0;
   margin: 0 auto var(--space-md);
@@ -851,6 +851,7 @@ ul, ol {
   display: block;
   border-radius: 50%;
   object-fit: cover;
+  object-position: center 18%;
   background: var(--surface-elevated);
 }
 
