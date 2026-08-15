@@ -118,25 +118,23 @@ const SITE_DATA = {
       { name: "Fidelia Onoja", role: "Treasurer", image: "images/executives/gk/treasurer.jpg" }
     ],
     bosso: [
-      // [Update] All Bosso entries are dummy until real names/photos are provided
-      { name: "Emeka Nwosu", role: "President", image: "" },
-      { name: "Aisha Bello", role: "Vice President", image: "" },
-      { name: "Emmanuel David", role: "General Secretary", image: "" },
-      { name: "Grace Okonkwo", role: "Treasurer", image: "" },
-      { name: "Faith Abraham", role: "Sisters Coordinator", image: "" },
-      { name: "Samuel Ola", role: "Brothers Coordinator", image: "" },
-      { name: "Tunde Bakare", role: "Financial Secretary", image: "" },
-      { name: "Mary Adeyemi", role: "Ushering Unit Secretary", image: "" },
-      { name: "Peter Ibe", role: "Evangelism Unit Secretary", image: "" },
-      { name: "Joy Nnadi", role: "Follow Up Secretary", image: "" },
-      { name: "Daniel Yusuf", role: "Prayer Unit Secretary", image: "" },
-      { name: "Ruth Osei", role: "Press Unit Secretary", image: "" },
-      { name: "Joseph Kalu", role: "Bible Study Unit Secretary", image: "" },
-      { name: "Blessing Eze", role: "Drama Unit Secretary", image: "" },
-      { name: "Victor Okafor", role: "Technical Unit Secretary", image: "" },
-      { name: "Esther Adeleke", role: "Assistant General Secretary", image: "" },
-      { name: "David Ogunleye", role: "Academic Coordinator", image: "" },
-      { name: "Praise Chibuzor", role: "Music Director", image: "" }
+      { name: "Odafe Oghenekewe Daniel", role: "President", image: "images/executives/bosso/president.jpg" },
+      { name: "Adeiza Israel", role: "Vice President", image: "images/executives/bosso/vice_president.jpg" },
+      { name: "Victoria Olabisi", role: "General Secretary", image: "images/executives/bosso/gen_sec.jpg" },
+      { name: "Sunday Precious Love", role: "Assistant General Secretary", image: "images/executives/bosso/ass_gen_sec.jpg" },
+      { name: "Okoye Reinhard", role: "Bible Study Secretary", image: "images/executives/bosso/bible_sec.jpg" },
+      { name: "Chukwuemeka Praise Ifeanyi", role: "Academic Secretary", image: "images/executives/bosso/academic_sec.jpg" },
+      { name: "Idoko Grace Ochefije", role: "Financial Secretary", image: "images/executives/bosso/financial_sec.jpg" },
+      { name: "Comfort Adewole", role: "Treasurer", image: "images/executives/bosso/treasurer.jpg" },
+      { name: "Emmanuel Odey", role: "Prayer Secretary", image: "images/executives/bosso/prayer_sec.jpg" },
+      { name: "Timothy Godday", role: "Follow Up Secretary", image: "images/executives/bosso/followup_sec.jpg" },
+      { name: "Oyinkansola Lydia Olaleye", role: "Sisters & Welfare Coordinator", image: "images/executives/bosso/sis_welfare_cord.jpg" },
+      { name: "Emmanuel Ogah", role: "Brothers' Coordinator", image: "images/executives/bosso/bro_cord.jpg" },
+      { name: "Victoria Jiya", role: "Ushering Coordinator", image: "images/executives/bosso/ushering_cord.jpg" },
+      { name: "Echu Emmanuel", role: "Drama Coordinator", image: "images/executives/bosso/drama_cord.jpg" },
+      { name: "Atuogu-Ukah Michael Chimere", role: "Technical Coordinator", image: "images/executives/bosso/technical_cord.jpg" },
+      { name: "Kucha KingDavid", role: "Evangelism Secretary", image: "images/executives/bosso/evangelism_sec.jpg" },
+      { name: "Vincent Elaigwu Owoicho Echi", role: "Publicity & Media Secretary", image: "images/executives/bosso/publicity_media_sec.jpg" }
     ]
   },
 
