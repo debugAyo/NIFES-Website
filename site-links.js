@@ -113,14 +113,19 @@
       btn.className = "theme-toggle";
       btn.setAttribute("aria-label", "Toggle dark mode");
       btn.innerHTML = '<i class="fas fa-moon"></i>';
+      document.body.appendChild(btn);
+    }
+
+    if (!btn.dataset.themeBound) {
       btn.addEventListener("click", () => {
         const root = document.documentElement;
         const next = root.getAttribute("data-theme") === "dark" ? "light" : "dark";
         try { localStorage.setItem("nifes-theme", next); } catch (e) {}
         applyTheme(next);
       });
-      document.body.appendChild(btn);
+      btn.dataset.themeBound = "true";
     }
+
     // Keep the site visually consistent across devices by defaulting to the
     // light blue-and-white theme unless the user explicitly changes it.
     applyTheme(getStoredTheme() || "light");
