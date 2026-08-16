@@ -193,7 +193,7 @@ const SITE_DATA = {
   testimonies: [
     {
       quote: "NIFES became my family away from home. The Thursday cell group gave me friends who pray with me and keep me accountable. My walk with God has never been the same.",
-      name: "Chiamaka O.", role: "300 Level — Computer Science"
+      name: "Chiamaka O.", role: "300 Level — Quantity Survey"
     },
     {
       quote: "I came to campus as a shy fresher not knowing anyone. NIFES welcomed me, discipled me, and today I lead a cell group myself. It truly raises leaders.",
@@ -209,7 +209,7 @@ const SITE_DATA = {
     },
     {
       quote: "Before NIFES, I was just trying to survive school. The fellowship gave me direction, prayer partners, and a stronger relationship with God. My grades improved and my faith grew at the same time.",
-      name: "Maryam S.", role: "200 Level — Physics"
+      name: "Maryam S.", role: "200 Level — Chemistry Education"
     },
     {
       quote: "Joining NIFES changed my mentality. I learned discipline, consistency, and how to live with purpose. It helped me balance academics, spiritual growth, and leadership without feeling overwhelmed.",
