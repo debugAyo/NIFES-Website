@@ -22,8 +22,8 @@ const SITE_DATA = {
     twitter: "https://x.com/nifesfutminna26",
     // [Update] Replace with the fellowship's real contact email
     email: "contact@nifesfutminna.org",
-    phoneDisplay: "+234 807 815 0481",
-    phoneTel: "+2348078150481",
+    phoneDisplay: "+234 916 627 5340",
+    phoneTel: "+234 916 627 5340",
     facebook: "https://www.facebook.com/nifesfutminnaofficial",
     instagram: "https://www.instagram.com/nifesfutminna?igsh=MXMzZDZzZnR2ZWFsaQ==",
     youtube: "https://youtube.com/@nifesfutminnaa",
